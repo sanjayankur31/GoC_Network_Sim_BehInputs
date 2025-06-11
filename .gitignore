@@ -2,3 +2,10 @@ __pycache__
 .mypy_cache
 .DS_Store
 x86_64/
+
+.mod
+.hoc
+
+__pycache__/
+
+*_nrn.py
