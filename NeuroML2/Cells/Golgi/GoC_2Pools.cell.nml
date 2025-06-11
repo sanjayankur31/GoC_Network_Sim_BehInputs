@@ -193,13 +193,13 @@
 
                 <channelDensity condDensity="0.08 mS_per_cm2" id="Golgi_hcn2s_soma_group" ionChannel="GolgiHCN2s" segmentGroup="soma_group" ion="h" erev="-20.0 mV"/>
 
+				<channelDensity condDensity="0.15 mS_per_cm2" id="GIRK_dend_group" ionChannel="GIRK" segmentGroup="dendrite_group" ion="k" erev="-84.69mV" />
+
 				<!--calcium channnels -->
 				<channelDensityNernst condDensity="0.46 mS_per_cm2" id="Golgi_Ca_HVA_soma_group" ionChannel="GolgiCaHVA" segmentGroup="soma_group" ion="ca"/> <!--calculate erev by nernst eqn-->
 
 				<channelDensityNernst condDensity="0.25 mS_per_cm2" id="Ca_LVA_soma_group" ionChannel="GolgiCaLVA" segmentGroup="soma_group" ion="ca2"/>
 
-
-				<channelDensity condDensity="0.15 mS_per_cm2" id="GIRK_dend_group" ionChannel="GIRK" segmentGroup="dendrite_group" ion="k" erev="-84.69mV" />
 
 				<!-- general properties-->
 				<spikeThresh value="0.0 mV"/>
@@ -210,10 +210,10 @@
 
             <intracellularProperties>
 
-                <resistivity value="0.1 kohm_cm"/>  <!-- Used for specific axial resistance, not nec for single segment model that is isolpotential -->
 				<species segmentGroup="soma_group" id="ca" ion="ca" concentrationModel="Golgi_CALC" initialConcentration="5e-5mM" initialExtConcentration="2mM"/>
 
                 <species segmentGroup="soma_group" id="ca2" ion="ca2" concentrationModel="Golgi_CALC2" initialConcentration="5e-5mM" initialExtConcentration="2mM"/>
+                <resistivity value="0.1 kohm_cm"/>  <!-- Used for specific axial resistance, not nec for single segment model that is isolpotential -->
             </intracellularProperties>
 
         </biophysicalProperties>

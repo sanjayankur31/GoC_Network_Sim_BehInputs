@@ -213,8 +213,8 @@
 
             <intracellularProperties>
 
-                <resistivity value="0.1 kohm_cm"/>  <!-- Used for specific axial resistance, not nec for single segment model that is isolpotential -->
 				<species segmentGroup="soma_group" id="ca" ion="ca" concentrationModel="Golgi_CALC" initialConcentration="5e-5mM" initialExtConcentration="2mM"/>
+                <resistivity value="0.1 kohm_cm"/>  <!-- Used for specific axial resistance, not nec for single segment model that is isolpotential -->
 
                 <!--species segmentGroup="soma_group" id="ca2" ion="ca2" concentrationModel="Golgi_CALC2" initialConcentration="5e-5mM" initialExtConcentration="2mM"/-->
             </intracellularProperties>
