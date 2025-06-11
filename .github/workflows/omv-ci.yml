@@ -33,7 +33,7 @@ jobs:
 
     - name: Install OMV
       run: |
-        pip install -r requirements.txt
+        pip install -r NeuroML2/requirements.txt
 
     #- name: Compile some mod files, required for NEURON tests
     #  run: |
