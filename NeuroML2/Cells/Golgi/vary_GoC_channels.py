@@ -12,16 +12,17 @@ from pyneuroml import pynml
 # from pyneuroml.lems import LEMSSimulation
 # import lems.api as lems
 
-# sys.path.append('../../PythonUtils')
-sys.path.append("../PythonUtils")  # JSR, running in subfolder
-import initialize_cell_params_JSR as icp
+sys.path.append("../../PythonUtils")
+import initialize_cell_params as icp
 
 
 def create_GoC(
     runid,
     usefile="cellparams_file.pkl",
+    morpho_fname="GoC.cell.nml",
+    girk=False,
     # morpho_fname='Golgi_reduced_twoCaPools.cell.nml',
-    morpho_fname="reduced/Golgi_reduced_2CaPools.cell.nml",  # JSR
+    # morpho_fname="reduced/Golgi_reduced_2CaPools.cell.nml",  # JSR
     # has2Pools=True JSR
     # girk=False JSR
 ):
