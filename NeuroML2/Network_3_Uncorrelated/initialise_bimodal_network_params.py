@@ -324,7 +324,7 @@ def get_simulation_params(
                 connWeight=Input_wt[input_],
                 connDist=Input_maxD[input_],
                 GoC_pos=np.reshape(params["GoC_pos"][choose_goc, :], (1, 3)),
-                cell_loc=Input_cellloc[input_],
+                syn_loc=Input_cellloc[input_],
                 seed=simid,
             )
             if len(Inp["conn_pairs"]) > 1:
@@ -349,7 +349,7 @@ def get_simulation_params(
                 connWeight=Input_wt[input_],
                 connDist=Input_maxD[input_],
                 GoC_pos=params["GoC_pos"],
-                cell_loc=Input_cellloc[input_],
+                syn_loc=Input_cellloc[input_],
                 nDend=Input_dend[input_],
                 seed=simid * ctr,
             )
@@ -405,7 +405,7 @@ def get_simulation_params(
                     connWeight=Input_wt[input_],
                     connDist=Input_maxD[input_],
                     GoC_pos=np.reshape(params["GoC_pos"][choose_goc, :], (1, 3)),
-                    cell_loc=Input_cellloc[input_],
+                    syn_loc=Input_cellloc[input_],
                     seed=simid,
                 )
                 if len(Inp["conn_pairs"]) > 1:
@@ -430,7 +430,7 @@ def get_simulation_params(
                     connWeight=Input_wt[input_],
                     connDist=Input_maxD[input_],
                     GoC_pos=params["GoC_pos"],
-                    cell_loc=Input_cellloc[input_],
+                    syn_loc=Input_cellloc[input_],
                     nDend=Input_dend[input_],
                     seed=simid * ctr,
                 )
@@ -495,7 +495,7 @@ def get_simulation_params(
                 connWeight=Input_wt[input_],
                 connDist=Input_maxD[input_],
                 GoC_pos=params["GoC_pos"],
-                cell_loc=Input_cellloc[input_],
+                syn_loc=Input_cellloc[input_],
                 nDend=Input_dend[input_],
                 seed=simid * ctr + Input_id[input_],
             )
