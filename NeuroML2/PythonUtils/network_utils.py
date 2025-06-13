@@ -3,6 +3,7 @@ import pickle as pkl
 
 # from numpy.core import multiarray
 import sys
+import typing
 
 import numpy as np
 from scipy.spatial import distance
@@ -17,7 +18,9 @@ sys.path.append("../Parameters")
 """
 
 
-def set_random_locations(numCells, volume, density, seed=-1):
+def locate_GoC(
+    numCells: int, volume: typing.List[int], density: int, seed: int = -1
+) -> [int, typing.List[int]]:
     """
     Distribute GoCs in volume (uniformly at random).
     Returns number of GoCs and their x,y,z coordinates.
@@ -40,7 +43,7 @@ def set_random_locations(numCells, volume, density, seed=-1):
     x, y, z = volume
     if numCells == 0:
         numCells = int(density * 1e-9 * x * y * z)  # units mm -> um
-    xyz = np.random.random(size=[numCells, 3]) * [x, y, z]  # in um
+    xyz = np.random.random_sample((numCells, 3)) * [x, y, z]  # in um
 
     return numCells, xyz
 
@@ -78,7 +81,7 @@ def get_hetero_GoC_id(
 
     # Load ids from pickled parameter file
     # TODO: how was this file generated?
-    with open(GoC_id_File, 'rb') as f:
+    with open(GoC_id_File, "rb") as f:
         allP = pkl.load(f, encoding="bytes")  # JSR added bytes
         # allP: list [1, 25, 32, 128 ... 975, 977, 995] n = 52
 
@@ -385,21 +388,21 @@ def get_syn_weights(
 
 
 def connect_inputs(
-    maxn=0,
-    frac=0,
-    density=6000,
-    volume=[350, 350, 80],
+    maxn: int = 0,
+    frac: int = 0,
+    density: int = 6000,
+    volume: typing.List[int] = [350, 350, 80],
     # mult=0,
-    loc_type="random",
-    connType="random_prob",
-    connProb=0.5,
-    connGoC=0,
-    connWeight=1,
-    connDist=[0],
-    GoC_pos=[],
-    syn_loc="soma",
-    nGJ_dend=3,
-    seed=-1,
+    loc_type: str = "random",
+    connType: str = "random_prob",
+    connProb: float = 0.5,
+    connGoC: int = 0,
+    connWeight: int = 1,
+    connDist: typing.List[int] = [0],
+    GoC_pos: typing.List[int] = [],
+    syn_loc: str = "soma",
+    nGJ_dend: int = 3,
+    seed: int = -1,
 ):
     """
     Generate connectivity from presynaptic inputs to GoCs
@@ -415,13 +418,13 @@ def connect_inputs(
     frac:       Fraction of generated inputs (nInputs = maxn*frac)
     density:    number of inputs/mm3, used only if maxn==0
     volume:     length/breadth/height of simulated volume in microns
-                (to generate input coordinates)
+                (to generate input_ coordinates)
     mult:       one or multiple synapses (NOT CURRENTLY USED)
     loc_type:   'random' to distribute inputs uniformly in volume
                 (rosette code not yet added)
     connType:   'random_prob' (independently connect with fixed prob) or
                 'random_sample' (sample postsynaptic partners)
-    connProb:   connection probability for each input-GoC pair
+    connProb:   connection probability for each input_-GoC pair
                 (used if MF_conntype=='random_prob')
     connGoC:    Number of inputs/GoC (used if MF_conntype=='random_sample')
     connWeight: Scale synaptic weights
@@ -437,7 +440,7 @@ def connect_inputs(
     Returns:
     ===========
     nInp:       number of inputs
-    Inp_pos:    input coordiates
+    Inp_pos:    input_ coordiates
     conn_pairs: list of pre-post pairs
     conn_wt:    list of synaptic weights
     conn_loc:   list of synapse location (dendritic segment if applicable)
@@ -447,7 +450,7 @@ def connect_inputs(
         return 0, [], [], [], []  # nothing to do
 
     nInp = int(maxn * frac)
-    nInp, Inp_pos = set_random_locations(nInp, volume, density, seed=seed)
+    nInp, Inp_pos = locate_GoC(nInp, volume, density, seed=seed)
     # numpy.ndarray size (nInp, 3)
 
     nGoC = GoC_pos.shape[0]
@@ -457,7 +460,7 @@ def connect_inputs(
     # Get list of connected pairs
     # JSR: if/elif statements call same code
     # conn_pairs numpy.ndarray size (2, nPairs)
-    # conn_pairs[0, iPair]: Input ID
+    # conn_pairs[0, iPair]: input_ ID
     # conn_pairs[1, iPair]: GoC ID
     if connType == "random_prob":
         # independently connect with probability connProb
@@ -540,7 +543,7 @@ def connect_inputs_known(  # NOT USED
     seed=-1,
 ):
     """
-    Same as connect_inputs except input locations are previously determined
+    Same as connect_inputs except input_ locations are previously determined
     (parameters nInp and Inp_pos)
     """
 
@@ -636,7 +639,7 @@ def MF_conn(  # NOT USED
 ):
     """
     [REDUNDANT]
-    Set up connectivity from presynaptic input populations to GoC population
+    Set up connectivity from presynaptic input_ populations to GoC population
     (can be MF/PF - MF used generically)
 
     Parameters:
@@ -649,7 +652,7 @@ def MF_conn(  # NOT USED
     GoC_pos:        xyz coordinates for all GoCs
     MF_conntype:    'random_prob' (independently connect with fixed prob) or
                     'random_sample' (sample postsynaptic partners)
-    MF_connprob:    Connection probability for each input-GoC pair
+    MF_connprob:    Connection probability for each input_-GoC pair
                     (used if MF_conntype=='random_prob')
     MF_connGoC:     Number of presynaptic partners for each GoC
                     (used if MF_conntype=='random_sample')
@@ -665,7 +668,7 @@ def MF_conn(  # NOT USED
 
     if seed != -1:
         np.random.seed(seed + 4000)
-    nMF, MF_pos = set_random_locations(nMF, volume, density)
+    nMF, MF_pos = locate_GoC(nMF, volume, density)
     nGoC = GoC_pos.shape[0]
 
     # Set up connectivity from presynaptic to GoCs
@@ -693,13 +696,13 @@ def PF_conn(  # NOT USED
 ):
     """
     [REDUNDANT]
-    Set up connectivity from presynaptic input populations to GoC population
+    Set up connectivity from presynaptic input_ populations to GoC population
     Similar to MF_conn, except parameter PF_conndist can be used to specify
     x,y,z connectivity extent (e.g. limited extent in AP axis)
     """
     if seed != -1:
         np.random.seed(seed + 7000)
-    nPF, PF_pos = set_random_locations(nPF, volume, PF_density)
+    nPF, PF_pos = locate_GoC(nPF, volume, PF_density)
 
     nGoC = GoC_pos.shape[0]
     if PF_conntype == "random_prob":
