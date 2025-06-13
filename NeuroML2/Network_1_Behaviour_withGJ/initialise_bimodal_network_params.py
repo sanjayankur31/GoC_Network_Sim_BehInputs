@@ -366,7 +366,7 @@ def get_simulation_params(
                     connWeight=Input_wt[input_],
                     connDist=Input_maxD[input_],
                     GoC_pos=np.reshape(params["GoC_pos"][choose_goc, :], (1, 3)),
-                    cell_loc=Input_cellloc[input_],
+                    syn_loc=Input_cellloc[input_],
                     seed=simid,
                 )
                 if len(Inp["conn_pairs"]) > 1:
