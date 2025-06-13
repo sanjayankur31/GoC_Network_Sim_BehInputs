@@ -19,33 +19,36 @@ sys.path.append("../Parameters")
 
 
 def locate_GoC(
-    numCells: int, volume: typing.List[int], density: int, seed: int = -1
-) -> [int, typing.List[int]]:
+    nGoC: int = 0,
+    volume: typing.List[int] = [350, 350, 80],
+    density: int = 4607,
+    seed: int = -1,
+) -> (int, typing.List[int]):
     """
     Distribute GoCs in volume (uniformly at random).
     Returns number of GoCs and their x,y,z coordinates.
     Also used for MFs and PFs.
 
-    Parameters:
-    ===========
-    numCells: number of cells to distribute. If 0, then calculated based on
-            density and volume.
-    volume: length, width, height of simulated volume in microns
-            (generated xyz coordinates are within 0 and these limits).
-    density: cell density (count/mm3)
-    seed:   sSimulation seed. If -1, then seed is not controlled.
-            For different fns, this seed is used differently -
-            but deterministically - to set up seed for the random
-            number generators.
+    :param nGoC: number of cells to distribute
+        If 0, then calculated based on density and volume.
+    :param volume: length, width, height of simulated volume in microns
+        (generated xyz coordinates are within 0 and these limits).
+    :param density: cell density (count/mm3)
+    :param seed: Simulation seed.
+        If -1, then seed is not controlled
+        For different fns, this seed is used differently - but
+        deterministically - to set up seed for the random number generators.
+    :returns: [number of cells, [positions of all cells]]
+    :rtype: (int, list[int])
     """
     if seed != -1:
         np.random.seed(seed + 1000)
     x, y, z = volume
-    if numCells == 0:
-        numCells = int(density * 1e-9 * x * y * z)  # units mm -> um
-    xyz = np.random.random_sample((numCells, 3)) * [x, y, z]  # in um
+    if nGoC == 0:
+        nGoC = int(density * 1e-9 * x * y * z)  # units mm -> um
+    xyz = np.random.random_sample((nGoC, 3)) * [x, y, z]  # in um
 
-    return numCells, xyz
+    return nGoC, xyz
 
 
 def get_hetero_GoC_id(
@@ -53,7 +56,7 @@ def get_hetero_GoC_id(
     nGoC_types: int,
     GoC_id_File: str,
     seed: int = -1,
-):
+) -> (typing.List[int], int):
     """Create list of nGoC cells which includes equal numbers of cells of
     nGoC_types.
 
@@ -72,7 +75,7 @@ def get_hetero_GoC_id(
     :type GoC_id_file: str
     :param seed: random seed
     :type seed: int
-    :returns: [nGoC, list of ids]
+    :returns: (list of ids, nGoC)
 
     """
     # distribute GoC types (different channel distributions)
@@ -104,15 +107,15 @@ def get_hetero_GoC_id(
     # 774, 774, 774, 774, 774, 774, 774, 774] n = 40
     # print(allid)
 
-    return nGoC, allid
+    return allid, nGoC
 
 
 def GJ_conn(
     GoC_pos,
     prob_type="Boltzmann",
     GJw_type="Szo16_oneGJ",
-    nGJ_dend=3,
-    dist_SF=1,
+    nDend=3,
+    wt_k=1,
     prob_k=1.0,
     seed=-1,
 ):
@@ -120,7 +123,7 @@ def GJ_conn(
     Generate Electrical connectivity matrix between GoCs.
     As connectivity is based on distance-dependent coupling probability and
     strength, need GoC locations (GoC_pos) to compute pairwise distance.
-    nGJ_dend is morphology specific for locating GJs in detailed models.
+    nDend is morphology specific for locating GJs in detailed models.
     Modelling as single Gap junction between cells
     (multiple GJs are collapsed into larger conductance).
 
@@ -135,9 +138,9 @@ def GJ_conn(
     prob_type:  Distance-dependent prob function
     GJw_type:   Distance-dependent coupling strength
                 'Vervaeke2010' or 'Szo16_oneGJ'
-    nGJ_dend:   how many dendritic compartments
+    nDend:   how many dendritic compartments
                 (to compute location of the GJ conductance)
-    dist_SF:    divisive scale factor for distances used in GJ weight
+    wt_k:    divisive scale factor for distances used in GJ weight
                 (for changing coupling scale, 1 for no change)
     prob_k:     divisive factor for distances used in GJ prob
                 (for changing coupling scale, 1 for no change)
@@ -189,34 +192,34 @@ def GJ_conn(
 
     if GJw_type == "Vervaeke2010":  # False
         # list of gj conductance for corresponding pair
-        GJ_cond = set_GJ_strength_Vervaeke2010(dpairs_1D, dist_SF=dist_SF)
+        GJ_cond = set_GJ_strength_Vervaeke2010(dpairs_1D, wt_k=wt_k)
     elif GJw_type == "Szo16_oneGJ":  # True
-        GJ_cond = set_GJ_strength_Szo2016_oneGJ(dpairs_1D, dist_SF=dist_SF)
+        GJ_cond = set_GJ_strength_Szo2016_oneGJ(dpairs_1D, wt_k=wt_k)
     GJ_cond[GJ_cond < 0] = 0  # lower limit = 0
     # np array, size=(210,)
 
     # Numerical normalization such that average total GJ conductance is
     # the same for different distance-dependent scaling
-    if dist_SF == 1:
+    if wt_k == 1:
         pass  # no change
     else:
         if GJw_type == "Vervaeke2010":  # False
-            GJf = set_GJ_strength_Vervaeke2010(dist_1D, dist_SF=dist_SF)
+            GJf = set_GJ_strength_Vervaeke2010(dist_1D, wt_k=wt_k)
             GJ0 = set_GJ_strength_Vervaeke2010(dist_1D)
         elif GJw_type == "Szo16_oneGJ":  # True
-            GJf = set_GJ_strength_Szo2016_oneGJ(dist_1D, dist_SF=dist_SF)
+            GJf = set_GJ_strength_Szo2016_oneGJ(dist_1D, wt_k=wt_k)
             GJ0 = set_GJ_strength_Szo2016_oneGJ(dist_1D)
         GJf[GJf < 0] = 0
         GJ0[GJ0 < 0] = 0
         curr_sum = np.mean(np.sum(GJf))
         avg_sum = np.mean(np.sum(GJ0))
         sf = avg_sum / curr_sum
-        GJ_cond = GJ_cond * sf  # sf = 1 if dist_SF = 1
+        GJ_cond = GJ_cond * sf  # sf = 1 if wt_k = 1
 
     # get dendritic id to locate GJ for each GoC in a connected pair
-    dend_id = np.random.randint(nGJ_dend, size=GJ_pairs.shape)
+    dend_id = np.random.randint(nDend, size=GJ_pairs.shape)
     # random dendrite sigment (0, 1, 2)
-    # high = nGJ_dend, size = (210, 2)
+    # high = nDend, size = (210, 2)
 
     dend_seg = np.random.random(size=GJ_pairs.shape)
     # random [0.0, 1.0)
@@ -294,7 +297,7 @@ def connProb_Boltzmann_scaled(  # see GJ_conn()
 
 
 def set_GJ_strength_Szo2016_oneGJ(  # see GJ_conn()
-    dist_1D, dist_SF=1, seed=-1
+    dist_1D, wt_k=1, seed=-1
 ):
     """
     Return weights to determine total GJ conductance between each
@@ -305,19 +308,19 @@ def set_GJ_strength_Szo2016_oneGJ(  # see GJ_conn()
     Parameters:
     ===========
     dist_1D:    Pairwise distances between GoCs (flattened into 1D array)
-    dist_SF:     Scaling factor (divisive) for pairwise distances to change
+    wt_k:     Scaling factor (divisive) for pairwise distances to change
                 coupling scale
                 [factor > 1 means more long-range coupling]
     """
     # Coupling Coefficient
-    CC = -2.3 + 29.7 * np.exp(-(dist_1D / dist_SF) / 70.4)
+    CC = -2.3 + 29.7 * np.exp(-(dist_1D / wt_k) / 70.4)
     # GJw = np.round(2*CC/5.0)
     GJw = 2 * CC / 5.0
     return GJw
 
 
 def set_GJ_strength_Vervaeke2010(  # see GJ_conn()
-    dist_1D, dist_SF=1
+    dist_1D, wt_k=1
 ):
     """
     Return weights to determine total GJ conductance between each
@@ -328,12 +331,12 @@ def set_GJ_strength_Vervaeke2010(  # see GJ_conn()
     Parameters:
     ===========
     dist_1D:    Pairwise distances between GoCs (flattened into 1D array)
-    dist_SF:     Scaling factor (divisive) for pairwise distances to change
+    wt_k:     Scaling factor (divisive) for pairwise distances to change
                 coupling scale
                 [factor > 1 means more long-range coupling]
     """
     # Coupling Coefficient
-    CC = -2.3 + 29.7 * np.exp(-dist_1D / (70.4 * dist_SF))
+    CC = -2.3 + 29.7 * np.exp(-dist_1D / (70.4 * wt_k))
     GJw = 0.576 * np.exp(CC / 12.4) + 0.00059 * np.exp(CC / 2.79) - 0.564
     return GJw
 
@@ -392,7 +395,7 @@ def connect_inputs(
     frac: int = 0,
     density: int = 6000,
     volume: typing.List[int] = [350, 350, 80],
-    # mult=0,
+    mult=0,
     loc_type: str = "random",
     connType: str = "random_prob",
     connProb: float = 0.5,
@@ -401,7 +404,7 @@ def connect_inputs(
     connDist: typing.List[int] = [0],
     GoC_pos: typing.List[int] = [],
     syn_loc: str = "soma",
-    nGJ_dend: int = 3,
+    nDend: int = 3,
     seed: int = -1,
 ):
     """
@@ -433,7 +436,7 @@ def connect_inputs(
                 separate limits can be applied to x,y,z distances.
     GoC_pos:    x,y,z coordiates of all GoCs - used for pruning
     syn_loc:   'soma' or 'dend', where should synapses be distributed?
-    nGJ_dend:   number of dendritic segments (if syn_loc=='dend', also choose
+    nDend:   number of dendritic segments (if syn_loc=='dend', also choose
                 dendritic segment to put synapse in)
 
 
@@ -509,7 +512,7 @@ def connect_inputs(
     # conn_loc[0, iPair]: dendrite segment: 0, 1, 2
     # conn_loc[1, iPair]: fraction: 0-1
     conn_loc = np.r_[
-        np.random.randint(nGJ_dend, size=[1, nPairs]),
+        np.random.randint(nDend, size=[1, nPairs]),
         np.random.random(size=[1, nPairs]),
     ]
 
@@ -530,7 +533,7 @@ def connect_inputs(
 def connect_inputs_known(  # NOT USED
     nInp,
     Inp_pos,
-    # mult=0,
+    mult=0,
     loc_type="random",
     connType="random_prob",
     connProb=0.5,
@@ -539,7 +542,7 @@ def connect_inputs_known(  # NOT USED
     connDist=[0],
     GoC_pos=[],
     syn_loc="soma",
-    nGJ_dend=3,
+    nDend=3,
     seed=-1,
 ):
     """
@@ -618,7 +621,7 @@ def connect_inputs_known(  # NOT USED
     conn_wt = get_syn_weights(conn_pairs, conn_wt=connWeight)
     # col 0,1 = dend, col 2,3 = seg
     conn_loc = np.r_[
-        np.random.randint(nGJ_dend, size=[1, conn_pairs.shape[1]]),
+        np.random.randint(nDend, size=[1, conn_pairs.shape[1]]),
         np.random.random(size=[1, conn_pairs.shape[1]]),
     ]
 
