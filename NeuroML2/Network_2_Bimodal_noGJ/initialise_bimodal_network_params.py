@@ -10,7 +10,7 @@ from numpy.core import multiarray
 
 sys.path.append("../PythonUtils")
 
-import network_utils as nu
+import network_utils as net_utils
 
 
 def get_simulation_params(
@@ -211,17 +211,17 @@ def get_simulation_params(
 
     # 1. Golgi Population - Type, Location and Electrical Coupling
 
-    params["nGoC"], params["GoC_pos"] = nu.locate_GoC(
+    params["nGoC"], params["GoC_pos"] = net_utils.locate_GoC(
         nGoC, volume, GoC_density, seed=simid
     )
 
     params["nPop"] = nGoC_pop
-    params["GoC_ParamID"], params["nGoC"] = nu.get_hetero_GoC_id(
+    params["GoC_ParamID"], params["nGoC"] = net_utils.get_hetero_GoC_id(
         params["nGoC"], nGoC_pop, densityParams, seed=simid
     )
     popsize = int(params["nGoC"] / params["nPop"])
     params["nGoC_per_pop"] = popsize
-    params["nGoC"], params["GoC_pos"] = nu.locate_GoC(
+    params["nGoC"], params["GoC_pos"] = net_utils.locate_GoC(
         params["nGoC"], volume, GoC_density, seed=simid
     )
 
@@ -231,7 +231,7 @@ def get_simulation_params(
     params["econn_pop"] = [
         [{} for post in range(nGoC_pop - pre)] for pre in range(nGoC_pop)
     ]
-    gj, wt, loc = nu.GJ_conn(
+    gj, wt, loc = net_utils.GJ_conn(
         params["GoC_pos"],
         GJ_dist_type,
         GJ_wt_type,
@@ -261,14 +261,14 @@ def get_simulation_params(
 
     ctr = 1
     np.random.seed(simid + 1000)
-    for input in bgInputs:
+    for input_ in bgInputs:
         Inp = {
-            "type": Input_type[input],
-            "rate": Input_rate[input],
-            "syn_type": Input_syn[input],
-            "syn_loc": Input_cellloc[input],
+            "type": Input_type[input_],
+            "rate": Input_rate[input_],
+            "syn_type": Input_syn[input_],
+            "syn_loc": Input_cellloc[input_],
         }
-        if connect_goc[input]:
+        if connect_goc[input_]:
             choose_goc = np.random.randint(params["nGoC"])
             (
                 Inp["nInp"],
@@ -276,19 +276,19 @@ def get_simulation_params(
                 Inp["conn_pairs"],
                 Inp["conn_wt"],
                 Inp["conn_loc"],
-            ) = nu.connect_inputs(
-                maxn=nInputs_max[input],
-                frac=nInputs_frac[input],
-                density=Input_density[input],
+            ) = net_utils.connect_inputs(
+                maxn=nInputs_max[input_],
+                frac=nInputs_frac[input_],
+                density=Input_density[input_],
                 volume=volume,
-                mult=Input_nRosette[input],
-                connType=Input_conn[input],
-                connProb=Input_prob[input],
-                connGoC=Input_nGoC[input],
-                connWeight=Input_wt[input],
-                connDist=Input_maxD[input],
+                mult=Input_nRosette[input_],
+                connType=Input_conn[input_],
+                connProb=Input_prob[input_],
+                connGoC=Input_nGoC[input_],
+                connWeight=Input_wt[input_],
+                connDist=Input_maxD[input_],
                 GoC_pos=np.reshape(params["GoC_pos"][choose_goc, :], (1, 3)),
-                cell_loc=Input_cellloc[input],
+                cell_loc=Input_cellloc[input_],
                 seed=simid,
             )
             if len(Inp["conn_pairs"]) > 1:
@@ -301,26 +301,26 @@ def get_simulation_params(
                 Inp["conn_pairs"],
                 Inp["conn_wt"],
                 Inp["conn_loc"],
-            ) = nu.connect_inputs(
-                maxn=nInputs_max[input],
-                frac=nInputs_frac[input],
-                density=Input_density[input],
+            ) = net_utils.connect_inputs(
+                maxn=nInputs_max[input_],
+                frac=nInputs_frac[input_],
+                density=Input_density[input_],
                 volume=volume,
-                mult=Input_nRosette[input],
-                connType=Input_conn[input],
-                connProb=Input_prob[input],
-                connGoC=Input_nGoC[input],
-                connWeight=Input_wt[input],
-                connDist=Input_maxD[input],
+                mult=Input_nRosette[input_],
+                connType=Input_conn[input_],
+                connProb=Input_prob[input_],
+                connGoC=Input_nGoC[input_],
+                connWeight=Input_wt[input_],
+                connDist=Input_maxD[input_],
                 GoC_pos=params["GoC_pos"],
-                cell_loc=Input_cellloc[input],
-                nDend=Input_dend[input],
+                cell_loc=Input_cellloc[input_],
+                nDend=Input_dend[input_],
                 seed=simid * ctr,
             )
         tmp = {"conn_pairs": [], "conn_wt": [], "conn_loc": []}
         if Inp["nInp"] > 0:
             np.random.seed(simid * Inp["nInp"] * ctr)
-            Inp["sample"] = np.random.permutation(input_nFiles[input])[0 : Inp["nInp"]]
+            Inp["sample"] = np.random.permutation(input_nFiles[input_])[0 : Inp["nInp"]]
             for pid in usedID:
                 pairid = [
                     x
@@ -336,20 +336,20 @@ def get_simulation_params(
                 Inp["conn_pairs"][jj][1, :] = np.mod(
                     Inp["conn_pairs"][jj][1, :], popsize
                 )
-            params["Inputs"]["types"].append(input)
+            params["Inputs"]["types"].append(input_)
 
-        params["Inputs"][input] = Inp
+        params["Inputs"][input_] = Inp
         ctr += 1
 
-    for input in stepInputs:
+    for input_ in stepInputs:
         for id in range(5):
             Inp = {
-                "type": Input_type[input],
-                "syn_type": Input_syn[input],
-                "syn_loc": Input_cellloc[input],
+                "type": Input_type[input_],
+                "syn_type": Input_syn[input_],
+                "syn_loc": Input_cellloc[input_],
                 "id": id + 1,
             }
-            if connect_goc[input]:
+            if connect_goc[input_]:
                 choose_goc = np.random.randint(params["nGoC"])
                 (
                     Inp["nInp"],
@@ -357,19 +357,19 @@ def get_simulation_params(
                     Inp["conn_pairs"],
                     Inp["conn_wt"],
                     Inp["conn_loc"],
-                ) = nu.connect_inputs(
-                    maxn=nInputs_max[input],
-                    frac=nInputs_frac[input],
-                    density=Input_density[input],
+                ) = net_utils.connect_inputs(
+                    maxn=nInputs_max[input_],
+                    frac=nInputs_frac[input_],
+                    density=Input_density[input_],
                     volume=volume,
-                    mult=Input_nRosette[input],
-                    connType=Input_conn[input],
-                    connProb=Input_prob[input],
-                    connGoC=Input_nGoC[input],
-                    connWeight=Input_wt[input],
-                    connDist=Input_maxD[input],
+                    mult=Input_nRosette[input_],
+                    connType=Input_conn[input_],
+                    connProb=Input_prob[input_],
+                    connGoC=Input_nGoC[input_],
+                    connWeight=Input_wt[input_],
+                    connDist=Input_maxD[input_],
                     GoC_pos=np.reshape(params["GoC_pos"][choose_goc, :], (1, 3)),
-                    cell_loc=Input_cellloc[input],
+                    cell_loc=Input_cellloc[input_],
                     seed=simid,
                 )
                 if len(Inp["conn_pairs"]) > 1:
@@ -382,26 +382,26 @@ def get_simulation_params(
                     Inp["conn_pairs"],
                     Inp["conn_wt"],
                     Inp["conn_loc"],
-                ) = nu.connect_inputs(
-                    maxn=nInputs_max[input],
-                    frac=nInputs_frac[input],
-                    density=Input_density[input],
+                ) = net_utils.connect_inputs(
+                    maxn=nInputs_max[input_],
+                    frac=nInputs_frac[input_],
+                    density=Input_density[input_],
                     volume=volume,
-                    mult=Input_nRosette[input],
-                    connType=Input_conn[input],
-                    connProb=Input_prob[input],
-                    connGoC=Input_nGoC[input],
-                    connWeight=Input_wt[input],
-                    connDist=Input_maxD[input],
+                    mult=Input_nRosette[input_],
+                    connType=Input_conn[input_],
+                    connProb=Input_prob[input_],
+                    connGoC=Input_nGoC[input_],
+                    connWeight=Input_wt[input_],
+                    connDist=Input_maxD[input_],
                     GoC_pos=params["GoC_pos"],
-                    cell_loc=Input_cellloc[input],
-                    nDend=Input_dend[input],
+                    cell_loc=Input_cellloc[input_],
+                    nDend=Input_dend[input_],
                     seed=simid * ctr,
                 )
             tmp = {"conn_pairs": [], "conn_wt": [], "conn_loc": []}
             if Inp["nInp"] > 0:
                 np.random.seed(simid * Inp["nInp"] * ctr)
-                Inp["sample"] = np.random.permutation(input_nFiles[input])[
+                Inp["sample"] = np.random.permutation(input_nFiles[input_])[
                     0 : Inp["nInp"]
                 ]
                 for pid in usedID:
@@ -419,29 +419,29 @@ def get_simulation_params(
                     Inp["conn_pairs"][jj][1, :] = np.mod(
                         Inp["conn_pairs"][jj][1, :], popsize
                     )
-                params["Inputs"]["types"].append(input + format(id + 1))
+                params["Inputs"]["types"].append(input_ + format(id + 1))
 
-            print(input + format(id + 1))
-            params["Inputs"][input + format(id + 1)] = Inp
+            print(input_ + format(id + 1))
+            params["Inputs"][input_ + format(id + 1)] = Inp
             ctr += 1
 
-    for input in behInputs:
+    for input_ in behInputs:
         Inp = {
-            "type": Input_type[input],
-            "syn_type": Input_syn[input],
-            "syn_loc": Input_cellloc[input],
-            "id": Input_id[input],
+            "type": Input_type[input_],
+            "syn_type": Input_syn[input_],
+            "syn_loc": Input_cellloc[input_],
+            "id": Input_id[input_],
         }
-        Inp["nInp"] = int(nInputs_max[input] * nInputs_frac[input])
-        Inp["nInp"], Inp["pos"] = nu.locate_GoC(
-            nGoC=Inp["nInp"], volume=volume, seed=simid + Input_id[input]
+        Inp["nInp"] = int(nInputs_max[input_] * nInputs_frac[input_])
+        Inp["nInp"], Inp["pos"] = net_utils.locate_GoC(
+            nGoC=Inp["nInp"], volume=volume, seed=simid + Input_id[input_]
         )
-        Inp["filename"] = Input_flnm[input]
+        Inp["filename"] = Input_flnm[input_]
 
         tmp = {"conn_pairs": [], "conn_wt": [], "conn_loc": []}
         if Inp["nInp"] > 0:
-            np.random.seed(simid * Inp["nInp"] * ctr + Input_id[input])
-            Inp["sample"] = np.random.permutation(input_nFiles[input])[
+            np.random.seed(simid * Inp["nInp"] * ctr + Input_id[input_])
+            Inp["sample"] = np.random.permutation(input_nFiles[input_])[
                 0 : Inp["nInp"]
             ]  # choose wh
 
@@ -449,19 +449,19 @@ def get_simulation_params(
                 Inp["conn_pairs"],
                 Inp["conn_wt"],
                 Inp["conn_loc"],
-            ) = nu.connect_inputs_known(
+            ) = net_utils.connect_inputs_known(
                 nInp=Inp["nInp"],
                 Inp_pos=Inp["pos"],
-                mult=Input_nRosette[input],
-                connType=Input_conn[input],
-                connProb=Input_prob[input],
-                connGoC=Input_nGoC[input],
-                connWeight=Input_wt[input],
-                connDist=Input_maxD[input],
+                mult=Input_nRosette[input_],
+                connType=Input_conn[input_],
+                connProb=Input_prob[input_],
+                connGoC=Input_nGoC[input_],
+                connWeight=Input_wt[input_],
+                connDist=Input_maxD[input_],
                 GoC_pos=params["GoC_pos"],
-                cell_loc=Input_cellloc[input],
-                nDend=Input_dend[input],
-                seed=simid * ctr + Input_id[input],
+                cell_loc=Input_cellloc[input_],
+                nDend=Input_dend[input_],
+                seed=simid * ctr + Input_id[input_],
             )
             for pid in usedID:
                 pairid = [
@@ -478,9 +478,9 @@ def get_simulation_params(
                 Inp["conn_pairs"][jj][1, :] = np.mod(
                     Inp["conn_pairs"][jj][1, :], popsize
                 )
-            params["Inputs"]["types"].append(input)
+            params["Inputs"]["types"].append(input_)
 
-        params["Inputs"][input] = Inp
+        params["Inputs"][input_] = Inp
         ctr += 1
 
     return params
@@ -490,6 +490,5 @@ if __name__ == "__main__":
     nSim = 1
     params_list = [get_simulation_params(simid) for simid in range(nSim)]
 
-    file = open("binetwork_params.pkl", "wb")
-    pkl.dump(params_list, file)
-    file.close()
+    with open("binetwork_params.pkl", "wb") as file:
+        pkl.dump(params_list, file)
