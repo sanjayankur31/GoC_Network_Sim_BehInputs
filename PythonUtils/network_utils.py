@@ -49,20 +49,34 @@ def GJ_conn(
 
     GJ_pairs = np.asarray(np.nonzero(isconn))
     GJ_pairs = np.asarray(
-        [GJ_pairs[:, jj] for jj in range(GJ_pairs.shape[1]) if GJ_pairs[0, jj] < GJ_pairs[1, jj]]
+        [
+            GJ_pairs[:, jj]
+            for jj in range(GJ_pairs.shape[1])
+            if GJ_pairs[0, jj] < GJ_pairs[1, jj]
+        ]
     )  # N_pairs x 2 array = [cell1, cell2] of each pair
 
     radDist = distance.squareform(radDist)
     # Gap junction conductance as a function of distance
     if GJw_type == "Vervaeke2010":
         GJ_cond = set_GJ_strength_Vervaeke2010(
-            np.asarray([radDist[GJ_pairs[jj, 0], GJ_pairs[jj, 1]] for jj in range(GJ_pairs.shape[0])]),
+            np.asarray(
+                [
+                    radDist[GJ_pairs[jj, 0], GJ_pairs[jj, 1]]
+                    for jj in range(GJ_pairs.shape[0])
+                ]
+            ),
             dist_k=wt_k,
         )  # list of gj conductance for corresponding pair
         GJ_cond[GJ_cond < 0] = 0
     elif GJw_type == "Szo16_oneGJ":
         GJ_cond = set_GJ_strength_Szo2016_oneGJ(
-            np.asarray([radDist[GJ_pairs[jj, 0], GJ_pairs[jj, 1]] for jj in range(GJ_pairs.shape[0])]),
+            np.asarray(
+                [
+                    radDist[GJ_pairs[jj, 0], GJ_pairs[jj, 1]]
+                    for jj in range(GJ_pairs.shape[0])
+                ]
+            ),
             dist_k=wt_k,
         )
         GJ_cond[GJ_cond < 0] = 0
@@ -103,7 +117,9 @@ def connProb_Boltzmann(radDist, seed=-1):
         np.random.seed(seed)
     connProb = 1e-2 * (-1745 + 1836 / (1 + np.exp((radDist - 267) / 39)))
     connGen = np.random.random(radDist.shape)
-    isconn = distance.squareform((connProb - connGen) > 0)  # symmetric boolean matrix with diag=0 -> GJ or not
+    isconn = distance.squareform(
+        (connProb - connGen) > 0
+    )  # symmetric boolean matrix with diag=0 -> GJ or not
     return isconn
 
 
@@ -113,7 +129,9 @@ def connProb_Boltzmann_scaled(radDist, probscale=1, seed=-1):
         np.random.seed(seed)
     connProb = 1e-2 * (-1745 + 1836 / (1 + np.exp((radDist - 267) / 39))) * probscale
     connGen = np.random.random(radDist.shape)
-    isconn = distance.squareform((connProb - connGen) > 0)  # symmetric boolean matrix with diag=0 -> GJ or not
+    isconn = distance.squareform(
+        (connProb - connGen) > 0
+    )  # symmetric boolean matrix with diag=0 -> GJ or not
     return isconn
 
 
@@ -153,7 +171,9 @@ def MF_conn(
         MF_pairs = randdist_MF_syn(nMF, nGoC, pConn=MF_connprob, nConn=0)
     elif MF_conntype == "random_sample":
         MF_pairs = randdist_MF_syn(nMF, nGoC, pConn=0, nConn=MF_connGoC)
-    MF_GoC_wt = get_MF_GoC_synaptic_weights(MF_pairs, MF_pos, GoC_pos, MF_wt_type, conn_wt)
+    MF_GoC_wt = get_MF_GoC_synaptic_weights(
+        MF_pairs, MF_pos, GoC_pos, MF_wt_type, conn_wt
+    )
 
     return nMF, MF_pos, MF_pairs, MF_GoC_wt
 
@@ -248,9 +268,18 @@ def PF_conn(
             :,
             [
                 (
-                    (abs(PF_pos[PF_pairs[0, jj], 0] - GoC_pos[PF_pairs[1, jj], 0]) < PF_conndist[0])
-                    & (abs(PF_pos[PF_pairs[0, jj], 1] - GoC_pos[PF_pairs[1, jj], 1]) < PF_conndist[1])
-                    & (abs(PF_pos[PF_pairs[0, jj], 2] - GoC_pos[PF_pairs[1, jj], 2]) < PF_conndist[2])
+                    (
+                        abs(PF_pos[PF_pairs[0, jj], 0] - GoC_pos[PF_pairs[1, jj], 0])
+                        < PF_conndist[0]
+                    )
+                    & (
+                        abs(PF_pos[PF_pairs[0, jj], 1] - GoC_pos[PF_pairs[1, jj], 1])
+                        < PF_conndist[1]
+                    )
+                    & (
+                        abs(PF_pos[PF_pairs[0, jj], 2] - GoC_pos[PF_pairs[1, jj], 2])
+                        < PF_conndist[2]
+                    )
                 )
                 for jj in range(PF_pairs.shape[1])
             ],
@@ -276,7 +305,6 @@ def connect_inputs(
     nDend=3,
     seed=-1,
 ):
-
     if frac == 0:
         return 0, [], [], [], []
     else:
@@ -300,9 +328,27 @@ def connect_inputs(
                 :,
                 [
                     (
-                        (abs(Inp_pos[conn_pairs[0, jj], 0] - GoC_pos[conn_pairs[1, jj], 0]) < connDist[0])
-                        & (abs(Inp_pos[conn_pairs[0, jj], 1] - GoC_pos[conn_pairs[1, jj], 1]) < connDist[1])
-                        & (abs(Inp_pos[conn_pairs[0, jj], 2] - GoC_pos[conn_pairs[1, jj], 2]) < connDist[2])
+                        (
+                            abs(
+                                Inp_pos[conn_pairs[0, jj], 0]
+                                - GoC_pos[conn_pairs[1, jj], 0]
+                            )
+                            < connDist[0]
+                        )
+                        & (
+                            abs(
+                                Inp_pos[conn_pairs[0, jj], 1]
+                                - GoC_pos[conn_pairs[1, jj], 1]
+                            )
+                            < connDist[1]
+                        )
+                        & (
+                            abs(
+                                Inp_pos[conn_pairs[0, jj], 2]
+                                - GoC_pos[conn_pairs[1, jj], 2]
+                            )
+                            < connDist[2]
+                        )
                     )
                     for jj in range(conn_pairs.shape[1])
                 ],
@@ -313,15 +359,18 @@ def connect_inputs(
                 [
                     (
                         np.power(
-                            Inp_pos[conn_pairs[0, jj], 0] - GoC_pos[conn_pairs[1, jj], 0],
+                            Inp_pos[conn_pairs[0, jj], 0]
+                            - GoC_pos[conn_pairs[1, jj], 0],
                             2,
                         )
                         + np.power(
-                            Inp_pos[conn_pairs[0, jj], 1] - GoC_pos[conn_pairs[1, jj], 1],
+                            Inp_pos[conn_pairs[0, jj], 1]
+                            - GoC_pos[conn_pairs[1, jj], 1],
                             2,
                         )
                         + np.power(
-                            Inp_pos[conn_pairs[0, jj], 2] - GoC_pos[conn_pairs[1, jj], 2],
+                            Inp_pos[conn_pairs[0, jj], 2]
+                            - GoC_pos[conn_pairs[1, jj], 2],
                             2,
                         )
                     )
@@ -331,7 +380,9 @@ def connect_inputs(
             ]
 
     ### --- to add code for weight
-    conn_wt = get_MF_GoC_synaptic_weights(conn_pairs, Inp_pos, GoC_pos, "mult", conn_wt=connWeight)
+    conn_wt = get_MF_GoC_synaptic_weights(
+        conn_pairs, Inp_pos, GoC_pos, "mult", conn_wt=connWeight
+    )
     conn_loc = np.r_[
         np.random.randint(nDend, size=[1, conn_pairs.shape[1]]),
         np.random.random(size=[1, conn_pairs.shape[1]]),
@@ -355,7 +406,6 @@ def connect_inputs_known(
     nDend=3,
     seed=-1,
 ):
-
     nGoC = GoC_pos.shape[0]
 
     if connType == "random_prob":
@@ -372,9 +422,27 @@ def connect_inputs_known(
                 :,
                 [
                     (
-                        (abs(Inp_pos[conn_pairs[0, jj], 0] - GoC_pos[conn_pairs[1, jj], 0]) < connDist[0])
-                        & (abs(Inp_pos[conn_pairs[0, jj], 1] - GoC_pos[conn_pairs[1, jj], 1]) < connDist[1])
-                        & (abs(Inp_pos[conn_pairs[0, jj], 2] - GoC_pos[conn_pairs[1, jj], 2]) < connDist[2])
+                        (
+                            abs(
+                                Inp_pos[conn_pairs[0, jj], 0]
+                                - GoC_pos[conn_pairs[1, jj], 0]
+                            )
+                            < connDist[0]
+                        )
+                        & (
+                            abs(
+                                Inp_pos[conn_pairs[0, jj], 1]
+                                - GoC_pos[conn_pairs[1, jj], 1]
+                            )
+                            < connDist[1]
+                        )
+                        & (
+                            abs(
+                                Inp_pos[conn_pairs[0, jj], 2]
+                                - GoC_pos[conn_pairs[1, jj], 2]
+                            )
+                            < connDist[2]
+                        )
                     )
                     for jj in range(conn_pairs.shape[1])
                 ],
@@ -385,15 +453,18 @@ def connect_inputs_known(
                 [
                     (
                         np.power(
-                            Inp_pos[conn_pairs[0, jj], 0] - GoC_pos[conn_pairs[1, jj], 0],
+                            Inp_pos[conn_pairs[0, jj], 0]
+                            - GoC_pos[conn_pairs[1, jj], 0],
                             2,
                         )
                         + np.power(
-                            Inp_pos[conn_pairs[0, jj], 1] - GoC_pos[conn_pairs[1, jj], 1],
+                            Inp_pos[conn_pairs[0, jj], 1]
+                            - GoC_pos[conn_pairs[1, jj], 1],
                             2,
                         )
                         + np.power(
-                            Inp_pos[conn_pairs[0, jj], 2] - GoC_pos[conn_pairs[1, jj], 2],
+                            Inp_pos[conn_pairs[0, jj], 2]
+                            - GoC_pos[conn_pairs[1, jj], 2],
                             2,
                         )
                     )
@@ -403,7 +474,9 @@ def connect_inputs_known(
             ]
 
     ### --- to add code for weight
-    conn_wt = get_MF_GoC_synaptic_weights(conn_pairs, Inp_pos, GoC_pos, "mult", conn_wt=connWeight)
+    conn_wt = get_MF_GoC_synaptic_weights(
+        conn_pairs, Inp_pos, GoC_pos, "mult", conn_wt=connWeight
+    )
     conn_loc = np.r_[
         np.random.randint(nDend, size=[1, conn_pairs.shape[1]]),
         np.random.random(size=[1, conn_pairs.shape[1]]),

@@ -77,7 +77,15 @@ def create_spkarray_file(
         weights = np.random.multivariate_normal(wtMean, wtCov, 1).transpose()
         weights[np.random.random(size=(wtlen, 1)) < sparsef] = 0  # sparsify
         weights[weights < minWt] = 0
-        time, rate = gip.create_rate(behfile, weights=weights, minT=window[0], maxT=window[1], scale=scale, offset=offset, minrate=minrate)
+        time, rate = gip.create_rate(
+            behfile,
+            weights=weights,
+            minT=window[0],
+            maxT=window[1],
+            scale=scale,
+            offset=offset,
+            minrate=minrate,
+        )
         inp = gip.create_spike_array(rate, duration, bint, name + "_{}".format(jj))
         allrates[jj] = rate
         allweights[jj] = weights

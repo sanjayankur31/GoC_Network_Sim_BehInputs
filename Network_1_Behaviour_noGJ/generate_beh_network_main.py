@@ -29,7 +29,6 @@ def create_GoC_network(
     gje=False,
     run=False,
 ):
-
     ### ---------- Load Params
     p = get_params(runid=runid, mf=mf, pf=pf, hom=hom)
 
@@ -86,22 +85,42 @@ def create_GoC_network(
         Inp = p["Inputs"][input]
         net_doc.includes.append(nml.IncludeType(href=Inp["syn_type"][0]))  # filename
         if Inp["syn_type"][1] == "ExpThreeSynapse":
-            synapse[input] = pynml.read_neuroml2_file(Inp["syn_type"][0]).exp_three_synapses[0]  # Component Type
+            synapse[input] = pynml.read_neuroml2_file(
+                Inp["syn_type"][0]
+            ).exp_three_synapses[0]  # Component Type
         elif Inp["syn_type"][1] == "ExpTwoSynapse":
-            synapse[input] = pynml.read_neuroml2_file(Inp["syn_type"][0]).exp_two_synapses[0]
+            synapse[input] = pynml.read_neuroml2_file(
+                Inp["syn_type"][0]
+            ).exp_two_synapses[0]
 
         # Set up spike generators
-        if Inp["type"] == "switchPoisson":  # 2 Rates: from 0 to delay, and delay to delay+duration
+        if (
+            Inp["type"] == "switchPoisson"
+        ):  # 2 Rates: from 0 to delay, and delay to delay+duration
+            inputGen[input] = (
+                pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml")
+                .components["Del_" + format(Inp["rate"][0])]
+                .id
+            )
 
-            inputGen[input] = pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml").components["Del_" + format(Inp["rate"][0])].id
-
-        elif Inp["type"] == "MF_step":  # 2 Rates: from 0 to delay, and delay to delay+duration
+        elif (
+            Inp["type"] == "MF_step"
+        ):  # 2 Rates: from 0 to delay, and delay to delay+duration
             print("PF" + format(Inp["id"]))
-            inputGen[input] = pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml").components["MF" + format(Inp["id"])].id
+            inputGen[input] = (
+                pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml")
+                .components["MF" + format(Inp["id"])]
+                .id
+            )
 
-        elif Inp["type"] == "PF_step":  # 2 Rates: from 0 to delay, and delay to delay+duration
-
-            inputGen[input] = pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml").components["PF" + format(Inp["id"])].id
+        elif (
+            Inp["type"] == "PF_step"
+        ):  # 2 Rates: from 0 to delay, and delay to delay+duration
+            inputGen[input] = (
+                pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml")
+                .components["PF" + format(Inp["id"])]
+                .id
+            )
 
         elif Inp["type"] == "MFON":  # beh - ON
             print("MFON")
@@ -112,14 +131,22 @@ def create_GoC_network(
             inputBeh[input] = "PFON"
 
         elif Inp["type"] == "transientPoisson":
-            inputGen[input] = pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml").components["Transient_350_2s_100ms"].id
+            inputGen[input] = (
+                pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml")
+                .components["Transient_350_2s_100ms"]
+                .id
+            )
 
         elif Inp["type"] == "poisson":
-            inputBG[input] = nml.SpikeGeneratorPoisson(id=input, average_rate="{} Hz".format(Inp["rate"][0]))
+            inputBG[input] = nml.SpikeGeneratorPoisson(
+                id=input, average_rate="{} Hz".format(Inp["rate"][0])
+            )
             net_doc.spike_generator_poissons.append(inputBG[input])
 
         elif Inp["type"] == "constantRate":
-            inputBG[input] = nml.SpikeGenerator(id=input, period="{} ms".format(1000.0 / (Inp["rate"][0])))
+            inputBG[input] = nml.SpikeGenerator(
+                id=input, period="{} ms".format(1000.0 / (Inp["rate"][0]))
+            )
             net_doc.spike_generators.append(inputBG[input])
 
     # ---- 3.  Gap Junctions
@@ -143,7 +170,9 @@ def create_GoC_network(
         for ctr in range(p["nGoC_per_pop"]):
             inst = nml.Instance(id=ctr)
             goc_pop[pid].instances.append(inst)
-            inst.location = nml.Location(x=p["GoC_pos"][goc, 0], y=p["GoC_pos"][goc, 1], z=p["GoC_pos"][goc, 2])
+            inst.location = nml.Location(
+                x=p["GoC_pos"][goc, 0], y=p["GoC_pos"][goc, 1], z=p["GoC_pos"][goc, 2]
+            )
             goc += 1
         net.populations.append(goc_pop[pid])
 
@@ -160,7 +189,9 @@ def create_GoC_network(
         for ctr in range(Inp["nInp"]):
             inst = nml.Instance(id=ctr)
             inputBG_pop[input].instances.append(inst)
-            inst.location = nml.Location(x=Inp["pos"][ctr, 0], y=Inp["pos"][ctr, 1], z=Inp["pos"][ctr, 2])
+            inst.location = nml.Location(
+                x=Inp["pos"][ctr, 0], y=Inp["pos"][ctr, 1], z=Inp["pos"][ctr, 2]
+            )
         net.populations.append(inputBG_pop[input])
 
     ctr = 1000
@@ -187,7 +218,9 @@ def create_GoC_network(
                 )
             )
             inst = nml.Instance(id=0)
-            inst.location = nml.Location(x=Inp["pos"][mfii, 0], y=Inp["pos"][mfii, 1], z=Inp["pos"][mfii, 2])
+            inst.location = nml.Location(
+                x=Inp["pos"][mfii, 0], y=Inp["pos"][mfii, 1], z=Inp["pos"][mfii, 2]
+            )
             inputGen_pop[input][mfii].instances.append(inst)
             net.populations.append(inputGen_pop[input][mfii])
 
@@ -219,8 +252,12 @@ def create_GoC_network(
                 if Inp["syn_loc"] == "soma":
                     conn = nml.ConnectionWD(
                         id=ctr,
-                        pre_cell_id="../{}/{}/{}".format(inputBG_pop[input].id, pre, inputBG[input].id),
-                        post_cell_id="../{}/{}/{}".format(goc_pop[jj].id, goc, goc_type[jj].id),
+                        pre_cell_id="../{}/{}/{}".format(
+                            inputBG_pop[input].id, pre, inputBG[input].id
+                        ),
+                        post_cell_id="../{}/{}/{}".format(
+                            goc_pop[jj].id, goc, goc_type[jj].id
+                        ),
                         post_segment_id="0",
                         post_fraction_along="0.5",
                         weight=Inp["conn_wt"][jj][syn],
@@ -229,8 +266,12 @@ def create_GoC_network(
                 elif Inp["syn_loc"] == "dend":
                     conn = nml.ConnectionWD(
                         id=ctr,
-                        pre_cell_id="../{}/{}/{}".format(inputBG_pop[input].id, pre, inputBG[input].id),
-                        post_cell_id="../{}/{}/{}".format(goc_pop[jj].id, goc, goc_type[jj].id),
+                        pre_cell_id="../{}/{}/{}".format(
+                            inputBG_pop[input].id, pre, inputBG[input].id
+                        ),
+                        post_cell_id="../{}/{}/{}".format(
+                            goc_pop[jj].id, goc, goc_type[jj].id
+                        ),
                         post_segment_id=dend_id[int(Inp["conn_loc"][jj][0, syn])],
                         post_fraction_along=dend_id[int(Inp["conn_loc"][jj][1, syn])],
                         weight=Inp["conn_wt"][jj][syn],
@@ -265,8 +306,12 @@ def create_GoC_network(
                 if Inp["syn_loc"] == "soma":
                     conn = nml.ConnectionWD(
                         id=ctr,
-                        pre_cell_id="../{}/{}/{}".format(inputGen_pop[input][pre].id, 0, allID[input][pre]),
-                        post_cell_id="../{}/{}/{}".format(goc_pop[jj].id, goc, goc_type[jj].id),
+                        pre_cell_id="../{}/{}/{}".format(
+                            inputGen_pop[input][pre].id, 0, allID[input][pre]
+                        ),
+                        post_cell_id="../{}/{}/{}".format(
+                            goc_pop[jj].id, goc, goc_type[jj].id
+                        ),
                         post_segment_id="0",
                         post_fraction_along="0.5",
                         weight=Inp["conn_wt"][jj][syn],
@@ -275,8 +320,12 @@ def create_GoC_network(
                 elif Inp["syn_loc"] == "dend":
                     conn = nml.ConnectionWD(
                         id=ctr,
-                        pre_cell_id="../{}/{}/{}".format(inputGen_pop[input][pre].id, 0, allID[input][pre]),
-                        post_cell_id="../{}/{}/{}".format(goc_pop[jj].id, goc, goc_type[jj].id),
+                        pre_cell_id="../{}/{}/{}".format(
+                            inputGen_pop[input][pre].id, 0, allID[input][pre]
+                        ),
+                        post_cell_id="../{}/{}/{}".format(
+                            goc_pop[jj].id, goc, goc_type[jj].id
+                        ),
                         post_segment_id=dend_id[int(Inp["conn_loc"][jj][0, syn])],
                         post_fraction_along=dend_id[int(Inp["conn_loc"][jj][1, syn])],
                         weight=Inp["conn_wt"][jj][syn],
@@ -343,7 +392,9 @@ def create_GoC_network(
 
     # Specify outputs
     eof0 = "Events_file"
-    ls.create_event_output_file(eof0, datadir + "%s.spikes.dat" % simid, format="ID_TIME")
+    ls.create_event_output_file(
+        eof0, datadir + "%s.spikes.dat" % simid, format="ID_TIME"
+    )
     ctr = 0
     for pid in range(p["nPop"]):
         for jj in range(goc_pop[pid].size):
@@ -356,7 +407,9 @@ def create_GoC_network(
             ctr += 1
 
     eof1 = "Events_file2"
-    ls.create_event_output_file(eof1, datadir + "%s.inputs.dat" % simid, format="ID_TIME")
+    ls.create_event_output_file(
+        eof1, datadir + "%s.inputs.dat" % simid, format="ID_TIME"
+    )
     ctr = 0
     for input in inputBeh:
         for pid in range(len(inputGen_pop[input])):
@@ -383,7 +436,9 @@ def create_GoC_network(
     lems_simfile = ls.save_to_file()
 
     if run:
-        res = pynml.run_lems_with_jneuroml_neuron(lems_simfile, max_memory="2G", nogui=True, plot=False)
+        res = pynml.run_lems_with_jneuroml_neuron(
+            lems_simfile, max_memory="2G", nogui=True, plot=False
+        )
     else:
         res = pynml.run_lems_with_jneuroml_neuron(
             lems_simfile,
@@ -399,7 +454,6 @@ def create_GoC_network(
 
 
 def get_params(runid=0, mf=0.2, pf=0.2, hom=False):
-
     Input_prob = {
         "MF_Step": 0.2,
         "MF_bg": 0.3,

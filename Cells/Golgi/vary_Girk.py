@@ -17,7 +17,6 @@ import initialize_cell_params as icp
 
 
 def create_GoC(runid=0, usefile="cellparams_file.pkl", girk=0):
-
     ### ---------- Load Params
     noPar = True
     pfile = Path(usefile)
@@ -104,7 +103,11 @@ def create_GoC(runid=0, usefile="cellparams_file.pkl", girk=0):
 	intracellular.resistivities.append( res )
 	intracellular.species.append( ca_species )
 	"""
-    intracellular = pynml.read_neuroml2_file(goc_2pools_fname).cells[0].biophysical_properties.intracellular_properties
+    intracellular = (
+        pynml.read_neuroml2_file(goc_2pools_fname)
+        .cells[0]
+        .biophysical_properties.intracellular_properties
+    )
     biophys.intracellular_properties = intracellular
 
     # Membrane properties ------- cond

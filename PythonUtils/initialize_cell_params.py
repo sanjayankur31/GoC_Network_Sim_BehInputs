@@ -26,17 +26,17 @@ def get_channel_params(
         "calva_cond": 0.25,
     },
 ):
-
     params = {}
     np.random.seed(simid)
     params["ra"] = "{} kohm_cm".format(ra * (1 + 0.2 * (np.random.random(1)[0] - 0.5)))
     for cond, value in defaults.items():
-        params[cond] = "{} mS_per_cm2".format(value * (1 + 0.4 * (np.random.random(1)[0] - 0.5)))
+        params[cond] = "{} mS_per_cm2".format(
+            value * (1 + 0.4 * (np.random.random(1)[0] - 0.5))
+        )
     return params
 
 
 if __name__ == "__main__":
-
     ra = 0.1
     defaults = {
         "leak_cond": 0.021,

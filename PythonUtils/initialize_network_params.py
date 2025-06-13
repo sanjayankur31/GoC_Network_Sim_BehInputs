@@ -35,13 +35,21 @@ def get_simulation_params(
     MFInput_connprob=0.3,
     MFInput_connGoC=0,
 ):
-
     params = {}
-    params["nGoC"], params["GoC_pos"] = nu.locate_GoC(nGoC, volume, GoC_loc_type, GoC_density, seed=simid)
+    params["nGoC"], params["GoC_pos"] = nu.locate_GoC(
+        nGoC, volume, GoC_loc_type, GoC_density, seed=simid
+    )
 
-    params["GJ_pairs"], params["GJ_wt"], params["GJ_loc"] = nu.GJ_conn(params["GoC_pos"], GJ_dist_type, GJ_wt_type, nDend=3, seed=simid)
+    params["GJ_pairs"], params["GJ_wt"], params["GJ_loc"] = nu.GJ_conn(
+        params["GoC_pos"], GJ_dist_type, GJ_wt_type, nDend=3, seed=simid
+    )
 
-    (params["nMF"], params["MF_pos"], params["MF_GoC_pairs"], params["MF_GoC_wt"],) = nu.MF_conn(
+    (
+        params["nMF"],
+        params["MF_pos"],
+        params["MF_GoC_pairs"],
+        params["MF_GoC_wt"],
+    ) = nu.MF_conn(
         nMFInput,
         MFInput_loc_type,
         volume,
@@ -54,13 +62,14 @@ def get_simulation_params(
     )
 
     params["nBurst"] = nBurst
-    params["Burst_GoC"] = nu.get_perturbed_GoC(params["nGoC"], Burst_conntype, Burst_connprob, Burst_connGoC, seed=simid)
+    params["Burst_GoC"] = nu.get_perturbed_GoC(
+        params["nGoC"], Burst_conntype, Burst_connprob, Burst_connGoC, seed=simid
+    )
 
     return params
 
 
 if __name__ == "__main__":
-
     nSim = 10
     params_list = [get_simulation_params(simid) for simid in range(nSim)]
 

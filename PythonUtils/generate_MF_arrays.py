@@ -42,7 +42,15 @@ def create_spkarray_file(
     - write     [BOOL] = Write NML file?
     """
 
-    arr_flnm = "SpikeArray_" + name + "_dur_" + format(int(window[0]), "03d") + "_" + format(int(window[1]), "03d") + ".nml"
+    arr_flnm = (
+        "SpikeArray_"
+        + name
+        + "_dur_"
+        + format(int(window[0]), "03d")
+        + "_"
+        + format(int(window[1]), "03d")
+        + ".nml"
+    )
     arrdoc = nml.NeuroMLDocument(id=name)
 
     bint = 0.1

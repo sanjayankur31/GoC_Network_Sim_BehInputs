@@ -21,7 +21,6 @@ def create_GoC_network(
     iRest=500,
     girk=False,
 ):
-
     wGirk = ""
     if girk:
         wGirk = "_wGIRK"
@@ -40,7 +39,9 @@ def create_GoC_network(
     )
 
     # Create GoC population
-    goc_pop = nml.Population(id=goc_type.id + "Pop", component=goc_type.id, type="populationList", size=1)
+    goc_pop = nml.Population(
+        id=goc_type.id + "Pop", component=goc_type.id, type="populationList", size=1
+    )
     inst = nml.Instance(id=0)
     goc_pop.instances.append(inst)
     inst.location = nml.Location(x=0, y=0, z=0)
@@ -71,8 +72,12 @@ def create_GoC_network(
         )
         net_doc.pulse_generators.append(istep)
 
-        input_list = nml.InputList(id="ilist_{}".format(ctr), component=istep.id, populations=goc_pop.id)
-        curr_inj = nml.Input("0", target="../%s[%i]" % (goc_pop.id, goc), destination="synapses")
+        input_list = nml.InputList(
+            id="ilist_{}".format(ctr), component=istep.id, populations=goc_pop.id
+        )
+        curr_inj = nml.Input(
+            "0", target="../%s[%i]" % (goc_pop.id, goc), destination="synapses"
+        )
         input_list.input.append(curr_inj)
         net.input_lists.append(input_list)
         ctr += 1
@@ -92,18 +97,24 @@ def create_GoC_network(
     eof0 = "Events_file"
     ls.create_event_output_file(eof0, "%s.v.spikes" % simid, format="ID_TIME")
     for jj in range(goc_pop.size):
-        ls.add_selection_to_event_output_file(eof0, jj, "{}/{}/{}".format(goc_pop.id, jj, goc_type.id), "spike")
+        ls.add_selection_to_event_output_file(
+            eof0, jj, "{}/{}/{}".format(goc_pop.id, jj, goc_type.id), "spike"
+        )
 
     of0 = "Volts_file"
     ls.create_output_file(of0, "%s.v.dat" % simid)
     for jj in range(goc_pop.size):
-        ls.add_column_to_output_file(of0, jj, "{}/{}/{}/v".format(goc_pop.id, jj, goc_type.id))
+        ls.add_column_to_output_file(
+            of0, jj, "{}/{}/{}/v".format(goc_pop.id, jj, goc_type.id)
+        )
 
     # Create Lems file to run
     lems_simfile = ls.save_to_file()
 
     if run:
-        res = pynml.run_lems_with_jneuroml_neuron(lems_simfile, max_memory="2G", nogui=True, plot=False)
+        res = pynml.run_lems_with_jneuroml_neuron(
+            lems_simfile, max_memory="2G", nogui=True, plot=False
+        )
     else:
         res = pynml.run_lems_with_jneuroml_neuron(
             lems_simfile,

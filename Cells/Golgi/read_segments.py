@@ -3,7 +3,9 @@ def get_seg(seg_group, morpho):
     for currGroup in seg_group.includes:
         allseg.extend(
             get_seg(
-                [x for x in morpho.segment_groups if x.id == currGroup.segment_groups][0],
+                [x for x in morpho.segment_groups if x.id == currGroup.segment_groups][
+                    0
+                ],
                 morpho,
             )
         )
