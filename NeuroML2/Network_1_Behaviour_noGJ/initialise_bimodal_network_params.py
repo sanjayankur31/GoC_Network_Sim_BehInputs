@@ -14,22 +14,22 @@ import network_utils as net_utils
 
 
 def get_simulation_params(
-    simid,
-    sim_durn=20000,
-    nGoC=0,
-    nGoC_pop=5,
-    densityParams="../Parameters/useParams_FI_14_25.pkl",
-    volume=[500, 500, 100],
-    GoC_density=4607,
-    GJ_dist_type="Boltzmann",
-    GJ_wt_type="Szo16_oneGJ",
-    nGJ_dend=3,
-    GoC_wtscale=1.0,
-    GoC_probscale=1.0,
-    stepInputs=["MF_Step", "PF_Step"],
-    bgInputs=["MF_bg", "PF_bg"],
-    behInputs=["MFON", "PFON"],
-    input_nFiles={
+    simid: int,
+    sim_durn: int = 20000,
+    nGoC: int = 0,
+    nGoC_pop: int = 5,
+    densityParams: str = "../Parameters/useParams_FI_14_25.pkl",
+    volume: typing.List[int] = [500, 500, 100],
+    GoC_density: int = 4607,
+    GJ_dist_type: str = "Boltzmann",
+    GJ_wt_type: str = "Szo16_oneGJ",
+    nGJ_dend: int = 3,
+    GoC_wtscale: float = 1.0,
+    GoC_probscale: float = 1.0,
+    stepInputs: typing.List[str] = ["MF_Step", "PF_Step"],
+    bgInputs: typing.List[str] = ["MF_bg", "PF_bg"],
+    behInputs: typing.List[str] = ["MFON", "PFON"],
+    input_nFiles: typing.Dict[str, int] = {
         "MF_Step": 300,
         "MF_bg": 60,
         "PF_Step": 300,
@@ -37,7 +37,7 @@ def get_simulation_params(
         "MFON": 200,
         "PFON": 200,
     },
-    nInputs_max={
+    nInputs_max: typing.Dict[str, int] = {
         "MF_Step": 60,
         "MF_bg": 60,
         "PF_Step": 300,
@@ -45,7 +45,7 @@ def get_simulation_params(
         "MFON": 60,
         "PFON": 300,
     },
-    nInputs_frac={
+    nInputs_frac: typing.Dict[str, float] = {
         "MF_Step": 0.55,
         "MF_bg": 0.10,
         "PF_Step": 0.45,
@@ -53,7 +53,7 @@ def get_simulation_params(
         "MFON": 0.5,
         "PFON": 0.5,
     },
-    Input_density={
+    Input_density: typing.Dict[str, int] = {
         "MF_Step": 0,
         "MF_bg": 0,
         "PF_Step": 0,
@@ -61,7 +61,7 @@ def get_simulation_params(
         "MFON": 0,
         "PFON": 0,
     },
-    Input_dend={
+    Input_dend: typing.Dict[str, int] = {
         "MF_Step": 3,
         "MF_bg": 3,
         "PF_Step": 3,
@@ -69,7 +69,7 @@ def get_simulation_params(
         "MFON": 3,
         "PFON": 3,
     },
-    Input_nRosette={
+    Input_nRosette: typing.Dict[str, float] = {
         "MF_Step": 0,
         "MF_bg": 0,
         "PF_Step": 0,
@@ -77,7 +77,7 @@ def get_simulation_params(
         "MFON": 0,
         "PFON": 0,
     },
-    Input_loc={
+    Input_loc: typing.Dict[str, str] = {
         "MF_Step": "random",
         "MF_bg": "random",
         "PF_Step": "random",
@@ -85,7 +85,7 @@ def get_simulation_params(
         "MFON": "random",
         "PFON": "random",
     },
-    Input_type={
+    Input_type: typing.Dict[str, str] = {
         "MF_Step": "MF_step",
         "MF_bg": "poisson",
         "PF_Step": "PF_step",
@@ -93,8 +93,15 @@ def get_simulation_params(
         "MFON": "MFON",
         "PFON": "PFON",
     },
-    Input_id={"MF_Step": 1, "MF_bg": 0, "PF_Step": 1, "PF_bg": 0, "MFON": 2, "PFON": 3},
-    Input_syn={
+    Input_id: typing.Dict[str, int] = {
+        "MF_Step": 1,
+        "MF_bg": 0,
+        "PF_Step": 1,
+        "PF_bg": 0,
+        "MFON": 2,
+        "PFON": 3,
+    },
+    Input_syn: typing.Dict[str, typing.List[str]] = {
         "MF_Step": ["../Mechanisms/MF_GoC_Syn.nml", "ExpThreeSynapse"],
         "MF_bg": ["../Mechanisms/MF_GoC_Syn.nml", "ExpThreeSynapse"],
         "PF_Step": ["../Mechanisms/PF_GoC_Syn.nml", "ExpTwoSynapse"],
@@ -102,7 +109,7 @@ def get_simulation_params(
         "MFON": ["../Mechanisms/MF_GoC_Syn.nml", "ExpThreeSynapse"],
         "PFON": ["../Mechanisms/PF_GoC_Syn.nml", "ExpTwoSynapse"],
     },
-    Input_conn={
+    Input_conn: typing.Dict[str, str] = {
         "MF_Step": "random_prob",
         "MF_bg": "random_prob",
         "PF_Step": "random_prob",
@@ -110,7 +117,7 @@ def get_simulation_params(
         "MFON": "random_prob",
         "PFON": "random_prob",
     },
-    Input_prob={
+    Input_prob: typing.Dict[str, float] = {
         "MF_Step": 0.3,
         "MF_bg": 0.3,
         "PF_Step": 0.3,
@@ -118,8 +125,8 @@ def get_simulation_params(
         "MFON": 0.3,
         "PFON": 0.3,
     },
-    Input_rate={"MF_bg": [5], "PF_bg": [2]},
-    Input_nGoC={
+    Input_rate: typing.Dict[str, typing.List[int]] = {"MF_bg": [5], "PF_bg": [2]},
+    Input_nGoC: typing.Dict[str, int] = {
         "MF_Step": 0,
         "MF_bg": 0,
         "PF_Step": 0,
@@ -127,8 +134,15 @@ def get_simulation_params(
         "MFON": 0,
         "PFON": 0,
     },
-    Input_wt={"MF_Step": 1, "MF_bg": 1, "PF_Step": 1, "PF_bg": 1, "MFON": 1, "PFON": 1},
-    Input_maxD={
+    Input_wt: typing.Dict[str, int] = {
+        "MF_Step": 1,
+        "MF_bg": 1,
+        "PF_Step": 1,
+        "PF_bg": 1,
+        "MFON": 1,
+        "PFON": 1,
+    },
+    Input_maxD: typing.Dict[str, typing.List[int]] = {
         "MF_Step": [300],
         "MF_bg": [300],
         "PF_Step": [100, 2000, 300],
@@ -136,7 +150,7 @@ def get_simulation_params(
         "MFON": [300],
         "PFON": [100, 2000, 300],
     },
-    Input_cellloc={
+    Input_cellloc: typing.Dict[str, str] = {
         "MF_Step": "soma",
         "MF_bg": "soma",
         "PF_Step": "dend",
@@ -144,7 +158,7 @@ def get_simulation_params(
         "MFON": "soma",
         "PFON": "dend",
     },
-    connect_goc={
+    connect_goc: typing.Dict[str, bool] = {
         "MF_Step": False,
         "MF_bg": False,
         "PF_Step": False,
@@ -435,6 +449,5 @@ if __name__ == "__main__":
     nSim = 1
     params_list = [get_simulation_params(simid) for simid in range(nSim)]
 
-    file = open("binetwork_params.pkl", "wb")
-    pkl.dump(params_list, file)
-    file.close()
+    with open("binetwork_params.pkl", "wb") as file:
+        pkl.dump(params_list, file)
