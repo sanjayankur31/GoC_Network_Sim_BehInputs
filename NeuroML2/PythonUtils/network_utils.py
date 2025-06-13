@@ -46,30 +46,51 @@ def set_random_locations(numCells, volume, density, seed=-1):
 
 
 def get_hetero_GoC_id(
-    nGoC,  # total number of GoCs
-    nGoC_types,  # number of GoCs per type (population)
-    GoC_id_File,
-    seed=-1,
+    nGoC: int,
+    nGoC_types: int,
+    GoC_id_File: str,
+    seed: int = -1,
 ):
+    """Create list of nGoC cells which includes equal numbers of cells of
+    nGoC_types.
+
+    This randomly selects nGoC_types ids from the provided parameter file
+    (which presumably contains cell ids), and creates a list of cells.
+    The list of cells represents nGoC_types populations, with nGoC/nGoC_types
+    cells in each. So, it will look like:
+
+    [x, x, x, x, y, y, y, y, z, z, z, z..]
+
+    :param nGoC: total number of GoCs
+    :type nGoC: int
+    :param nGoC_types: number of GoCs per type/population
+    :type nGoC_types: int
+    :param GoC_id_file: path to file containing all GoC ids
+    :type GoC_id_file: str
+    :param seed: random seed
+    :type seed: int
+    :returns: [nGoC, list of ids]
+
+    """
     # distribute GoC types (different channel distributions)
     if seed != -1:
         np.random.seed(seed + 6000)
 
-    file = open(GoC_id_File, "rb")
-    allP = pkl.load(file, encoding="bytes")  # JSR added bytes
-    file.close()
-    # allP: list [1, 25, 32, 128 ... 975, 977, 995] n = 52
+    # Load ids from pickled parameter file
+    # TODO: how was this file generated?
+    with open(GoC_id_File, 'rb') as f:
+        allP = pkl.load(f, encoding="bytes")  # JSR added bytes
+        # allP: list [1, 25, 32, 128 ... 975, 977, 995] n = 52
 
-    series = np.random.permutation(len(allP))
-    # numpy.ndarray [ 5 37 33 12 ... 17 41 11 10] n = 52
+    # pick nGoC_types from the list
+    ids = np.random.choice(allP, nGoC_types)
 
-    ids = [allP[series[x]] for x in range(nGoC_types)]
-    # ids = [allP[np.random.randint(len(allP))] for jj in range(nGoC_types)]
-    # ids = [177, 774, 735, 348, 1] n = 5
-
+    # round off nGoC to nearest tens
     nGoC_per_type = int(nGoC / nGoC_types)  # JSR added int() # 8
     nGoC = nGoC_per_type * nGoC_types  # 8 * 5 = 40
 
+    # generate nGoC_types populations, each with nGoC_per_type cells from the
+    # chosen ids from the parameter file
     allid = []
     for jj in range(nGoC_types):
         for kk in range(nGoC_per_type):
