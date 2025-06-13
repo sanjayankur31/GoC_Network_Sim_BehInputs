@@ -2,3 +2,5 @@ pyneuroml
 pyneuroml[neuron]
 pyneuroml[vispy]
 OSBModelValidation
+ruff
+mypy
