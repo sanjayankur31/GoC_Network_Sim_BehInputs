@@ -47,6 +47,7 @@ def create_GoC_network(
     net_doc.networks.append(net)
 
     arr_flnm = "../Mechanisms/SpikeArray_MFON_dur_060_080.nml"
+    arr_ = pynml.read_neuroml2_file(arr_flnm)
 
     ### -------------- Component types ------------------------- ###
 
@@ -209,7 +210,7 @@ def create_GoC_network(
 
         for mfii in range(Inp["nInp"]):
             arrid = Inp["sample"][mfii]
-            currinp = pynml.read_neuroml2_file(arr_flnm).spike_arrays[arrid]
+            currinp = arr_.spike_arrays[arrid]
             allID[input_][mfii] = currinp.id
             inputGen_pop[input_].append(
                 nml.Population(
