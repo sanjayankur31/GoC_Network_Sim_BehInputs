@@ -22,7 +22,7 @@ def create_GoC_network(
     duration=1000, dt=0.025, seed=100, runid=0, mf=0.2, pf=0.2, hom=True, run=False
 ):
     ### ---------- Load Params
-    p = get_params(runid=runid, mf=mf, pf=pf, hom=hom)
+    params = get_params(runid=runid, mf=mf, pf=pf, hom=hom)
 
     hom_str = "hom" if hom else "het"
     # Build network to specify cells and connectivity
@@ -51,7 +51,7 @@ def create_GoC_network(
     ### -------------- Component types ------------------------- ###
 
     # ---- 1. GoC types
-    goc_params = np.unique(np.asarray(p["GoC_ParamID"]))
+    goc_params = np.unique(np.asarray(params["GoC_ParamID"]))
 
     ctr = 0
     goc_type = []
@@ -69,9 +69,9 @@ def create_GoC_network(
     inputBG = {}
     inputBeh = {}
 
-    for input_ in p["Inputs"]["types"]:
+    for input_ in params["Inputs"]["types"]:
         # Load synapse type
-        Inp = p["Inputs"][input_]
+        Inp = params["Inputs"][input_]
         net_doc.includes.append(nml.IncludeType(href=Inp["syn_type"][0]))  # filename
         if Inp["syn_type"][1] == "ExpThreeSynapse":
             synapse[input_] = pynml.read_neuroml2_file(
@@ -147,20 +147,22 @@ def create_GoC_network(
     # Create GoC population
     goc_pop = []
     goc = 0
-    for pid in range(p["nPop"]):
+    for pid in range(params["nPop"]):
         goc_pop.append(
             nml.Population(
                 id=goc_type[pid].id + "Pop",
                 component=goc_type[pid].id,
                 type="populationList",
-                size=p["nGoC_per_pop"],
+                size=params["nGoC_per_pop"],
             )
         )
-        for ctr in range(p["nGoC_per_pop"]):
+        for ctr in range(params["nGoC_per_pop"]):
             inst = nml.Instance(id=ctr)
             goc_pop[pid].instances.append(inst)
             inst.location = nml.Location(
-                x=p["GoC_pos"][goc, 0], y=p["GoC_pos"][goc, 1], z=p["GoC_pos"][goc, 2]
+                x=params["GoC_pos"][goc, 0],
+                y=params["GoC_pos"][goc, 1],
+                z=params["GoC_pos"][goc, 2],
             )
             goc += 1
         net.populations.append(goc_pop[pid])
@@ -168,7 +170,7 @@ def create_GoC_network(
     ### Background input_ population
     inputBG_pop = {}
     for input_ in inputBG:
-        Inp = p["Inputs"][input_]
+        Inp = params["Inputs"][input_]
         inputBG_pop[input_] = nml.Population(
             id=inputBG[input_].id + "_pop",
             component=inputBG[input_].id,
@@ -201,7 +203,7 @@ def create_GoC_network(
     allID = {}
     # Add spike array populations
     for input_ in inputBeh:
-        Inp = p["Inputs"][input_]
+        Inp = params["Inputs"][input_]
         inputGen_pop[input_] = []
         allID[input_] = {}
 
@@ -232,10 +234,10 @@ def create_GoC_network(
 
     BG_Proj = {}
     for input_ in inputBG:
-        Inp = p["Inputs"][input_]
+        Inp = params["Inputs"][input_]
         BG_Proj[input_] = []
 
-        for jj in range(p["nPop"]):
+        for jj in range(params["nPop"]):
             BG_Proj[input_].append(
                 nml.Projection(
                     id="{}_to_{}".format(input_, goc_type[jj].id),
@@ -282,11 +284,11 @@ def create_GoC_network(
 
     InputGen_Proj = {}
     for input_ in inputBeh:
-        Inp = p["Inputs"][input_]
+        Inp = params["Inputs"][input_]
         InputGen_Proj[input_] = []
 
         ctr = 0
-        for jj in range(p["nPop"]):
+        for jj in range(params["nPop"]):
             InputGen_Proj[input_].append([])
             # initialise all projections
             for mfii in range(Inp["nInp"]):
@@ -338,8 +340,8 @@ def create_GoC_network(
 
     GoCCoupling = []
     ctr = 0
-    for pre in range(p["nPop"]):
-        for post in range(pre, p["nPop"]):
+    for pre in range(params["nPop"]):
+        for post in range(pre, params["nPop"]):
             GoCCoupling.append(
                 nml.ElectricalProjection(
                     id="GJ_{}_{}".format(goc_pop[pre].id, goc_pop[post].id),
@@ -349,7 +351,7 @@ def create_GoC_network(
             )
             net.electrical_projections.append(GoCCoupling[ctr])
 
-            gjParams = p["econn_pop"][pre][post - pre]
+            gjParams = params["econn_pop"][pre][post - pre]
             for jj in range(gjParams["GJ_pairs"].shape[0]):
                 conn = nml.ElectricalConnectionInstanceW(
                     id=jj,
@@ -390,7 +392,7 @@ def create_GoC_network(
         eof0, datadir + "%s.spikes.dat" % simid, format="ID_TIME"
     )
     ctr = 0
-    for pid in range(p["nPop"]):
+    for pid in range(params["nPop"]):
         for jj in range(goc_pop[pid].size):
             ls.add_selection_to_event_output_file(
                 eof0,
@@ -418,7 +420,7 @@ def create_GoC_network(
     of0 = "Volts_file"
     ls.create_output_file(of0, datadir + "%s.v.dat" % simid)
     ctr = 0
-    for pid in range(p["nPop"]):
+    for pid in range(params["nPop"]):
         for jj in range(goc_pop[pid].size):
             ls.add_column_to_output_file(
                 of0, ctr, "{}/{}/{}/v".format(goc_pop[pid].id, jj, goc_type[pid].id)
