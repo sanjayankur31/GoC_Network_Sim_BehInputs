@@ -517,17 +517,17 @@ def connect_inputs(
     ]
 
     # JSR: reverse order of arrays to be consistent with GJ pairs
-    conn_pairs2 = np.zeros([nPairs, 2], dtype=int)
-    for iPair in range(nPairs):
-        conn_pairs2[iPair, 0] = conn_pairs[0, iPair]
-        conn_pairs2[iPair, 1] = conn_pairs[1, iPair]
-
-    conn_loc2 = np.zeros([nPairs, 2], dtype=float)
-    for iPair in range(nPairs):
-        conn_loc2[iPair, 0] = conn_loc[0, iPair]
-        conn_loc2[iPair, 1] = conn_loc[1, iPair]
-
-    return nInp, Inp_pos, conn_pairs2, conn_wt, conn_loc2
+    # conn_pairs2 = np.zeros([nPairs, 2], dtype=int)
+    # for iPair in range(nPairs):
+    #     conn_pairs2[iPair, 0] = conn_pairs[0, iPair]
+    #     conn_pairs2[iPair, 1] = conn_pairs[1, iPair]
+    #
+    # conn_loc2 = np.zeros([nPairs, 2], dtype=float)
+    # for iPair in range(nPairs):
+    #     conn_loc2[iPair, 0] = conn_loc[0, iPair]
+    #     conn_loc2[iPair, 1] = conn_loc[1, iPair]
+    #
+    return nInp, Inp_pos, conn_pairs, conn_wt, conn_loc
 
 
 def connect_inputs_known(  # NOT USED
