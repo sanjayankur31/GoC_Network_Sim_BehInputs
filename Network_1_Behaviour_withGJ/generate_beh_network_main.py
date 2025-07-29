@@ -69,16 +69,16 @@ def create_GoC_network(
     inputBG = {}
     inputBeh = {}
 
-    for input in p["Inputs"]["types"]:
+    for input_ in p["Inputs"]["types"]:
         # Load synapse type
-        Inp = p["Inputs"][input]
+        Inp = p["Inputs"][input_]
         net_doc.includes.append(nml.IncludeType(href=Inp["syn_type"][0]))  # filename
         if Inp["syn_type"][1] == "ExpThreeSynapse":
-            synapse[input] = pynml.read_neuroml2_file(
+            synapse[input_] = pynml.read_neuroml2_file(
                 Inp["syn_type"][0]
             ).exp_three_synapses[0]  # Component Type
         elif Inp["syn_type"][1] == "ExpTwoSynapse":
-            synapse[input] = pynml.read_neuroml2_file(
+            synapse[input_] = pynml.read_neuroml2_file(
                 Inp["syn_type"][0]
             ).exp_two_synapses[0]
 
@@ -86,7 +86,7 @@ def create_GoC_network(
         if (
             Inp["type"] == "switchPoisson"
         ):  # 2 Rates: from 0 to delay, and delay to delay+duration
-            inputGen[input] = (
+            inputGen[input_] = (
                 pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml")
                 .components["Del_" + format(Inp["rate"][0])]
                 .id
@@ -96,7 +96,7 @@ def create_GoC_network(
             Inp["type"] == "MF_step"
         ):  # 2 Rates: from 0 to delay, and delay to delay+duration
             print("PF" + format(Inp["id"]))
-            inputGen[input] = (
+            inputGen[input_] = (
                 pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml")
                 .components["MF" + format(Inp["id"])]
                 .id
@@ -105,7 +105,7 @@ def create_GoC_network(
         elif (
             Inp["type"] == "PF_step"
         ):  # 2 Rates: from 0 to delay, and delay to delay+duration
-            inputGen[input] = (
+            inputGen[input_] = (
                 pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml")
                 .components["PF" + format(Inp["id"])]
                 .id
@@ -113,30 +113,30 @@ def create_GoC_network(
 
         elif Inp["type"] == "MFON":  # beh - ON
             print("MFON")
-            inputBeh[input] = "MFON"
+            inputBeh[input_] = "MFON"
 
         elif Inp["type"] == "PFON":  # beh - ON
             print("PFON")
-            inputBeh[input] = "PFON"
+            inputBeh[input_] = "PFON"
 
         elif Inp["type"] == "transientPoisson":
-            inputGen[input] = (
+            inputGen[input_] = (
                 pynml.read_lems_file("../Mechanisms/lems_instances_ON.xml")
                 .components["Transient_350_2s_100ms"]
                 .id
             )
 
         elif Inp["type"] == "poisson":
-            inputBG[input] = nml.SpikeGeneratorPoisson(
-                id=input, average_rate="{} Hz".format(Inp["rate"][0])
+            inputBG[input_] = nml.SpikeGeneratorPoisson(
+                id=input_, average_rate="{} Hz".format(Inp["rate"][0])
             )
-            net_doc.spike_generator_poissons.append(inputBG[input])
+            net_doc.spike_generator_poissons.append(inputBG[input_])
 
         elif Inp["type"] == "constantRate":
-            inputBG[input] = nml.SpikeGenerator(
-                id=input, period="{} ms".format(1000.0 / (Inp["rate"][0]))
+            inputBG[input_] = nml.SpikeGenerator(
+                id=input_, period="{} ms".format(1000.0 / (Inp["rate"][0]))
             )
-            net_doc.spike_generators.append(inputBG[input])
+            net_doc.spike_generators.append(inputBG[input_])
 
     # ---- 3.  Gap Junctions
     gj = nml.GapJunction(id="GJ_0", conductance="426pS")  # GoC synapse
@@ -165,23 +165,23 @@ def create_GoC_network(
             goc += 1
         net.populations.append(goc_pop[pid])
 
-    ### Background Input population
+    ### Background input_ population
     inputBG_pop = {}
-    for input in inputBG:
-        Inp = p["Inputs"][input]
-        inputBG_pop[input] = nml.Population(
-            id=inputBG[input].id + "_pop",
-            component=inputBG[input].id,
+    for input_ in inputBG:
+        Inp = p["Inputs"][input_]
+        inputBG_pop[input_] = nml.Population(
+            id=inputBG[input_].id + "_pop",
+            component=inputBG[input_].id,
             type="populationList",
             size=Inp["nInp"],
         )
         for ctr in range(Inp["nInp"]):
             inst = nml.Instance(id=ctr)
-            inputBG_pop[input].instances.append(inst)
+            inputBG_pop[input_].instances.append(inst)
             inst.location = nml.Location(
                 x=Inp["pos"][ctr, 0], y=Inp["pos"][ctr, 1], z=Inp["pos"][ctr, 2]
             )
-        net.populations.append(inputBG_pop[input])
+        net.populations.append(inputBG_pop[input_])
 
     # create MF as spike array
     bint = 0.1
@@ -200,18 +200,18 @@ def create_GoC_network(
     inputGen_pop = {}
     allID = {}
     # Add spike array populations
-    for input in inputBeh:
-        Inp = p["Inputs"][input]
-        inputGen_pop[input] = []
-        allID[input] = {}
+    for input_ in inputBeh:
+        Inp = p["Inputs"][input_]
+        inputGen_pop[input_] = []
+        allID[input_] = {}
 
         for mfii in range(Inp["nInp"]):
             arrid = Inp["sample"][mfii]
             currinp = pynml.read_neuroml2_file(arr_flnm).spike_arrays[arrid]
-            allID[input][mfii] = currinp.id
-            inputGen_pop[input].append(
+            allID[input_][mfii] = currinp.id
+            inputGen_pop[input_].append(
                 nml.Population(
-                    id=input + "_" + currinp.id + "_pop",
+                    id=input_ + "_" + currinp.id + "_pop",
                     component=currinp.id,
                     type="populationList",
                     size=1,
@@ -221,8 +221,8 @@ def create_GoC_network(
             inst.location = nml.Location(
                 x=Inp["pos"][mfii, 0], y=Inp["pos"][mfii, 1], z=Inp["pos"][mfii, 2]
             )
-            inputGen_pop[input][mfii].instances.append(inst)
-            net.populations.append(inputGen_pop[input][mfii])
+            inputGen_pop[input_][mfii].instances.append(inst)
+            net.populations.append(inputGen_pop[input_][mfii])
 
     ### ------------ Connectivity
 
@@ -231,20 +231,20 @@ def create_GoC_network(
     nDend = 3
 
     BG_Proj = {}
-    for input in inputBG:
-        Inp = p["Inputs"][input]
-        BG_Proj[input] = []
+    for input_ in inputBG:
+        Inp = p["Inputs"][input_]
+        BG_Proj[input_] = []
 
         for jj in range(p["nPop"]):
-            BG_Proj[input].append(
+            BG_Proj[input_].append(
                 nml.Projection(
-                    id="{}_to_{}".format(input, goc_type[jj].id),
-                    presynaptic_population=inputBG_pop[input].id,
+                    id="{}_to_{}".format(input_, goc_type[jj].id),
+                    presynaptic_population=inputBG_pop[input_].id,
                     postsynaptic_population=goc_pop[jj].id,
-                    synapse=synapse[input].id,
+                    synapse=synapse[input_].id,
                 )
             )
-            net.projections.append(BG_Proj[input][jj])
+            net.projections.append(BG_Proj[input_][jj])
             ctr = 0
             nSyn = Inp["conn_pairs"][jj].shape[1]
             for syn in range(nSyn):
@@ -253,7 +253,7 @@ def create_GoC_network(
                     conn = nml.ConnectionWD(
                         id=ctr,
                         pre_cell_id="../{}/{}/{}".format(
-                            inputBG_pop[input].id, pre, inputBG[input].id
+                            inputBG_pop[input_].id, pre, inputBG[input_].id
                         ),
                         post_cell_id="../{}/{}/{}".format(
                             goc_pop[jj].id, goc, goc_type[jj].id
@@ -267,7 +267,7 @@ def create_GoC_network(
                     conn = nml.ConnectionWD(
                         id=ctr,
                         pre_cell_id="../{}/{}/{}".format(
-                            inputBG_pop[input].id, pre, inputBG[input].id
+                            inputBG_pop[input_].id, pre, inputBG[input_].id
                         ),
                         post_cell_id="../{}/{}/{}".format(
                             goc_pop[jj].id, goc, goc_type[jj].id
@@ -277,28 +277,28 @@ def create_GoC_network(
                         weight=Inp["conn_wt"][jj][syn],
                         delay="0 ms",
                     )  # on dend
-                BG_Proj[input][jj].connection_wds.append(conn)
+                BG_Proj[input_][jj].connection_wds.append(conn)
                 ctr += 1
 
     InputGen_Proj = {}
-    for input in inputBeh:
-        Inp = p["Inputs"][input]
-        InputGen_Proj[input] = []
+    for input_ in inputBeh:
+        Inp = p["Inputs"][input_]
+        InputGen_Proj[input_] = []
 
         ctr = 0
         for jj in range(p["nPop"]):
-            InputGen_Proj[input].append([])
+            InputGen_Proj[input_].append([])
             # initialise all projections
             for mfii in range(Inp["nInp"]):
-                InputGen_Proj[input][jj].append(
+                InputGen_Proj[input_][jj].append(
                     nml.Projection(
-                        id="{}_{}_to_{}".format(input, mfii, goc_type[jj].id),
-                        presynaptic_population=inputGen_pop[input][mfii].id,
+                        id="{}_{}_to_{}".format(input_, mfii, goc_type[jj].id),
+                        presynaptic_population=inputGen_pop[input_][mfii].id,
                         postsynaptic_population=goc_pop[jj].id,
-                        synapse=synapse[input].id,
+                        synapse=synapse[input_].id,
                     )
                 )
-                net.projections.append(InputGen_Proj[input][jj][mfii])
+                net.projections.append(InputGen_Proj[input_][jj][mfii])
 
             nSyn = Inp["conn_pairs"][jj].shape[1]
             for syn in range(nSyn):
@@ -307,7 +307,7 @@ def create_GoC_network(
                     conn = nml.ConnectionWD(
                         id=ctr,
                         pre_cell_id="../{}/{}/{}".format(
-                            inputGen_pop[input][pre].id, 0, allID[input][pre]
+                            inputGen_pop[input_][pre].id, 0, allID[input_][pre]
                         ),
                         post_cell_id="../{}/{}/{}".format(
                             goc_pop[jj].id, goc, goc_type[jj].id
@@ -321,7 +321,7 @@ def create_GoC_network(
                     conn = nml.ConnectionWD(
                         id=ctr,
                         pre_cell_id="../{}/{}/{}".format(
-                            inputGen_pop[input][pre].id, 0, allID[input][pre]
+                            inputGen_pop[input_][pre].id, 0, allID[input_][pre]
                         ),
                         post_cell_id="../{}/{}/{}".format(
                             goc_pop[jj].id, goc, goc_type[jj].id
@@ -331,7 +331,7 @@ def create_GoC_network(
                         weight=Inp["conn_wt"][jj][syn],
                         delay="{} ms".format(np.random.random()),
                     )  # on dend
-                InputGen_Proj[input][jj][pre].connection_wds.append(conn)
+                InputGen_Proj[input_][jj][pre].connection_wds.append(conn)
                 ctr += 1
 
     ### 3. Electrical coupling between GoCs
@@ -405,12 +405,12 @@ def create_GoC_network(
         eof1, datadir + "%s.inputs.dat" % simid, format="ID_TIME"
     )
     ctr = 0
-    for input in inputBeh:
-        for pid in range(len(inputGen_pop[input])):
+    for input_ in inputBeh:
+        for pid in range(len(inputGen_pop[input_])):
             ls.add_selection_to_event_output_file(
                 eof1,
                 ctr,
-                "{}/{}/{}".format(inputGen_pop[input][pid].id, 0, allID[input][pid]),
+                "{}/{}/{}".format(inputGen_pop[input_][pid].id, 0, allID[input_][pid]),
                 "spike",
             )
             ctr += 1
