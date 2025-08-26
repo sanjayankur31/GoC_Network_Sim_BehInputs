@@ -1,0 +1,11 @@
+{
+    "label": "default",
+    "seed": 1234,
+    "logging_level": "DEBUG",
+    "Annotations": false,
+    "simulator": "jneuroml_neuron",
+    "hack to keep unused bits is to put them in a dict that wont be used": {
+        "neuroml_file": "some_thing",
+        "lems_file": "some_thing"
+    }
+}

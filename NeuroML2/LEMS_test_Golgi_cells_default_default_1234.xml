@@ -1,0 +1,287 @@
+<Lems>
+
+    <!--
+
+        This LEMS file has been automatically generated using PyNeuroML v1.3.22 (libNeuroML v0.6.7)
+
+     -->
+
+    <!-- Specify which component to run -->
+    <Target component="test_golgi_cells"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+
+    <Include file="Golgi_cell_network_default_default_1234.net.nml"/>
+    <Include file="./cells/Golgi/GoC_00177.cell.nml"/>
+    <Include file="./cells/Golgi/GoC_00263.cell.nml"/>
+    <Include file="./cells/Golgi/GoC_00514.cell.nml"/>
+    <Include file="./cells/Golgi/GoC_00659.cell.nml"/>
+    <Include file="./cells/Golgi/GoC_00856.cell.nml"/>
+
+    <Simulation id="test_golgi_cells" length="1500.0ms" step="0.01ms" target="Golgi_cell_network" seed="1234">  <!-- Note seed: ensures same random numbers used every run -->
+        <Display id="DispPop__GoC_00177_pop" title="Membrane potentials of cells in GoC_00177_pop" timeScale="1ms" xmin="-150.0" xmax="1650.0000000000002" ymin="-90" ymax="50">
+            <Line id="GoC_00177_pop[0]: v" quantity="GoC_00177_pop/0/GoC_00177/v" scale="1mV" color="#d54f33" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[1]: v" quantity="GoC_00177_pop/1/GoC_00177/v" scale="1mV" color="#0534e4" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[2]: v" quantity="GoC_00177_pop/2/GoC_00177/v" scale="1mV" color="#98e752" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[3]: v" quantity="GoC_00177_pop/3/GoC_00177/v" scale="1mV" color="#bca074" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[4]: v" quantity="GoC_00177_pop/4/GoC_00177/v" scale="1mV" color="#632794" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[5]: v" quantity="GoC_00177_pop/5/GoC_00177/v" scale="1mV" color="#8a5d88" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[6]: v" quantity="GoC_00177_pop/6/GoC_00177/v" scale="1mV" color="#df5954" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[7]: v" quantity="GoC_00177_pop/7/GoC_00177/v" scale="1mV" color="#52c8bf" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[8]: v" quantity="GoC_00177_pop/8/GoC_00177/v" scale="1mV" color="#bf0239" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[9]: v" quantity="GoC_00177_pop/9/GoC_00177/v" scale="1mV" color="#3f9fe8" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[10]: v" quantity="GoC_00177_pop/10/GoC_00177/v" scale="1mV" color="#dda9d2" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[11]: v" quantity="GoC_00177_pop/11/GoC_00177/v" scale="1mV" color="#85ad96" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[12]: v" quantity="GoC_00177_pop/12/GoC_00177/v" scale="1mV" color="#59438f" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[13]: v" quantity="GoC_00177_pop/13/GoC_00177/v" scale="1mV" color="#5fa56f" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[14]: v" quantity="GoC_00177_pop/14/GoC_00177/v" scale="1mV" color="#b5b5a2" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[15]: v" quantity="GoC_00177_pop/15/GoC_00177/v" scale="1mV" color="#2ebe19" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[16]: v" quantity="GoC_00177_pop/16/GoC_00177/v" scale="1mV" color="#d30150" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[17]: v" quantity="GoC_00177_pop/17/GoC_00177/v" scale="1mV" color="#55490a" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[18]: v" quantity="GoC_00177_pop/18/GoC_00177/v" scale="1mV" color="#4bd9d0" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[19]: v" quantity="GoC_00177_pop/19/GoC_00177/v" scale="1mV" color="#69535e" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[20]: v" quantity="GoC_00177_pop/20/GoC_00177/v" scale="1mV" color="#27dae9" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[21]: v" quantity="GoC_00177_pop/21/GoC_00177/v" scale="1mV" color="#6143ed" timeScale="1ms"/>
+            <Line id="GoC_00177_pop[22]: v" quantity="GoC_00177_pop/22/GoC_00177/v" scale="1mV" color="#aee102" timeScale="1ms"/>
+        </Display>
+
+        <Display id="DispPop__GoC_00263_pop" title="Membrane potentials of cells in GoC_00263_pop" timeScale="1ms" xmin="-150.0" xmax="1650.0000000000002" ymin="-90" ymax="50">
+            <Line id="GoC_00263_pop[0]: v" quantity="GoC_00263_pop/0/GoC_00263/v" scale="1mV" color="#a4e245" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[1]: v" quantity="GoC_00263_pop/1/GoC_00263/v" scale="1mV" color="#0c0af9" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[2]: v" quantity="GoC_00263_pop/2/GoC_00263/v" scale="1mV" color="#eaece2" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[3]: v" quantity="GoC_00263_pop/3/GoC_00263/v" scale="1mV" color="#add546" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[4]: v" quantity="GoC_00263_pop/4/GoC_00263/v" scale="1mV" color="#0dc1e8" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[5]: v" quantity="GoC_00263_pop/5/GoC_00263/v" scale="1mV" color="#d4b998" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[6]: v" quantity="GoC_00263_pop/6/GoC_00263/v" scale="1mV" color="#01c4cd" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[7]: v" quantity="GoC_00263_pop/7/GoC_00263/v" scale="1mV" color="#036aae" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[8]: v" quantity="GoC_00263_pop/8/GoC_00263/v" scale="1mV" color="#53de83" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[9]: v" quantity="GoC_00263_pop/9/GoC_00263/v" scale="1mV" color="#5b9557" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[10]: v" quantity="GoC_00263_pop/10/GoC_00263/v" scale="1mV" color="#92b9f4" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[11]: v" quantity="GoC_00263_pop/11/GoC_00263/v" scale="1mV" color="#32f19d" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[12]: v" quantity="GoC_00263_pop/12/GoC_00263/v" scale="1mV" color="#d43d99" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[13]: v" quantity="GoC_00263_pop/13/GoC_00263/v" scale="1mV" color="#36379e" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[14]: v" quantity="GoC_00263_pop/14/GoC_00263/v" scale="1mV" color="#5d01b7" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[15]: v" quantity="GoC_00263_pop/15/GoC_00263/v" scale="1mV" color="#c0004f" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[16]: v" quantity="GoC_00263_pop/16/GoC_00263/v" scale="1mV" color="#771a1c" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[17]: v" quantity="GoC_00263_pop/17/GoC_00263/v" scale="1mV" color="#a8e7b4" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[18]: v" quantity="GoC_00263_pop/18/GoC_00263/v" scale="1mV" color="#149bc7" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[19]: v" quantity="GoC_00263_pop/19/GoC_00263/v" scale="1mV" color="#76f116" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[20]: v" quantity="GoC_00263_pop/20/GoC_00263/v" scale="1mV" color="#3d56b9" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[21]: v" quantity="GoC_00263_pop/21/GoC_00263/v" scale="1mV" color="#ff9a67" timeScale="1ms"/>
+            <Line id="GoC_00263_pop[22]: v" quantity="GoC_00263_pop/22/GoC_00263/v" scale="1mV" color="#6ec96a" timeScale="1ms"/>
+        </Display>
+
+        <Display id="DispPop__GoC_00514_pop" title="Membrane potentials of cells in GoC_00514_pop" timeScale="1ms" xmin="-150.0" xmax="1650.0000000000002" ymin="-90" ymax="50">
+            <Line id="GoC_00514_pop[0]: v" quantity="GoC_00514_pop/0/GoC_00514/v" scale="1mV" color="#5f24e5" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[1]: v" quantity="GoC_00514_pop/1/GoC_00514/v" scale="1mV" color="#83f5a5" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[2]: v" quantity="GoC_00514_pop/2/GoC_00514/v" scale="1mV" color="#de0aae" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[3]: v" quantity="GoC_00514_pop/3/GoC_00514/v" scale="1mV" color="#427e32" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[4]: v" quantity="GoC_00514_pop/4/GoC_00514/v" scale="1mV" color="#1544a0" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[5]: v" quantity="GoC_00514_pop/5/GoC_00514/v" scale="1mV" color="#5409ee" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[6]: v" quantity="GoC_00514_pop/6/GoC_00514/v" scale="1mV" color="#9a477d" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[7]: v" quantity="GoC_00514_pop/7/GoC_00514/v" scale="1mV" color="#04ca61" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[8]: v" quantity="GoC_00514_pop/8/GoC_00514/v" scale="1mV" color="#4cf083" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[9]: v" quantity="GoC_00514_pop/9/GoC_00514/v" scale="1mV" color="#754e4b" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[10]: v" quantity="GoC_00514_pop/10/GoC_00514/v" scale="1mV" color="#b30f75" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[11]: v" quantity="GoC_00514_pop/11/GoC_00514/v" scale="1mV" color="#af1648" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[12]: v" quantity="GoC_00514_pop/12/GoC_00514/v" scale="1mV" color="#505fca" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[13]: v" quantity="GoC_00514_pop/13/GoC_00514/v" scale="1mV" color="#c5a380" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[14]: v" quantity="GoC_00514_pop/14/GoC_00514/v" scale="1mV" color="#a5c3f7" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[15]: v" quantity="GoC_00514_pop/15/GoC_00514/v" scale="1mV" color="#06933f" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[16]: v" quantity="GoC_00514_pop/16/GoC_00514/v" scale="1mV" color="#19405e" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[17]: v" quantity="GoC_00514_pop/17/GoC_00514/v" scale="1mV" color="#1f2cf7" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[18]: v" quantity="GoC_00514_pop/18/GoC_00514/v" scale="1mV" color="#e3e5f3" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[19]: v" quantity="GoC_00514_pop/19/GoC_00514/v" scale="1mV" color="#283960" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[20]: v" quantity="GoC_00514_pop/20/GoC_00514/v" scale="1mV" color="#c6b519" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[21]: v" quantity="GoC_00514_pop/21/GoC_00514/v" scale="1mV" color="#5be56f" timeScale="1ms"/>
+            <Line id="GoC_00514_pop[22]: v" quantity="GoC_00514_pop/22/GoC_00514/v" scale="1mV" color="#05febe" timeScale="1ms"/>
+        </Display>
+
+        <Display id="DispPop__GoC_00659_pop" title="Membrane potentials of cells in GoC_00659_pop" timeScale="1ms" xmin="-150.0" xmax="1650.0000000000002" ymin="-90" ymax="50">
+            <Line id="GoC_00659_pop[0]: v" quantity="GoC_00659_pop/0/GoC_00659/v" scale="1mV" color="#bc4a07" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[1]: v" quantity="GoC_00659_pop/1/GoC_00659/v" scale="1mV" color="#6e4273" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[2]: v" quantity="GoC_00659_pop/2/GoC_00659/v" scale="1mV" color="#3e35e3" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[3]: v" quantity="GoC_00659_pop/3/GoC_00659/v" scale="1mV" color="#f6284e" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[4]: v" quantity="GoC_00659_pop/4/GoC_00659/v" scale="1mV" color="#1f8036" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[5]: v" quantity="GoC_00659_pop/5/GoC_00659/v" scale="1mV" color="#07131e" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[6]: v" quantity="GoC_00659_pop/6/GoC_00659/v" scale="1mV" color="#fbcc00" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[7]: v" quantity="GoC_00659_pop/7/GoC_00659/v" scale="1mV" color="#a6ca1f" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[8]: v" quantity="GoC_00659_pop/8/GoC_00659/v" scale="1mV" color="#d776d3" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[9]: v" quantity="GoC_00659_pop/9/GoC_00659/v" scale="1mV" color="#673768" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[10]: v" quantity="GoC_00659_pop/10/GoC_00659/v" scale="1mV" color="#ba83d6" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[11]: v" quantity="GoC_00659_pop/11/GoC_00659/v" scale="1mV" color="#3d1f96" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[12]: v" quantity="GoC_00659_pop/12/GoC_00659/v" scale="1mV" color="#4ca02a" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[13]: v" quantity="GoC_00659_pop/13/GoC_00659/v" scale="1mV" color="#28fbd3" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[14]: v" quantity="GoC_00659_pop/14/GoC_00659/v" scale="1mV" color="#fd629f" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[15]: v" quantity="GoC_00659_pop/15/GoC_00659/v" scale="1mV" color="#54748c" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[16]: v" quantity="GoC_00659_pop/16/GoC_00659/v" scale="1mV" color="#abcdf4" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[17]: v" quantity="GoC_00659_pop/17/GoC_00659/v" scale="1mV" color="#7616c7" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[18]: v" quantity="GoC_00659_pop/18/GoC_00659/v" scale="1mV" color="#6810ad" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[19]: v" quantity="GoC_00659_pop/19/GoC_00659/v" scale="1mV" color="#53bbe9" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[20]: v" quantity="GoC_00659_pop/20/GoC_00659/v" scale="1mV" color="#5354af" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[21]: v" quantity="GoC_00659_pop/21/GoC_00659/v" scale="1mV" color="#939b7d" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[22]: v" quantity="GoC_00659_pop/22/GoC_00659/v" scale="1mV" color="#4cdfbe" timeScale="1ms"/>
+        </Display>
+
+        <Display id="DispPop__GoC_00856_pop" title="Membrane potentials of cells in GoC_00856_pop" timeScale="1ms" xmin="-150.0" xmax="1650.0000000000002" ymin="-90" ymax="50">
+            <Line id="GoC_00856_pop[0]: v" quantity="GoC_00856_pop/0/GoC_00856/v" scale="1mV" color="#2e6290" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[1]: v" quantity="GoC_00856_pop/1/GoC_00856/v" scale="1mV" color="#01b4b5" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[2]: v" quantity="GoC_00856_pop/2/GoC_00856/v" scale="1mV" color="#4b077f" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[3]: v" quantity="GoC_00856_pop/3/GoC_00856/v" scale="1mV" color="#01a175" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[4]: v" quantity="GoC_00856_pop/4/GoC_00856/v" scale="1mV" color="#fdfc6d" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[5]: v" quantity="GoC_00856_pop/5/GoC_00856/v" scale="1mV" color="#5ea53f" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[6]: v" quantity="GoC_00856_pop/6/GoC_00856/v" scale="1mV" color="#31164d" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[7]: v" quantity="GoC_00856_pop/7/GoC_00856/v" scale="1mV" color="#874f89" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[8]: v" quantity="GoC_00856_pop/8/GoC_00856/v" scale="1mV" color="#cff156" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[9]: v" quantity="GoC_00856_pop/9/GoC_00856/v" scale="1mV" color="#21da04" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[10]: v" quantity="GoC_00856_pop/10/GoC_00856/v" scale="1mV" color="#ebf688" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[11]: v" quantity="GoC_00856_pop/11/GoC_00856/v" scale="1mV" color="#d55c16" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[12]: v" quantity="GoC_00856_pop/12/GoC_00856/v" scale="1mV" color="#5d26ec" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[13]: v" quantity="GoC_00856_pop/13/GoC_00856/v" scale="1mV" color="#7c8d98" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[14]: v" quantity="GoC_00856_pop/14/GoC_00856/v" scale="1mV" color="#5e5f55" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[15]: v" quantity="GoC_00856_pop/15/GoC_00856/v" scale="1mV" color="#0df715" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[16]: v" quantity="GoC_00856_pop/16/GoC_00856/v" scale="1mV" color="#beee88" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[17]: v" quantity="GoC_00856_pop/17/GoC_00856/v" scale="1mV" color="#a932d1" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[18]: v" quantity="GoC_00856_pop/18/GoC_00856/v" scale="1mV" color="#5a1782" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[19]: v" quantity="GoC_00856_pop/19/GoC_00856/v" scale="1mV" color="#ca1ff7" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[20]: v" quantity="GoC_00856_pop/20/GoC_00856/v" scale="1mV" color="#5b0f75" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[21]: v" quantity="GoC_00856_pop/21/GoC_00856/v" scale="1mV" color="#5b20b3" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[22]: v" quantity="GoC_00856_pop/22/GoC_00856/v" scale="1mV" color="#7f7523" timeScale="1ms"/>
+        </Display>
+
+        <OutputFile id="Volts_file__GoC_00177_pop" fileName="test_golgi_cells.GoC_00177_pop.v.dat">
+            <OutputColumn id="v_GoC_00177_pop_0_GoC_00177_v" quantity="GoC_00177_pop/0/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_1_GoC_00177_v" quantity="GoC_00177_pop/1/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_2_GoC_00177_v" quantity="GoC_00177_pop/2/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_3_GoC_00177_v" quantity="GoC_00177_pop/3/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_4_GoC_00177_v" quantity="GoC_00177_pop/4/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_5_GoC_00177_v" quantity="GoC_00177_pop/5/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_6_GoC_00177_v" quantity="GoC_00177_pop/6/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_7_GoC_00177_v" quantity="GoC_00177_pop/7/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_8_GoC_00177_v" quantity="GoC_00177_pop/8/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_9_GoC_00177_v" quantity="GoC_00177_pop/9/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_10_GoC_00177_v" quantity="GoC_00177_pop/10/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_11_GoC_00177_v" quantity="GoC_00177_pop/11/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_12_GoC_00177_v" quantity="GoC_00177_pop/12/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_13_GoC_00177_v" quantity="GoC_00177_pop/13/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_14_GoC_00177_v" quantity="GoC_00177_pop/14/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_15_GoC_00177_v" quantity="GoC_00177_pop/15/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_16_GoC_00177_v" quantity="GoC_00177_pop/16/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_17_GoC_00177_v" quantity="GoC_00177_pop/17/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_18_GoC_00177_v" quantity="GoC_00177_pop/18/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_19_GoC_00177_v" quantity="GoC_00177_pop/19/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_20_GoC_00177_v" quantity="GoC_00177_pop/20/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_21_GoC_00177_v" quantity="GoC_00177_pop/21/GoC_00177/v"/>
+            <OutputColumn id="v_GoC_00177_pop_22_GoC_00177_v" quantity="GoC_00177_pop/22/GoC_00177/v"/>
+        </OutputFile>
+
+        <OutputFile id="Volts_file__GoC_00263_pop" fileName="test_golgi_cells.GoC_00263_pop.v.dat">
+            <OutputColumn id="v_GoC_00263_pop_0_GoC_00263_v" quantity="GoC_00263_pop/0/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_1_GoC_00263_v" quantity="GoC_00263_pop/1/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_2_GoC_00263_v" quantity="GoC_00263_pop/2/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_3_GoC_00263_v" quantity="GoC_00263_pop/3/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_4_GoC_00263_v" quantity="GoC_00263_pop/4/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_5_GoC_00263_v" quantity="GoC_00263_pop/5/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_6_GoC_00263_v" quantity="GoC_00263_pop/6/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_7_GoC_00263_v" quantity="GoC_00263_pop/7/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_8_GoC_00263_v" quantity="GoC_00263_pop/8/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_9_GoC_00263_v" quantity="GoC_00263_pop/9/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_10_GoC_00263_v" quantity="GoC_00263_pop/10/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_11_GoC_00263_v" quantity="GoC_00263_pop/11/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_12_GoC_00263_v" quantity="GoC_00263_pop/12/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_13_GoC_00263_v" quantity="GoC_00263_pop/13/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_14_GoC_00263_v" quantity="GoC_00263_pop/14/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_15_GoC_00263_v" quantity="GoC_00263_pop/15/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_16_GoC_00263_v" quantity="GoC_00263_pop/16/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_17_GoC_00263_v" quantity="GoC_00263_pop/17/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_18_GoC_00263_v" quantity="GoC_00263_pop/18/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_19_GoC_00263_v" quantity="GoC_00263_pop/19/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_20_GoC_00263_v" quantity="GoC_00263_pop/20/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_21_GoC_00263_v" quantity="GoC_00263_pop/21/GoC_00263/v"/>
+            <OutputColumn id="v_GoC_00263_pop_22_GoC_00263_v" quantity="GoC_00263_pop/22/GoC_00263/v"/>
+        </OutputFile>
+
+        <OutputFile id="Volts_file__GoC_00514_pop" fileName="test_golgi_cells.GoC_00514_pop.v.dat">
+            <OutputColumn id="v_GoC_00514_pop_0_GoC_00514_v" quantity="GoC_00514_pop/0/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_1_GoC_00514_v" quantity="GoC_00514_pop/1/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_2_GoC_00514_v" quantity="GoC_00514_pop/2/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_3_GoC_00514_v" quantity="GoC_00514_pop/3/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_4_GoC_00514_v" quantity="GoC_00514_pop/4/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_5_GoC_00514_v" quantity="GoC_00514_pop/5/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_6_GoC_00514_v" quantity="GoC_00514_pop/6/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_7_GoC_00514_v" quantity="GoC_00514_pop/7/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_8_GoC_00514_v" quantity="GoC_00514_pop/8/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_9_GoC_00514_v" quantity="GoC_00514_pop/9/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_10_GoC_00514_v" quantity="GoC_00514_pop/10/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_11_GoC_00514_v" quantity="GoC_00514_pop/11/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_12_GoC_00514_v" quantity="GoC_00514_pop/12/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_13_GoC_00514_v" quantity="GoC_00514_pop/13/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_14_GoC_00514_v" quantity="GoC_00514_pop/14/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_15_GoC_00514_v" quantity="GoC_00514_pop/15/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_16_GoC_00514_v" quantity="GoC_00514_pop/16/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_17_GoC_00514_v" quantity="GoC_00514_pop/17/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_18_GoC_00514_v" quantity="GoC_00514_pop/18/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_19_GoC_00514_v" quantity="GoC_00514_pop/19/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_20_GoC_00514_v" quantity="GoC_00514_pop/20/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_21_GoC_00514_v" quantity="GoC_00514_pop/21/GoC_00514/v"/>
+            <OutputColumn id="v_GoC_00514_pop_22_GoC_00514_v" quantity="GoC_00514_pop/22/GoC_00514/v"/>
+        </OutputFile>
+
+        <OutputFile id="Volts_file__GoC_00659_pop" fileName="test_golgi_cells.GoC_00659_pop.v.dat">
+            <OutputColumn id="v_GoC_00659_pop_0_GoC_00659_v" quantity="GoC_00659_pop/0/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_1_GoC_00659_v" quantity="GoC_00659_pop/1/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_2_GoC_00659_v" quantity="GoC_00659_pop/2/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_3_GoC_00659_v" quantity="GoC_00659_pop/3/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_4_GoC_00659_v" quantity="GoC_00659_pop/4/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_5_GoC_00659_v" quantity="GoC_00659_pop/5/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_6_GoC_00659_v" quantity="GoC_00659_pop/6/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_7_GoC_00659_v" quantity="GoC_00659_pop/7/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_8_GoC_00659_v" quantity="GoC_00659_pop/8/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_9_GoC_00659_v" quantity="GoC_00659_pop/9/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_10_GoC_00659_v" quantity="GoC_00659_pop/10/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_11_GoC_00659_v" quantity="GoC_00659_pop/11/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_12_GoC_00659_v" quantity="GoC_00659_pop/12/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_13_GoC_00659_v" quantity="GoC_00659_pop/13/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_14_GoC_00659_v" quantity="GoC_00659_pop/14/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_15_GoC_00659_v" quantity="GoC_00659_pop/15/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_16_GoC_00659_v" quantity="GoC_00659_pop/16/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_17_GoC_00659_v" quantity="GoC_00659_pop/17/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_18_GoC_00659_v" quantity="GoC_00659_pop/18/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_19_GoC_00659_v" quantity="GoC_00659_pop/19/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_20_GoC_00659_v" quantity="GoC_00659_pop/20/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_21_GoC_00659_v" quantity="GoC_00659_pop/21/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_22_GoC_00659_v" quantity="GoC_00659_pop/22/GoC_00659/v"/>
+        </OutputFile>
+
+        <OutputFile id="Volts_file__GoC_00856_pop" fileName="test_golgi_cells.GoC_00856_pop.v.dat">
+            <OutputColumn id="v_GoC_00856_pop_0_GoC_00856_v" quantity="GoC_00856_pop/0/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_1_GoC_00856_v" quantity="GoC_00856_pop/1/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_2_GoC_00856_v" quantity="GoC_00856_pop/2/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_3_GoC_00856_v" quantity="GoC_00856_pop/3/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_4_GoC_00856_v" quantity="GoC_00856_pop/4/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_5_GoC_00856_v" quantity="GoC_00856_pop/5/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_6_GoC_00856_v" quantity="GoC_00856_pop/6/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_7_GoC_00856_v" quantity="GoC_00856_pop/7/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_8_GoC_00856_v" quantity="GoC_00856_pop/8/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_9_GoC_00856_v" quantity="GoC_00856_pop/9/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_10_GoC_00856_v" quantity="GoC_00856_pop/10/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_11_GoC_00856_v" quantity="GoC_00856_pop/11/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_12_GoC_00856_v" quantity="GoC_00856_pop/12/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_13_GoC_00856_v" quantity="GoC_00856_pop/13/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_14_GoC_00856_v" quantity="GoC_00856_pop/14/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_15_GoC_00856_v" quantity="GoC_00856_pop/15/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_16_GoC_00856_v" quantity="GoC_00856_pop/16/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_17_GoC_00856_v" quantity="GoC_00856_pop/17/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_18_GoC_00856_v" quantity="GoC_00856_pop/18/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_19_GoC_00856_v" quantity="GoC_00856_pop/19/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_20_GoC_00856_v" quantity="GoC_00856_pop/20/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_21_GoC_00856_v" quantity="GoC_00856_pop/21/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_22_GoC_00856_v" quantity="GoC_00856_pop/22/GoC_00856/v"/>
+        </OutputFile>
+
+    </Simulation>
+
+</Lems>

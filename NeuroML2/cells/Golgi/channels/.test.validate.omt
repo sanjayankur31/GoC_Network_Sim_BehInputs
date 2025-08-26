@@ -1,0 +1,4 @@
+# Script for running automated tests on OSB, see https://github.com/OpenSourceBrain/osb-model-validation
+# exclude a few that use new component types and are so not valid against the schema
+target: "Golgi_CaHVA.channel.nml Golgi_HCN1s.channel.nml Golgi_KA.channel.nml Golgi_lkg.channel.nml Golgi_CaLVA.channel.nml Golgi_HCN2f.channel.nml Golgi_KM.channel.nml Golgi_Na.channel.nml Golgi_SK2.channel.nml Golgi_HCN1f.channel.nml Golgi_HCN2s.channel.nml Golgi_KV.channel.nml Golgi_NaP.channel.nml LeakCond.channel.nml"
+engine: jNeuroML_validate

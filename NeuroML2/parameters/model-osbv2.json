@@ -1,0 +1,41 @@
+{
+    "label": "osbv2",
+    "Comment": "Model parameters for simulating on OSBv2",
+    "Golgi_cells":
+    {
+        "density": "4607e-9 /um-3",
+        "xyz": ["500 um", "500 um", "100 um"],
+        "homogeneous": false,
+        "num_populations": 5
+    },
+    "Gap_junctions":
+    {
+        "enabled": true,
+        "conductance": "426pS",
+        "weight_type": "constant",
+        "constant_weight": "1",
+        "unused_weight_types": ["Vervaeke2010"," Szobozlay2016"]
+    },
+    "Unused": {
+        "MF_step": {
+            "prob": 0.2,
+            "max": 0,
+            "frac": 0.2
+        },
+        "MF_bg": {
+            "prob": 0.3,
+            "max": 60,
+            "frac": 1.0
+        },
+        "PF_step": {
+            "prob": 0.2,
+            "max": 0,
+            "frac": 0.2
+        },
+        "PF_bg": {
+            "prob": 0.5,
+            "max": 150,
+            "frac": 1.0
+        }
+    }
+}

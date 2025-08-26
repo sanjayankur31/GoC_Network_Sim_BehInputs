@@ -1,0 +1,1099 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.3.1.xsd" id="Golgi_cell_network">
+    <include href="./cells/Golgi/GoC_00177.cell.nml"/>
+    <include href="./cells/Golgi/GoC_00263.cell.nml"/>
+    <include href="./cells/Golgi/GoC_00514.cell.nml"/>
+    <include href="./cells/Golgi/GoC_00659.cell.nml"/>
+    <include href="./cells/Golgi/GoC_00856.cell.nml"/>
+    <gapJunction id="Gap_junction" conductance="426pS"/>
+    <network id="Golgi_cell_network">
+        <population id="GoC_00177_pop" component="GoC_00177" type="populationList">
+            <instance id="0">
+                <location x="92.143541906906819" y="23.677639400757567" z="67.488094358233013"/>
+            </instance>
+            <instance id="1">
+                <location x="297.312389967224419" y="266.655081499375285" z="4.332406269480349"/>
+            </instance>
+            <instance id="2">
+                <location x="280.716540031698912" y="164.834222810457504" z="50.296683311261837"/>
+            </instance>
+            <instance id="3">
+                <location x="55.947158787201914" y="303.596853109242261" z="56.594464305053137"/>
+            </instance>
+            <instance id="4">
+                <location x="3.382030995001395" y="308.720854402148518" z="91.212288643315432"/>
+            </instance>
+            <instance id="5">
+                <location x="395.262066528516698" y="496.040733094180723" z="95.880176215286653"/>
+            </instance>
+            <instance id="6">
+                <location x="395.982067645819882" y="142.625480012254883" z="62.491670530591101"/>
+            </instance>
+            <instance id="7">
+                <location x="239.04689783533729" y="97.837589332949122" z="38.231745203150645"/>
+            </instance>
+            <instance id="8">
+                <location x="26.936842573118291" y="225.824204130429536" z="98.200474152195454"/>
+            </instance>
+            <instance id="9">
+                <location x="61.971350243481496" y="59.690448963124197" z="73.852305614334682"/>
+            </instance>
+            <instance id="10">
+                <location x="293.651816731992312" y="235.816267160183884" z="10.71268171938663"/>
+            </instance>
+            <instance id="11">
+                <location x="114.609282730308962" y="449.982597418337662" z="41.675353780269319"/>
+            </instance>
+            <instance id="12">
+                <location x="267.925831265807915" y="3.104258293564699" z="30.064170577030115"/>
+            </instance>
+            <instance id="13">
+                <location x="218.446586087805088" y="306.074498532878749" z="91.819807538057304"/>
+            </instance>
+            <instance id="14">
+                <location x="312.868334981267651" y="352.998782540886623" z="14.983371598992722"/>
+            </instance>
+            <instance id="15">
+                <location x="373.03170456835835" y="415.503496216768895" z="63.372576895097907"/>
+            </instance>
+            <instance id="16">
+                <location x="219.154940561213749" y="76.286387337252677" z="56.840961524719013"/>
+            </instance>
+            <instance id="17">
+                <location x="264.112138792530232" y="475.714381876796608" z="48.035917851001606"/>
+            </instance>
+            <instance id="18">
+                <location x="251.27978169127519" y="268.439096462204873" z="81.920206706415826"/>
+            </instance>
+            <instance id="19">
+                <location x="28.557819044429944" y="334.710871537274386" z="76.711662837947244"/>
+            </instance>
+            <instance id="20">
+                <location x="354.057680988801906" y="398.433591862598291" z="55.776082842744948"/>
+            </instance>
+            <instance id="21">
+                <location x="482.918265996063781" y="73.578449946498594" z="2.964700053541558"/>
+            </instance>
+            <instance id="22">
+                <location x="296.946746312385869" y="57.032849371331238" z="95.080985008412227"/>
+            </instance>
+        </population>
+        <population id="GoC_00263_pop" component="GoC_00263" type="populationList">
+            <instance id="0">
+                <location x="162.853707212673612" y="96.809345076888604" z="45.781164889742755"/>
+            </instance>
+            <instance id="1">
+                <location x="460.201285546543886" y="439.534580757337892" z="25.261575504653024"/>
+            </instance>
+            <instance id="2">
+                <location x="174.004396434673083" y="91.294365790154373" z="90.179605137099202"/>
+            </instance>
+            <instance id="3">
+                <location x="353.264081585898737" y="363.329230781070351" z="90.008783680970765"/>
+            </instance>
+            <instance id="4">
+                <location x="389.581900384662106" y="299.577390302146171" z="29.112524489787482"/>
+            </instance>
+            <instance id="5">
+                <location x="75.697632203716054" y="167.587329574717444" z="65.75517771578194"/>
+            </instance>
+            <instance id="6">
+                <location x="36.67127181630908" y="27.503197703111827" z="32.319481392117645"/>
+            </instance>
+            <instance id="7">
+                <location x="295.240902231493067" y="426.949283562820881" z="28.706242500000901"/>
+            </instance>
+            <instance id="8">
+                <location x="86.533613407396075" y="67.010602999421408" z="99.465382864429458"/>
+            </instance>
+            <instance id="9">
+                <location x="89.748934734695922" y="158.773411513597921" z="56.829140465910719"/>
+            </instance>
+            <instance id="10">
+                <location x="4.674287250122255" y="450.324310577545987" z="97.724143092258714"/>
+            </instance>
+            <instance id="11">
+                <location x="278.447339568417419" y="42.386921697095069" z="33.300246572910005"/>
+            </instance>
+            <instance id="12">
+                <location x="364.214338184835981" y="71.217686670908606" z="55.246893949754551"/>
+            </instance>
+            <instance id="13">
+                <location x="136.52162984184281" y="487.247569043629881" z="66.778690614503773"/>
+            </instance>
+            <instance id="14">
+                <location x="127.826643217069829" y="54.15574709136439" z="77.618072317388226"/>
+            </instance>
+            <instance id="15">
+                <location x="391.238996300101007" y="380.801957153747026" z="91.440311326932374"/>
+            </instance>
+            <instance id="16">
+                <location x="329.311390971211324" y="284.183790786466204" z="20.175569245297829"/>
+            </instance>
+            <instance id="17">
+                <location x="349.148187775880558" y="476.09770490773866" z="88.996328714200516"/>
+            </instance>
+            <instance id="18">
+                <location x="496.783681431586842" y="409.351755101962738" z="54.512216617971987"/>
+            </instance>
+            <instance id="19">
+                <location x="225.627027482049158" y="445.278593964428637" z="97.326479111866888"/>
+            </instance>
+            <instance id="20">
+                <location x="296.705664784484838" y="183.037248860235422" z="32.309469296624947"/>
+            </instance>
+            <instance id="21">
+                <location x="435.711627524349012" y="107.817031494197906" z="73.494518856219642"/>
+            </instance>
+            <instance id="22">
+                <location x="182.809543683592807" y="400.801299251380101" z="78.273559197537622"/>
+            </instance>
+        </population>
+        <population id="GoC_00514_pop" component="GoC_00514" type="populationList">
+            <instance id="0">
+                <location x="350.677689618346506" y="311.38829330159956" z="49.368264574711205"/>
+            </instance>
+            <instance id="1">
+                <location x="420.268850059244357" y="356.048493471823633" z="44.390898141585247"/>
+            </instance>
+            <instance id="2">
+                <location x="15.517430566666324" y="181.619880096799022" z="73.072179141033871"/>
+            </instance>
+            <instance id="3">
+                <location x="237.783286541820786" y="172.20848506100134" z="64.088043499601881"/>
+            </instance>
+            <instance id="4">
+                <location x="63.102660807199726" y="85.732630482124875" z="73.708649368852164"/>
+            </instance>
+            <instance id="5">
+                <location x="63.514696786201199" y="184.824937473313412" z="60.433400483602639"/>
+            </instance>
+            <instance id="6">
+                <location x="51.552219427823623" y="401.187091168605093" z="94.555323584212431"/>
+            </instance>
+            <instance id="7">
+                <location x="489.519409966968794" y="440.616123169463549" z="62.768192146397517"/>
+            </instance>
+            <instance id="8">
+                <location x="465.2432667013328" y="362.394976551219429" z="71.66778860553562"/>
+            </instance>
+            <instance id="9">
+                <location x="20.539283292091927" y="219.740887583737447" z="28.206978311608776"/>
+            </instance>
+            <instance id="10">
+                <location x="167.497984445963652" y="41.763503522200153" z="76.084914705738598"/>
+            </instance>
+            <instance id="11">
+                <location x="254.636223581976964" y="330.523708804226089" z="63.031444248428144"/>
+            </instance>
+            <instance id="12">
+                <location x="185.463413728763726" y="223.370075865422336" z="41.510822019759317"/>
+            </instance>
+            <instance id="13">
+                <location x="240.194254006703289" y="491.661786694233115" z="37.34237073535374"/>
+            </instance>
+            <instance id="14">
+                <location x="6.203490863856798" y="460.951668899514459" z="87.327607034420794"/>
+            </instance>
+            <instance id="15">
+                <location x="175.873410793794363" y="315.066556251146039" z="35.782695934169105"/>
+            </instance>
+            <instance id="16">
+                <location x="106.409968824232479" y="111.659611561326088" z="41.956379173082766"/>
+            </instance>
+            <instance id="17">
+                <location x="36.455110539033384" y="325.419535068346136" z="75.568614895093745"/>
+            </instance>
+            <instance id="18">
+                <location x="466.050613155906149" y="188.202079790998965" z="29.692728344953345"/>
+            </instance>
+            <instance id="19">
+                <location x="185.972156247075077" y="413.849679401817127" z="90.113953525029473"/>
+            </instance>
+            <instance id="20">
+                <location x="213.651892428748113" y="1.094715411560809" z="4.196524456467021"/>
+            </instance>
+            <instance id="21">
+                <location x="70.893691581382313" y="299.118592552583323" z="10.646052201186084"/>
+            </instance>
+            <instance id="22">
+                <location x="148.579493087158966" y="29.195994956066396" z="62.13248602513616"/>
+            </instance>
+        </population>
+        <population id="GoC_00659_pop" component="GoC_00659" type="populationList">
+            <instance id="0">
+                <location x="11.34023806239165" y="427.527343065828347" z="30.633720286627241"/>
+            </instance>
+            <instance id="1">
+                <location x="379.391722376952089" y="281.637555069933057" z="3.816418217864814"/>
+            </instance>
+            <instance id="2">
+                <location x="282.758362029918942" y="329.436744324104325" z="18.326634939267784"/>
+            </instance>
+            <instance id="3">
+                <location x="398.705654045569304" y="306.183714734474449" z="55.56533844497369"/>
+            </instance>
+            <instance id="4">
+                <location x="314.745772311192184" y="343.090037665550994" z="24.03825375227866"/>
+            </instance>
+            <instance id="5">
+                <location x="393.963893989769815" y="428.238728529785419" z="72.779601559861916"/>
+            </instance>
+            <instance id="6">
+                <location x="346.172571707980524" y="236.17546953509239" z="85.687294193450086"/>
+            </instance>
+            <instance id="7">
+                <location x="332.371666952153021" y="166.687971137662259" z="51.814549925631326"/>
+            </instance>
+            <instance id="8">
+                <location x="197.344291722586263" y="15.52479917818067" z="57.683984313312088"/>
+            </instance>
+            <instance id="9">
+                <location x="425.125872674430411" y="475.744432586822541" z="68.297879710826663"/>
+            </instance>
+            <instance id="10">
+                <location x="38.081274098013985" y="205.038971386243503" z="4.190139877173671"/>
+            </instance>
+            <instance id="11">
+                <location x="87.093415787689594" y="282.701002782376747" z="17.289117059986037"/>
+            </instance>
+            <instance id="12">
+                <location x="283.305238972223094" y="257.002126474770535" z="86.88708875473769"/>
+            </instance>
+            <instance id="13">
+                <location x="360.173623965476395" y="451.795673535149149" z="27.761499823337211"/>
+            </instance>
+            <instance id="14">
+                <location x="128.332716090743986" y="349.851631430705368" z="90.15688962489395"/>
+            </instance>
+            <instance id="15">
+                <location x="491.846162560789082" y="320.456406213122477" z="33.000738853521092"/>
+            </instance>
+            <instance id="16">
+                <location x="303.337608114580064" y="411.079894287945308" z="62.796506546116163"/>
+            </instance>
+            <instance id="17">
+                <location x="58.96152875035515" y="142.938836675578159" z="98.674721533786453"/>
+            </instance>
+            <instance id="18">
+                <location x="215.900424245462176" y="287.117206891532192" z="52.724207667423016"/>
+            </instance>
+            <instance id="19">
+                <location x="98.826524688756351" y="82.854216112417049" z="50.099045792219854"/>
+            </instance>
+            <instance id="20">
+                <location x="495.102030042657134" y="196.995905654323394" z="71.401326527661496"/>
+            </instance>
+            <instance id="21">
+                <location x="87.952134711636376" y="35.348089375221328" z="15.762308631249732"/>
+            </instance>
+            <instance id="22">
+                <location x="80.779006754417964" y="141.818541131069622" z="53.6706025564066"/>
+            </instance>
+        </population>
+        <population id="GoC_00856_pop" component="GoC_00856" type="populationList">
+            <instance id="0">
+                <location x="386.61935744660525" y="440.171790638602204" z="63.739144695740521"/>
+            </instance>
+            <instance id="1">
+                <location x="426.301120127276533" y="298.977685762213525" z="69.38466603020629"/>
+            </instance>
+            <instance id="2">
+                <location x="268.588336573300637" y="444.615041732847999" z="5.226642625681965"/>
+            </instance>
+            <instance id="3">
+                <location x="391.591850396483892" y="72.586634550846185" z="5.869842598794717"/>
+            </instance>
+            <instance id="4">
+                <location x="29.497290427769162" y="25.985614934012691" z="51.598608844158576"/>
+            </instance>
+            <instance id="5">
+                <location x="202.498110049656731" y="499.824796885096816" z="10.857001055264426"/>
+            </instance>
+            <instance id="6">
+                <location x="163.692151247390569" y="498.914966029051243" z="40.111439173804939"/>
+            </instance>
+            <instance id="7">
+                <location x="441.667883236563057" y="284.569290263716937" z="95.324088964441657"/>
+            </instance>
+            <instance id="8">
+                <location x="442.693622077618329" y="389.6427957909724" z="3.180806303617245"/>
+            </instance>
+            <instance id="9">
+                <location x="481.309264891738167" y="259.817722115701258" z="20.779101145399448"/>
+            </instance>
+            <instance id="10">
+                <location x="437.54890336932533" y="112.075739501297903" z="13.86593265369096"/>
+            </instance>
+            <instance id="11">
+                <location x="362.619643753101002" y="486.894454753748619" z="53.548187659534761"/>
+            </instance>
+            <instance id="12">
+                <location x="222.398999000245283" y="11.055589009255018" z="60.598834031549451"/>
+            </instance>
+            <instance id="13">
+                <location x="482.398261978340088" y="483.795740483467569" z="93.00288092605399"/>
+            </instance>
+            <instance id="14">
+                <location x="92.339915998016167" y="311.481079180720428" z="41.296266976313213"/>
+            </instance>
+            <instance id="15">
+                <location x="181.53060110274194" y="18.301470672420773" z="86.814870957187779"/>
+            </instance>
+            <instance id="16">
+                <location x="336.414106314074616" y="43.735807030861828" z="88.696593923639455"/>
+            </instance>
+            <instance id="17">
+                <location x="391.232275382698333" y="158.652205631480143" z="81.831378738700693"/>
+            </instance>
+            <instance id="18">
+                <location x="253.777534121174085" y="10.596650884034053" z="43.352175822878166"/>
+            </instance>
+            <instance id="19">
+                <location x="223.156527976897053" y="119.409994703614913" z="83.024573184107538"/>
+            </instance>
+            <instance id="20">
+                <location x="372.382088306526612" y="293.239500480082768" z="49.286785256548207"/>
+            </instance>
+            <instance id="21">
+                <location x="243.677939920596486" y="133.370347961460197" z="60.501110143971694"/>
+            </instance>
+            <instance id="22">
+                <location x="376.771860495143471" y="135.292113976616832" z="52.230328313247597"/>
+            </instance>
+        </population>
+        <electricalProjection id="GJ_0_1" presynapticPopulation="GoC_00177_pop" postsynapticPopulation="GoC_00263_pop">
+            <electricalConnectionInstanceW id="22" preCell="../GoC_00177_pop/0/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/0/GoC_00263" postSegment="1" synapse="Gap_junction" weight="1.791098300271282"/>
+            <electricalConnectionInstanceW id="24" preCell="../GoC_00177_pop/0/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/2/GoC_00263" postSegment="1" synapse="Gap_junction" weight="1.62116914641273"/>
+            <electricalConnectionInstanceW id="28" preCell="../GoC_00177_pop/0/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/6/GoC_00263" postSegment="1" synapse="Gap_junction" weight="3.746014477167007"/>
+            <electricalConnectionInstanceW id="151" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/16/GoC_00263" postSegment="5" synapse="Gap_junction" weight="5.832037343298323"/>
+            <electricalConnectionInstanceW id="155" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/20/GoC_00263" postSegment="1" synapse="Gap_junction" weight="2.475173190299674"/>
+            <electricalConnectionInstanceW id="258" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/11/GoC_00263" postSegment="5" synapse="Gap_junction" weight="1.131510680352268"/>
+            <electricalConnectionInstanceW id="263" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/16/GoC_00263" postSegment="5" synapse="Gap_junction" weight="0.893158798600858"/>
+            <electricalConnectionInstanceW id="267" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/20/GoC_00263" postSegment="1" synapse="Gap_junction" weight="6.81868243887988"/>
+            <electricalConnectionInstanceW id="580" preCell="../GoC_00177_pop/5/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/3/GoC_00263" postSegment="2" synapse="Gap_junction" weight="0.721892020641874"/>
+            <electricalConnectionInstanceW id="595" preCell="../GoC_00177_pop/5/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/18/GoC_00263" postSegment="1" synapse="Gap_junction" weight="0.711705198283203"/>
+            <electricalConnectionInstanceW id="705" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/20/GoC_00263" postSegment="1" synapse="Gap_junction" weight="1.522721279665383"/>
+            <electricalConnectionInstanceW id="706" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/21/GoC_00263" postSegment="2" synapse="Gap_junction" weight="4.600408270356579"/>
+            <electricalConnectionInstanceW id="794" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/2/GoC_00263" postSegment="1" synapse="Gap_junction" weight="2.708447097405015"/>
+            <electricalConnectionInstanceW id="804" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/12/GoC_00263" postSegment="1" synapse="Gap_junction" weight="0.978658963671791"/>
+            <electricalConnectionInstanceW id="812" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/20/GoC_00263" postSegment="2" synapse="Gap_junction" weight="1.82869732202008"/>
+            <electricalConnectionInstanceW id="903" preCell="../GoC_00177_pop/8/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/5/GoC_00263" postSegment="1" synapse="Gap_junction" weight="2.755317416757787"/>
+            <electricalConnectionInstanceW id="1003" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/0/GoC_00263" postSegment="1" synapse="Gap_junction" weight="1.531601431986555"/>
+            <electricalConnectionInstanceW id="1008" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/5/GoC_00263" postSegment="1" synapse="Gap_junction" weight="1.60338839732165"/>
+            <electricalConnectionInstanceW id="1009" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/6/GoC_00263" postSegment="2" synapse="Gap_junction" weight="4.268597956873019"/>
+            <electricalConnectionInstanceW id="1011" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/8/GoC_00263" postSegment="5" synapse="Gap_junction" weight="6.180502810601022"/>
+            <electricalConnectionInstanceW id="1012" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/9/GoC_00263" postSegment="1" synapse="Gap_junction" weight="1.780130314881637"/>
+            <electricalConnectionInstanceW id="1017" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/14/GoC_00263" postSegment="2" synapse="Gap_junction" weight="3.71942854810041"/>
+            <electricalConnectionInstanceW id="1111" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/4/GoC_00263" postSegment="2" synapse="Gap_junction" weight="1.345811594807085"/>
+            <electricalConnectionInstanceW id="1123" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/16/GoC_00263" postSegment="2" synapse="Gap_junction" weight="4.086620479741424"/>
+            <electricalConnectionInstanceW id="1127" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/20/GoC_00263" postSegment="5" synapse="Gap_junction" weight="4.358579996609836"/>
+            <electricalConnectionInstanceW id="1223" preCell="../GoC_00177_pop/11/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/13/GoC_00263" postSegment="5" synapse="Gap_junction" weight="4.920229915261425"/>
+            <electricalConnectionInstanceW id="1229" preCell="../GoC_00177_pop/11/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/19/GoC_00263" postSegment="5" synapse="Gap_junction" weight="1.113168887947862"/>
+            <electricalConnectionInstanceW id="1232" preCell="../GoC_00177_pop/11/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/22/GoC_00263" postSegment="2" synapse="Gap_junction" weight="2.309256472826385"/>
+            <electricalConnectionInstanceW id="1323" preCell="../GoC_00177_pop/12/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/11/GoC_00263" postSegment="1" synapse="Gap_junction" weight="5.735008341387362"/>
+            <electricalConnectionInstanceW id="1429" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/16/GoC_00263" postSegment="2" synapse="Gap_junction" weight="0.855803217059815"/>
+            <electricalConnectionInstanceW id="1435" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/22/GoC_00263" postSegment="2" synapse="Gap_junction" weight="1.865466242248445"/>
+            <electricalConnectionInstanceW id="1520" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/7/GoC_00263" postSegment="2" synapse="Gap_junction" weight="3.045138088912801"/>
+            <electricalConnectionInstanceW id="1529" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/16/GoC_00263" postSegment="2" synapse="Gap_junction" weight="3.416859936081002"/>
+            <electricalConnectionInstanceW id="1530" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/17/GoC_00263" postSegment="5" synapse="Gap_junction" weight="0.528455184086125"/>
+            <electricalConnectionInstanceW id="1615" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/3/GoC_00263" postSegment="2" synapse="Gap_junction" weight="4.016478759083928"/>
+            <electricalConnectionInstanceW id="1627" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/15/GoC_00263" postSegment="5" synapse="Gap_junction" weight="5.070404342882357"/>
+            <electricalConnectionInstanceW id="1629" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/17/GoC_00263" postSegment="5" synapse="Gap_junction" weight="3.475909227931436"/>
+            <electricalConnectionInstanceW id="1710" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/0/GoC_00263" postSegment="5" synapse="Gap_junction" weight="4.079167438886341"/>
+            <electricalConnectionInstanceW id="1712" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/2/GoC_00263" postSegment="1" synapse="Gap_junction" weight="4.284965257712896"/>
+            <electricalConnectionInstanceW id="1724" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/14/GoC_00263" postSegment="5" synapse="Gap_junction" weight="2.107684174780754"/>
+            <electricalConnectionInstanceW id="1814" preCell="../GoC_00177_pop/17/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/7/GoC_00263" postSegment="2" synapse="Gap_junction" weight="4.07489973540455"/>
+            <electricalConnectionInstanceW id="1824" preCell="../GoC_00177_pop/17/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/17/GoC_00263" postSegment="2" synapse="Gap_junction" weight="2.188444365967194"/>
+            <electricalConnectionInstanceW id="1826" preCell="../GoC_00177_pop/17/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/19/GoC_00263" postSegment="5" synapse="Gap_junction" weight="3.50358659967722"/>
+            <electricalConnectionInstanceW id="1829" preCell="../GoC_00177_pop/17/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/22/GoC_00263" postSegment="5" synapse="Gap_junction" weight="1.412206496551511"/>
+            <electricalConnectionInstanceW id="1923" preCell="../GoC_00177_pop/18/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/20/GoC_00263" postSegment="1" synapse="Gap_junction" weight="1.616176085637181"/>
+            <electricalConnectionInstanceW id="2095" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/3/GoC_00263" postSegment="1" synapse="Gap_junction" weight="4.999663303089005"/>
+            <electricalConnectionInstanceW id="2096" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/4/GoC_00263" postSegment="5" synapse="Gap_junction" weight="1.628277146751633"/>
+            <electricalConnectionInstanceW id="2099" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/7/GoC_00263" postSegment="5" synapse="Gap_junction" weight="3.428833385741619"/>
+            <electricalConnectionInstanceW id="2107" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/15/GoC_00263" postSegment="5" synapse="Gap_junction" weight="4.561390929052862"/>
+            <electricalConnectionInstanceW id="2110" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="1" postCell="../GoC_00263_pop/18/GoC_00263" postSegment="2" synapse="Gap_junction" weight="0.635031585288546"/>
+            <electricalConnectionInstanceW id="2206" preCell="../GoC_00177_pop/21/GoC_00177" preSegment="2" postCell="../GoC_00263_pop/21/GoC_00263" postSegment="5" synapse="Gap_junction" weight="2.317855567735928"/>
+            <electricalConnectionInstanceW id="2288" preCell="../GoC_00177_pop/22/GoC_00177" preSegment="5" postCell="../GoC_00263_pop/11/GoC_00263" postSegment="5" synapse="Gap_junction" weight="3.72348546581632"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_0_2" presynapticPopulation="GoC_00177_pop" postsynapticPopulation="GoC_00514_pop">
+            <electricalConnectionInstanceW id="49" preCell="../GoC_00177_pop/0/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/4/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.551126388802976"/>
+            <electricalConnectionInstanceW id="55" preCell="../GoC_00177_pop/0/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/10/GoC_00514" postSegment="1" synapse="Gap_junction" weight="3.004858070328367"/>
+            <electricalConnectionInstanceW id="61" preCell="../GoC_00177_pop/0/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="1" synapse="Gap_junction" weight="2.263145826299162"/>
+            <electricalConnectionInstanceW id="67" preCell="../GoC_00177_pop/0/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/22/GoC_00514" postSegment="1" synapse="Gap_junction" weight="4.36991190992735"/>
+            <electricalConnectionInstanceW id="158" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/0/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.737917485834464"/>
+            <electricalConnectionInstanceW id="161" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/3/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.046323198135279"/>
+            <electricalConnectionInstanceW id="169" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/11/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.089077297775578"/>
+            <electricalConnectionInstanceW id="173" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/15/GoC_00514" postSegment="1" synapse="Gap_junction" weight="0.83922751730622"/>
+            <electricalConnectionInstanceW id="273" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/3/GoC_00514" postSegment="1" synapse="Gap_junction" weight="5.287813489108373"/>
+            <electricalConnectionInstanceW id="282" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/12/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.495409681786002"/>
+            <electricalConnectionInstanceW id="386" preCell="../GoC_00177_pop/3/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/5/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.269022269316798"/>
+            <electricalConnectionInstanceW id="390" preCell="../GoC_00177_pop/3/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/9/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.146295715813266"/>
+            <electricalConnectionInstanceW id="396" preCell="../GoC_00177_pop/3/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/15/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.172247133275604"/>
+            <electricalConnectionInstanceW id="398" preCell="../GoC_00177_pop/3/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/17/GoC_00514" postSegment="5" synapse="Gap_junction" weight="6.319040310792225"/>
+            <electricalConnectionInstanceW id="493" preCell="../GoC_00177_pop/4/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/2/GoC_00514" postSegment="5" synapse="Gap_junction" weight="0.982219178966447"/>
+            <electricalConnectionInstanceW id="497" preCell="../GoC_00177_pop/4/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/6/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.779628072244199"/>
+            <electricalConnectionInstanceW id="607" preCell="../GoC_00177_pop/5/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/7/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.424347681354902"/>
+            <electricalConnectionInstanceW id="726" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/18/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.398132666673076"/>
+            <electricalConnectionInstanceW id="818" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/3/GoC_00514" postSegment="1" synapse="Gap_junction" weight="2.961739224904994"/>
+            <electricalConnectionInstanceW id="831" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="1" synapse="Gap_junction" weight="0.865802577168633"/>
+            <electricalConnectionInstanceW id="837" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/22/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.36516779773496"/>
+            <electricalConnectionInstanceW id="923" preCell="../GoC_00177_pop/8/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/2/GoC_00514" postSegment="1" synapse="Gap_junction" weight="4.746673961698875"/>
+            <electricalConnectionInstanceW id="926" preCell="../GoC_00177_pop/8/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/5/GoC_00514" postSegment="1" synapse="Gap_junction" weight="3.688040953863057"/>
+            <electricalConnectionInstanceW id="930" preCell="../GoC_00177_pop/8/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/9/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.441227576504546"/>
+            <electricalConnectionInstanceW id="938" preCell="../GoC_00177_pop/8/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/17/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.847093581316675"/>
+            <electricalConnectionInstanceW id="1028" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/2/GoC_00514" postSegment="5" synapse="Gap_junction" weight="0.941586729947549"/>
+            <electricalConnectionInstanceW id="1030" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/4/GoC_00514" postSegment="2" synapse="Gap_junction" weight="7.283693319459168"/>
+            <electricalConnectionInstanceW id="1036" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/10/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.67631209986934"/>
+            <electricalConnectionInstanceW id="1042" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.147796661830037"/>
+            <electricalConnectionInstanceW id="1048" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/22/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.269983859976418"/>
+            <electricalConnectionInstanceW id="1130" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/0/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.859535074876411"/>
+            <electricalConnectionInstanceW id="1133" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/3/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.946964094961971"/>
+            <electricalConnectionInstanceW id="1145" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/15/GoC_00514" postSegment="2" synapse="Gap_junction" weight="0.612944003235824"/>
+            <electricalConnectionInstanceW id="1239" preCell="../GoC_00177_pop/11/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/6/GoC_00514" postSegment="1" synapse="Gap_junction" weight="2.132169779748659"/>
+            <electricalConnectionInstanceW id="1246" preCell="../GoC_00177_pop/11/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/13/GoC_00514" postSegment="5" synapse="Gap_junction" weight="0.891753118226246"/>
+            <electricalConnectionInstanceW id="1247" preCell="../GoC_00177_pop/11/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/14/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.298384250909772"/>
+            <electricalConnectionInstanceW id="1345" preCell="../GoC_00177_pop/12/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/10/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.333233303167419"/>
+            <electricalConnectionInstanceW id="1355" preCell="../GoC_00177_pop/12/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/20/GoC_00514" postSegment="2" synapse="Gap_junction" weight="4.134895164721594"/>
+            <electricalConnectionInstanceW id="1357" preCell="../GoC_00177_pop/12/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/22/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.055388726440535"/>
+            <electricalConnectionInstanceW id="1447" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/11/GoC_00514" postSegment="2" synapse="Gap_junction" weight="4.730996012491135"/>
+            <electricalConnectionInstanceW id="1448" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/12/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.859232058101193"/>
+            <electricalConnectionInstanceW id="1451" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/15/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.416575943809856"/>
+            <electricalConnectionInstanceW id="1455" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/19/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.480767789572147"/>
+            <electricalConnectionInstanceW id="1537" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/1/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.52130519949031"/>
+            <electricalConnectionInstanceW id="1547" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/11/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.960496756364073"/>
+            <electricalConnectionInstanceW id="1642" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/7/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.266202101240578"/>
+            <electricalConnectionInstanceW id="1643" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/8/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.688403433073241"/>
+            <electricalConnectionInstanceW id="1736" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/3/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.033699417082928"/>
+            <electricalConnectionInstanceW id="1743" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/10/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.795944126799729"/>
+            <electricalConnectionInstanceW id="1753" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/20/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.297787080419664"/>
+            <electricalConnectionInstanceW id="1843" preCell="../GoC_00177_pop/17/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/13/GoC_00514" postSegment="5" synapse="Gap_junction" weight="6.76432493357984"/>
+            <electricalConnectionInstanceW id="1849" preCell="../GoC_00177_pop/17/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/19/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.635274225991852"/>
+            <electricalConnectionInstanceW id="1929" preCell="../GoC_00177_pop/18/GoC_00177" preSegment="1" postCell="../GoC_00514_pop/3/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.999804932221723"/>
+            <electricalConnectionInstanceW id="1937" preCell="../GoC_00177_pop/18/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/11/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.800093383603766"/>
+            <electricalConnectionInstanceW id="2027" preCell="../GoC_00177_pop/19/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/6/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.317823934695944"/>
+            <electricalConnectionInstanceW id="2030" preCell="../GoC_00177_pop/19/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/9/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.091165578343183"/>
+            <electricalConnectionInstanceW id="2038" preCell="../GoC_00177_pop/19/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/17/GoC_00514" postSegment="2" synapse="Gap_junction" weight="9.063016542292129"/>
+            <electricalConnectionInstanceW id="2042" preCell="../GoC_00177_pop/19/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/21/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.573735812739415"/>
+            <electricalConnectionInstanceW id="2115" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/0/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.515431192699263"/>
+            <electricalConnectionInstanceW id="2116" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="2" postCell="../GoC_00514_pop/1/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.92397748747493"/>
+            <electricalConnectionInstanceW id="2126" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="5" postCell="../GoC_00514_pop/11/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.221515592408834"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_0_3" presynapticPopulation="GoC_00177_pop" postsynapticPopulation="GoC_00659_pop">
+            <electricalConnectionInstanceW id="76" preCell="../GoC_00177_pop/0/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/8/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.716865314965507"/>
+            <electricalConnectionInstanceW id="89" preCell="../GoC_00177_pop/0/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/21/GoC_00659" postSegment="5" synapse="Gap_junction" weight="4.660602611200675"/>
+            <electricalConnectionInstanceW id="90" preCell="../GoC_00177_pop/0/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.256211655346468"/>
+            <electricalConnectionInstanceW id="182" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/1/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.711586339879354"/>
+            <electricalConnectionInstanceW id="183" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/2/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.735684050592195"/>
+            <electricalConnectionInstanceW id="184" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/3/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.231780612116963"/>
+            <electricalConnectionInstanceW id="185" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.848247521225312"/>
+            <electricalConnectionInstanceW id="187" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.963572314013392"/>
+            <electricalConnectionInstanceW id="193" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.667902268575978"/>
+            <electricalConnectionInstanceW id="199" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/18/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.079742689658792"/>
+            <electricalConnectionInstanceW id="299" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.827187706632855"/>
+            <electricalConnectionInstanceW id="300" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/7/GoC_00659" postSegment="1" synapse="Gap_junction" weight="4.779223185416193"/>
+            <electricalConnectionInstanceW id="305" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.983093073625743"/>
+            <electricalConnectionInstanceW id="311" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/18/GoC_00659" postSegment="1" synapse="Gap_junction" weight="0.74306183981026"/>
+            <electricalConnectionInstanceW id="415" preCell="../GoC_00177_pop/3/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/11/GoC_00659" postSegment="2" synapse="Gap_junction" weight="4.571152118456861"/>
+            <electricalConnectionInstanceW id="418" preCell="../GoC_00177_pop/3/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/14/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.285377441898659"/>
+            <electricalConnectionInstanceW id="628" preCell="../GoC_00177_pop/5/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.374041651487384"/>
+            <electricalConnectionInstanceW id="632" preCell="../GoC_00177_pop/5/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/9/GoC_00659" postSegment="2" synapse="Gap_junction" weight="5.310376394669518"/>
+            <electricalConnectionInstanceW id="636" preCell="../GoC_00177_pop/5/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/13/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.460476373371689"/>
+            <electricalConnectionInstanceW id="737" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.62408132444722"/>
+            <electricalConnectionInstanceW id="738" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/7/GoC_00659" postSegment="1" synapse="Gap_junction" weight="3.548175391790684"/>
+            <electricalConnectionInstanceW id="751" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/20/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.452667876722417"/>
+            <electricalConnectionInstanceW id="845" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/7/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.341986492561258"/>
+            <electricalConnectionInstanceW id="954" preCell="../GoC_00177_pop/8/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/10/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.078469165265157"/>
+            <electricalConnectionInstanceW id="961" preCell="../GoC_00177_pop/8/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/17/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.442434228493075"/>
+            <electricalConnectionInstanceW id="966" preCell="../GoC_00177_pop/8/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.59631794579536"/>
+            <electricalConnectionInstanceW id="1066" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/17/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.536176726095813"/>
+            <electricalConnectionInstanceW id="1070" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/21/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.593482823601336"/>
+            <electricalConnectionInstanceW id="1154" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/1/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.055699753951587"/>
+            <electricalConnectionInstanceW id="1155" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/2/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.180881821095874"/>
+            <electricalConnectionInstanceW id="1157" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.565337406206423"/>
+            <electricalConnectionInstanceW id="1159" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.316712923532392"/>
+            <electricalConnectionInstanceW id="1160" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/7/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.423310369020471"/>
+            <electricalConnectionInstanceW id="1165" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.907412461502794"/>
+            <electricalConnectionInstanceW id="1256" preCell="../GoC_00177_pop/11/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/0/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.706145371439595"/>
+            <electricalConnectionInstanceW id="1366" preCell="../GoC_00177_pop/12/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/8/GoC_00659" postSegment="5" synapse="Gap_junction" weight="3.07038714251722"/>
+            <electricalConnectionInstanceW id="1461" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/2/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.933413073148183"/>
+            <electricalConnectionInstanceW id="1463" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.13733888400227"/>
+            <electricalConnectionInstanceW id="1471" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.81393500946718"/>
+            <electricalConnectionInstanceW id="1473" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/14/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.942181489010181"/>
+            <electricalConnectionInstanceW id="1560" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/1/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.024751499681539"/>
+            <electricalConnectionInstanceW id="1561" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/2/GoC_00659" postSegment="2" synapse="Gap_junction" weight="5.967431540040986"/>
+            <electricalConnectionInstanceW id="1563" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="1" synapse="Gap_junction" weight="8.879527872663829"/>
+            <electricalConnectionInstanceW id="1571" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.134801527204983"/>
+            <electricalConnectionInstanceW id="1662" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.912334447271277"/>
+            <electricalConnectionInstanceW id="1663" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="1" synapse="Gap_junction" weight="7.26291632092654"/>
+            <electricalConnectionInstanceW id="1667" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/9/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.904483245431961"/>
+            <electricalConnectionInstanceW id="1671" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/13/GoC_00659" postSegment="2" synapse="Gap_junction" weight="4.719989757723461"/>
+            <electricalConnectionInstanceW id="1674" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="1" synapse="Gap_junction" weight="3.485516376629779"/>
+            <electricalConnectionInstanceW id="1866" preCell="../GoC_00177_pop/17/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/13/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.907793201377579"/>
+            <electricalConnectionInstanceW id="1869" preCell="../GoC_00177_pop/17/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="1" synapse="Gap_junction" weight="3.05741970383665"/>
+            <electricalConnectionInstanceW id="1951" preCell="../GoC_00177_pop/18/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/2/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.224659946718683"/>
+            <electricalConnectionInstanceW id="1953" preCell="../GoC_00177_pop/18/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.439248477808189"/>
+            <electricalConnectionInstanceW id="1955" preCell="../GoC_00177_pop/18/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.93811629348412"/>
+            <electricalConnectionInstanceW id="1961" preCell="../GoC_00177_pop/18/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="5" synapse="Gap_junction" weight="6.371329670827334"/>
+            <electricalConnectionInstanceW id="1967" preCell="../GoC_00177_pop/18/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/18/GoC_00659" postSegment="1" synapse="Gap_junction" weight="4.958726385821168"/>
+            <electricalConnectionInstanceW id="2044" preCell="../GoC_00177_pop/19/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/0/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.751754279037191"/>
+            <electricalConnectionInstanceW id="2055" preCell="../GoC_00177_pop/19/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/11/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.020498168276458"/>
+            <electricalConnectionInstanceW id="2058" preCell="../GoC_00177_pop/19/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/14/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.877447897304484"/>
+            <electricalConnectionInstanceW id="2141" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/3/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.850642332278663"/>
+            <electricalConnectionInstanceW id="2143" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="1" synapse="Gap_junction" weight="4.705240470275442"/>
+            <electricalConnectionInstanceW id="2151" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/13/GoC_00659" postSegment="5" synapse="Gap_junction" weight="4.104715081754904"/>
+            <electricalConnectionInstanceW id="2154" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="1" synapse="Gap_junction" weight="4.696322790461997"/>
+            <electricalConnectionInstanceW id="2251" preCell="../GoC_00177_pop/21/GoC_00177" preSegment="5" postCell="../GoC_00659_pop/20/GoC_00659" postSegment="2" synapse="Gap_junction" weight="0.668554489446896"/>
+            <electricalConnectionInstanceW id="2330" preCell="../GoC_00177_pop/22/GoC_00177" preSegment="2" postCell="../GoC_00659_pop/7/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.147661808887048"/>
+            <electricalConnectionInstanceW id="2331" preCell="../GoC_00177_pop/22/GoC_00177" preSegment="1" postCell="../GoC_00659_pop/8/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.42589839123218"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_0_4" presynapticPopulation="GoC_00177_pop" postsynapticPopulation="GoC_00856_pop">
+            <electricalConnectionInstanceW id="106" preCell="../GoC_00177_pop/0/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.313520779244166"/>
+            <electricalConnectionInstanceW id="224" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.320902452316784"/>
+            <electricalConnectionInstanceW id="335" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.877230468569003"/>
+            <electricalConnectionInstanceW id="337" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="2" synapse="Gap_junction" weight="4.947803184208844"/>
+            <electricalConnectionInstanceW id="338" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.929370574141132"/>
+            <electricalConnectionInstanceW id="441" preCell="../GoC_00177_pop/3/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/14/GoC_00856" postSegment="2" synapse="Gap_junction" weight="5.78613963696534"/>
+            <electricalConnectionInstanceW id="551" preCell="../GoC_00177_pop/4/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/14/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.868167862173748"/>
+            <electricalConnectionInstanceW id="646" preCell="../GoC_00177_pop/5/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="1" synapse="Gap_junction" weight="3.796726624098193"/>
+            <electricalConnectionInstanceW id="657" preCell="../GoC_00177_pop/5/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/11/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.578670246244545"/>
+            <electricalConnectionInstanceW id="757" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/3/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.380332706906831"/>
+            <electricalConnectionInstanceW id="764" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/10/GoC_00856" postSegment="1" synapse="Gap_junction" weight="3.420025314459356"/>
+            <electricalConnectionInstanceW id="770" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/16/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.290677969273448"/>
+            <electricalConnectionInstanceW id="771" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/17/GoC_00856" postSegment="2" synapse="Gap_junction" weight="7.34271144987772"/>
+            <electricalConnectionInstanceW id="776" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="5" synapse="Gap_junction" weight="7.651374581040355"/>
+            <electricalConnectionInstanceW id="873" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/12/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.334679793491176"/>
+            <electricalConnectionInstanceW id="876" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.587250988781395"/>
+            <electricalConnectionInstanceW id="880" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.740185148387011"/>
+            <electricalConnectionInstanceW id="882" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="2" synapse="Gap_junction" weight="5.604567198993979"/>
+            <electricalConnectionInstanceW id="1076" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/4/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.769992477918983"/>
+            <electricalConnectionInstanceW id="1087" preCell="../GoC_00177_pop/9/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.030880926475141"/>
+            <electricalConnectionInstanceW id="1196" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.760934443603656"/>
+            <electricalConnectionInstanceW id="1197" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.109997460560587"/>
+            <electricalConnectionInstanceW id="1284" preCell="../GoC_00177_pop/11/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/5/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.729520702709327"/>
+            <electricalConnectionInstanceW id="1285" preCell="../GoC_00177_pop/11/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/6/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.517657843194911"/>
+            <electricalConnectionInstanceW id="1384" preCell="../GoC_00177_pop/12/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/3/GoC_00856" postSegment="5" synapse="Gap_junction" weight="0.618579693133846"/>
+            <electricalConnectionInstanceW id="1393" preCell="../GoC_00177_pop/12/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/12/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.488853188257385"/>
+            <electricalConnectionInstanceW id="1396" preCell="../GoC_00177_pop/12/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.773356908538116"/>
+            <electricalConnectionInstanceW id="1399" preCell="../GoC_00177_pop/12/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/18/GoC_00856" postSegment="2" synapse="Gap_junction" weight="7.920287266700875"/>
+            <electricalConnectionInstanceW id="1582" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.116501346136792"/>
+            <electricalConnectionInstanceW id="1584" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.861057830488644"/>
+            <electricalConnectionInstanceW id="1681" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="5" synapse="Gap_junction" weight="7.042804040896657"/>
+            <electricalConnectionInstanceW id="1683" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.149369707463765"/>
+            <electricalConnectionInstanceW id="1689" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.134182477631896"/>
+            <electricalConnectionInstanceW id="1701" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.148119890341345"/>
+            <electricalConnectionInstanceW id="1791" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/12/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.770799164425317"/>
+            <electricalConnectionInstanceW id="1794" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.154184769517179"/>
+            <electricalConnectionInstanceW id="1797" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/18/GoC_00856" postSegment="1" synapse="Gap_junction" weight="3.146694958589407"/>
+            <electricalConnectionInstanceW id="1798" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="2" synapse="Gap_junction" weight="4.869134763928102"/>
+            <electricalConnectionInstanceW id="1800" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="2" synapse="Gap_junction" weight="3.987764051446324"/>
+            <electricalConnectionInstanceW id="1993" preCell="../GoC_00177_pop/18/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="2" synapse="Gap_junction" weight="0.777732171565175"/>
+            <electricalConnectionInstanceW id="2081" preCell="../GoC_00177_pop/19/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/14/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.084028757839425"/>
+            <electricalConnectionInstanceW id="2161" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="2" synapse="Gap_junction" weight="4.633612356055393"/>
+            <electricalConnectionInstanceW id="2162" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/1/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.13051933341258"/>
+            <electricalConnectionInstanceW id="2163" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.587488007211144"/>
+            <electricalConnectionInstanceW id="2169" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.813370727172385"/>
+            <electricalConnectionInstanceW id="2172" preCell="../GoC_00177_pop/20/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/11/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.440337672128242"/>
+            <electricalConnectionInstanceW id="2257" preCell="../GoC_00177_pop/21/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/3/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.324215124122352"/>
+            <electricalConnectionInstanceW id="2264" preCell="../GoC_00177_pop/21/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/10/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.110894819449852"/>
+            <electricalConnectionInstanceW id="2349" preCell="../GoC_00177_pop/22/GoC_00177" preSegment="5" postCell="../GoC_00856_pop/3/GoC_00856" postSegment="5" synapse="Gap_junction" weight="0.928196484096098"/>
+            <electricalConnectionInstanceW id="2358" preCell="../GoC_00177_pop/22/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/12/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.199880668580371"/>
+            <electricalConnectionInstanceW id="2362" preCell="../GoC_00177_pop/22/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/16/GoC_00856" postSegment="1" synapse="Gap_junction" weight="5.60973915193815"/>
+            <electricalConnectionInstanceW id="2364" preCell="../GoC_00177_pop/22/GoC_00177" preSegment="2" postCell="../GoC_00856_pop/18/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.795566473458206"/>
+            <electricalConnectionInstanceW id="2365" preCell="../GoC_00177_pop/22/GoC_00177" preSegment="1" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.059437656900445"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_0_0" presynapticPopulation="GoC_00177_pop" postsynapticPopulation="GoC_00177_pop">
+            <electricalConnectionInstanceW id="126" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="1" postCell="../GoC_00177_pop/14/GoC_00177" postSegment="1" synapse="Gap_junction" weight="2.465452084708435"/>
+            <electricalConnectionInstanceW id="130" preCell="../GoC_00177_pop/1/GoC_00177" preSegment="5" postCell="../GoC_00177_pop/18/GoC_00177" postSegment="1" synapse="Gap_junction" weight="2.3773962395323"/>
+            <electricalConnectionInstanceW id="240" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="5" postCell="../GoC_00177_pop/16/GoC_00177" postSegment="1" synapse="Gap_junction" weight="1.640362531889141"/>
+            <electricalConnectionInstanceW id="242" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="5" postCell="../GoC_00177_pop/18/GoC_00177" postSegment="1" synapse="Gap_junction" weight="1.491781982573108"/>
+            <electricalConnectionInstanceW id="246" preCell="../GoC_00177_pop/2/GoC_00177" preSegment="1" postCell="../GoC_00177_pop/22/GoC_00177" postSegment="2" synapse="Gap_junction" weight="1.307224531505588"/>
+            <electricalConnectionInstanceW id="339" preCell="../GoC_00177_pop/3/GoC_00177" preSegment="2" postCell="../GoC_00177_pop/4/GoC_00177" postSegment="2" synapse="Gap_junction" weight="3.924575329495973"/>
+            <electricalConnectionInstanceW id="343" preCell="../GoC_00177_pop/3/GoC_00177" preSegment="5" postCell="../GoC_00177_pop/8/GoC_00177" postSegment="1" synapse="Gap_junction" weight="2.257056115690669"/>
+            <electricalConnectionInstanceW id="453" preCell="../GoC_00177_pop/4/GoC_00177" preSegment="2" postCell="../GoC_00177_pop/8/GoC_00177" postSegment="1" synapse="Gap_junction" weight="2.558899333057621"/>
+            <electricalConnectionInstanceW id="571" preCell="../GoC_00177_pop/5/GoC_00177" preSegment="2" postCell="../GoC_00177_pop/17/GoC_00177" postSegment="2" synapse="Gap_junction" weight="0.681484251105312"/>
+            <electricalConnectionInstanceW id="574" preCell="../GoC_00177_pop/5/GoC_00177" preSegment="2" postCell="../GoC_00177_pop/20/GoC_00177" postSegment="1" synapse="Gap_junction" weight="1.456685250453926"/>
+            <electricalConnectionInstanceW id="684" preCell="../GoC_00177_pop/6/GoC_00177" preSegment="1" postCell="../GoC_00177_pop/22/GoC_00177" postSegment="5" synapse="Gap_junction" weight="0.828504248672992"/>
+            <electricalConnectionInstanceW id="781" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="2" postCell="../GoC_00177_pop/12/GoC_00177" postSegment="1" synapse="Gap_junction" weight="1.975911589921143"/>
+            <electricalConnectionInstanceW id="791" preCell="../GoC_00177_pop/7/GoC_00177" preSegment="5" postCell="../GoC_00177_pop/22/GoC_00177" postSegment="2" synapse="Gap_junction" weight="2.349779762815831"/>
+            <electricalConnectionInstanceW id="894" preCell="../GoC_00177_pop/8/GoC_00177" preSegment="5" postCell="../GoC_00177_pop/19/GoC_00177" postSegment="2" synapse="Gap_junction" weight="1.535108062002502"/>
+            <electricalConnectionInstanceW id="1097" preCell="../GoC_00177_pop/10/GoC_00177" preSegment="1" postCell="../GoC_00177_pop/13/GoC_00177" postSegment="5" synapse="Gap_junction" weight="0.926977776560387"/>
+            <electricalConnectionInstanceW id="1305" preCell="../GoC_00177_pop/12/GoC_00177" preSegment="1" postCell="../GoC_00177_pop/16/GoC_00177" postSegment="1" synapse="Gap_junction" weight="2.298852977848221"/>
+            <electricalConnectionInstanceW id="1311" preCell="../GoC_00177_pop/12/GoC_00177" preSegment="2" postCell="../GoC_00177_pop/22/GoC_00177" postSegment="2" synapse="Gap_junction" weight="2.420550849964095"/>
+            <electricalConnectionInstanceW id="1404" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="1" postCell="../GoC_00177_pop/14/GoC_00177" postSegment="5" synapse="Gap_junction" weight="0.942009186890511"/>
+            <electricalConnectionInstanceW id="1408" preCell="../GoC_00177_pop/13/GoC_00177" preSegment="5" postCell="../GoC_00177_pop/18/GoC_00177" postSegment="5" synapse="Gap_junction" weight="4.843915069656956"/>
+            <electricalConnectionInstanceW id="1505" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="5" postCell="../GoC_00177_pop/15/GoC_00177" postSegment="1" synapse="Gap_junction" weight="1.977386000457527"/>
+            <electricalConnectionInstanceW id="1508" preCell="../GoC_00177_pop/14/GoC_00177" preSegment="1" postCell="../GoC_00177_pop/18/GoC_00177" postSegment="5" synapse="Gap_junction" weight="1.115504745260333"/>
+            <electricalConnectionInstanceW id="1609" preCell="../GoC_00177_pop/15/GoC_00177" preSegment="1" postCell="../GoC_00177_pop/20/GoC_00177" postSegment="1" synapse="Gap_junction" weight="7.218484066691486"/>
+            <electricalConnectionInstanceW id="1709" preCell="../GoC_00177_pop/16/GoC_00177" preSegment="2" postCell="../GoC_00177_pop/22/GoC_00177" postSegment="1" synapse="Gap_junction" weight="2.445453788687112"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_1_1" presynapticPopulation="GoC_00263_pop" postsynapticPopulation="GoC_00263_pop">
+            <electricalConnectionInstanceW id="2370" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="5" postCell="../GoC_00263_pop/2/GoC_00263" postSegment="1" synapse="Gap_junction" weight="5.251296956809353"/>
+            <electricalConnectionInstanceW id="2376" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="2" postCell="../GoC_00263_pop/8/GoC_00263" postSegment="1" synapse="Gap_junction" weight="2.034956058891182"/>
+            <electricalConnectionInstanceW id="2377" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="5" postCell="../GoC_00263_pop/9/GoC_00263" postSegment="1" synapse="Gap_junction" weight="2.097969623388333"/>
+            <electricalConnectionInstanceW id="2382" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="2" postCell="../GoC_00263_pop/14/GoC_00263" postSegment="2" synapse="Gap_junction" weight="3.885639191311623"/>
+            <electricalConnectionInstanceW id="2476" preCell="../GoC_00263_pop/1/GoC_00263" preSegment="1" postCell="../GoC_00263_pop/18/GoC_00263" postSegment="1" synapse="Gap_junction" weight="4.463609845386192"/>
+            <electricalConnectionInstanceW id="2556" preCell="../GoC_00263_pop/2/GoC_00263" preSegment="1" postCell="../GoC_00263_pop/9/GoC_00263" postSegment="1" synapse="Gap_junction" weight="1.466948109482256"/>
+            <electricalConnectionInstanceW id="2642" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="2" postCell="../GoC_00263_pop/7/GoC_00263" postSegment="2" synapse="Gap_junction" weight="1.72707487639065"/>
+            <electricalConnectionInstanceW id="2650" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="1" postCell="../GoC_00263_pop/15/GoC_00263" postSegment="2" synapse="Gap_junction" weight="5.638308361799102"/>
+            <electricalConnectionInstanceW id="2652" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="5" postCell="../GoC_00263_pop/17/GoC_00263" postSegment="5" synapse="Gap_junction" weight="1.471451017639097"/>
+            <electricalConnectionInstanceW id="2737" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="2" postCell="../GoC_00263_pop/15/GoC_00263" postSegment="1" synapse="Gap_junction" weight="1.854216820597606"/>
+            <electricalConnectionInstanceW id="2738" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="1" postCell="../GoC_00263_pop/16/GoC_00263" postSegment="2" synapse="Gap_junction" weight="3.945580744419861"/>
+            <electricalConnectionInstanceW id="2817" preCell="../GoC_00263_pop/5/GoC_00263" preSegment="5" postCell="../GoC_00263_pop/9/GoC_00263" postSegment="2" synapse="Gap_junction" weight="8.171120576016101"/>
+            <electricalConnectionInstanceW id="2822" preCell="../GoC_00263_pop/5/GoC_00263" preSegment="2" postCell="../GoC_00263_pop/14/GoC_00263" postSegment="1" synapse="Gap_junction" weight="1.080949533539178"/>
+            <electricalConnectionInstanceW id="2901" preCell="../GoC_00263_pop/6/GoC_00263" preSegment="1" postCell="../GoC_00263_pop/8/GoC_00263" postSegment="5" synapse="Gap_junction" weight="2.273064585273077"/>
+            <electricalConnectionInstanceW id="2907" preCell="../GoC_00263_pop/6/GoC_00263" preSegment="1" postCell="../GoC_00263_pop/14/GoC_00263" postSegment="2" synapse="Gap_junction" weight="1.745065918958296"/>
+            <electricalConnectionInstanceW id="2992" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="2" postCell="../GoC_00263_pop/15/GoC_00263" postSegment="2" synapse="Gap_junction" weight="1.132288263595678"/>
+            <electricalConnectionInstanceW id="2994" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="5" postCell="../GoC_00263_pop/17/GoC_00263" postSegment="2" synapse="Gap_junction" weight="2.177386126247524"/>
+            <electricalConnectionInstanceW id="2996" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="2" postCell="../GoC_00263_pop/19/GoC_00263" postSegment="2" synapse="Gap_junction" weight="1.972668138262958"/>
+            <electricalConnectionInstanceW id="2999" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="1" postCell="../GoC_00263_pop/22/GoC_00263" postSegment="1" synapse="Gap_junction" weight="1.074555611701792"/>
+            <electricalConnectionInstanceW id="3069" preCell="../GoC_00263_pop/8/GoC_00263" preSegment="2" postCell="../GoC_00263_pop/9/GoC_00263" postSegment="5" synapse="Gap_junction" weight="1.900329931225035"/>
+            <electricalConnectionInstanceW id="3236" preCell="../GoC_00263_pop/10/GoC_00263" preSegment="1" postCell="../GoC_00263_pop/13/GoC_00263" postSegment="2" synapse="Gap_junction" weight="0.697557131481532"/>
+            <electricalConnectionInstanceW id="3315" preCell="../GoC_00263_pop/11/GoC_00263" preSegment="1" postCell="../GoC_00263_pop/12/GoC_00263" postSegment="2" synapse="Gap_junction" weight="2.245524673540615"/>
+            <electricalConnectionInstanceW id="3403" preCell="../GoC_00263_pop/12/GoC_00263" preSegment="2" postCell="../GoC_00263_pop/21/GoC_00263" postSegment="5" synapse="Gap_junction" weight="2.767202877822354"/>
+            <electricalConnectionInstanceW id="3479" preCell="../GoC_00263_pop/13/GoC_00263" preSegment="1" postCell="../GoC_00263_pop/19/GoC_00263" postSegment="5" synapse="Gap_junction" weight="1.82571710379043"/>
+            <electricalConnectionInstanceW id="3631" preCell="../GoC_00263_pop/15/GoC_00263" preSegment="5" postCell="../GoC_00263_pop/18/GoC_00263" postSegment="5" synapse="Gap_junction" weight="1.386132840652995"/>
+            <electricalConnectionInstanceW id="3781" preCell="../GoC_00263_pop/17/GoC_00263" preSegment="1" postCell="../GoC_00263_pop/19/GoC_00263" postSegment="5" synapse="Gap_junction" weight="1.01990451834111"/>
+            <electricalConnectionInstanceW id="3929" preCell="../GoC_00263_pop/19/GoC_00263" preSegment="5" postCell="../GoC_00263_pop/22/GoC_00263" postSegment="1" synapse="Gap_junction" weight="3.82497672313189"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_1_2" presynapticPopulation="GoC_00263_pop" postsynapticPopulation="GoC_00514_pop">
+            <electricalConnectionInstanceW id="2411" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/20/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.364641614946845"/>
+            <electricalConnectionInstanceW id="2413" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/22/GoC_00514" postSegment="2" synapse="Gap_junction" weight="3.412588399418418"/>
+            <electricalConnectionInstanceW id="2488" preCell="../GoC_00263_pop/1/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/7/GoC_00514" postSegment="1" synapse="Gap_junction" weight="5.120368896217938"/>
+            <electricalConnectionInstanceW id="2489" preCell="../GoC_00263_pop/1/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/8/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.38066249690971"/>
+            <electricalConnectionInstanceW id="2574" preCell="../GoC_00263_pop/2/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/4/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.491647639160423"/>
+            <electricalConnectionInstanceW id="2592" preCell="../GoC_00263_pop/2/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/22/GoC_00514" postSegment="2" synapse="Gap_junction" weight="3.308285952528698"/>
+            <electricalConnectionInstanceW id="2658" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/0/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.732173617923924"/>
+            <electricalConnectionInstanceW id="2659" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/1/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.81896482647914"/>
+            <electricalConnectionInstanceW id="2666" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/8/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.450246162347968"/>
+            <electricalConnectionInstanceW id="2669" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/11/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.664438132205901"/>
+            <electricalConnectionInstanceW id="2745" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/0/GoC_00514" postSegment="1" synapse="Gap_junction" weight="5.311584047394495"/>
+            <electricalConnectionInstanceW id="2746" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/1/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.728221836025198"/>
+            <electricalConnectionInstanceW id="2753" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/8/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.67297232796299"/>
+            <electricalConnectionInstanceW id="2833" preCell="../GoC_00263_pop/5/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/2/GoC_00514" postSegment="2" synapse="Gap_junction" weight="3.988461488525188"/>
+            <electricalConnectionInstanceW id="2835" preCell="../GoC_00263_pop/5/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/4/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.723889128450704"/>
+            <electricalConnectionInstanceW id="2836" preCell="../GoC_00263_pop/5/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/5/GoC_00514" postSegment="5" synapse="Gap_junction" weight="7.800185428408724"/>
+            <electricalConnectionInstanceW id="2840" preCell="../GoC_00263_pop/5/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/9/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.647557022326594"/>
+            <electricalConnectionInstanceW id="2847" preCell="../GoC_00263_pop/5/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="1" synapse="Gap_junction" weight="3.595581904728144"/>
+            <electricalConnectionInstanceW id="2926" preCell="../GoC_00263_pop/6/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/10/GoC_00514" postSegment="2" synapse="Gap_junction" weight="0.73674432380007"/>
+            <electricalConnectionInstanceW id="3000" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/0/GoC_00514" postSegment="1" synapse="Gap_junction" weight="0.959024819404286"/>
+            <electricalConnectionInstanceW id="3013" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/13/GoC_00514" postSegment="1" synapse="Gap_junction" weight="2.611947158644423"/>
+            <electricalConnectionInstanceW id="3088" preCell="../GoC_00263_pop/8/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/5/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.057514388906921"/>
+            <electricalConnectionInstanceW id="3093" preCell="../GoC_00263_pop/8/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/10/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.48497081189147"/>
+            <electricalConnectionInstanceW id="3099" preCell="../GoC_00263_pop/8/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.146665806072459"/>
+            <electricalConnectionInstanceW id="3105" preCell="../GoC_00263_pop/8/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/22/GoC_00514" postSegment="1" synapse="Gap_junction" weight="2.802800251376013"/>
+            <electricalConnectionInstanceW id="3167" preCell="../GoC_00263_pop/9/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/2/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.928768691990434"/>
+            <electricalConnectionInstanceW id="3169" preCell="../GoC_00263_pop/9/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/4/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.917163450542552"/>
+            <electricalConnectionInstanceW id="3170" preCell="../GoC_00263_pop/9/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/5/GoC_00514" postSegment="5" synapse="Gap_junction" weight="6.089024071601584"/>
+            <electricalConnectionInstanceW id="3174" preCell="../GoC_00263_pop/9/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/9/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.093459117776899"/>
+            <electricalConnectionInstanceW id="3181" preCell="../GoC_00263_pop/9/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="5" synapse="Gap_junction" weight="4.744633865808768"/>
+            <electricalConnectionInstanceW id="3252" preCell="../GoC_00263_pop/10/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/6/GoC_00514" postSegment="1" synapse="Gap_junction" weight="3.602889651347282"/>
+            <electricalConnectionInstanceW id="3260" preCell="../GoC_00263_pop/10/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/14/GoC_00514" postSegment="2" synapse="Gap_junction" weight="8.687678858641371"/>
+            <electricalConnectionInstanceW id="3263" preCell="../GoC_00263_pop/10/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/17/GoC_00514" postSegment="1" synapse="Gap_junction" weight="0.933836729247934"/>
+            <electricalConnectionInstanceW id="3346" preCell="../GoC_00263_pop/11/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/20/GoC_00514" postSegment="1" synapse="Gap_junction" weight="2.777986996152058"/>
+            <electricalConnectionInstanceW id="3348" preCell="../GoC_00263_pop/11/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/22/GoC_00514" postSegment="1" synapse="Gap_junction" weight="0.858837517779863"/>
+            <electricalConnectionInstanceW id="3496" preCell="../GoC_00263_pop/13/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/13/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.647004979121429"/>
+            <electricalConnectionInstanceW id="3570" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/10/GoC_00514" postSegment="2" synapse="Gap_junction" weight="5.660352605274712"/>
+            <electricalConnectionInstanceW id="3576" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="1" synapse="Gap_junction" weight="3.414998708661444"/>
+            <electricalConnectionInstanceW id="3580" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/20/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.098374265382144"/>
+            <electricalConnectionInstanceW id="3582" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/22/GoC_00514" postSegment="5" synapse="Gap_junction" weight="6.207719834358142"/>
+            <electricalConnectionInstanceW id="3636" preCell="../GoC_00263_pop/15/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/0/GoC_00514" postSegment="1" synapse="Gap_junction" weight="2.353804032170683"/>
+            <electricalConnectionInstanceW id="3637" preCell="../GoC_00263_pop/15/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/1/GoC_00514" postSegment="1" synapse="Gap_junction" weight="4.105080193162377"/>
+            <electricalConnectionInstanceW id="3644" preCell="../GoC_00263_pop/15/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/8/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.959910224159811"/>
+            <electricalConnectionInstanceW id="3712" preCell="../GoC_00263_pop/16/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/1/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.289356346634938"/>
+            <electricalConnectionInstanceW id="3866" preCell="../GoC_00263_pop/18/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/8/GoC_00514" postSegment="2" synapse="Gap_junction" weight="4.210579519541364"/>
+            <electricalConnectionInstanceW id="3943" preCell="../GoC_00263_pop/19/GoC_00263" preSegment="1" postCell="../GoC_00514_pop/13/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.04733463687463"/>
+            <electricalConnectionInstanceW id="3949" preCell="../GoC_00263_pop/19/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/19/GoC_00514" postSegment="5" synapse="Gap_junction" weight="4.82799860457003"/>
+            <electricalConnectionInstanceW id="4001" preCell="../GoC_00263_pop/20/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/0/GoC_00514" postSegment="5" synapse="Gap_junction" weight="0.6997442841985"/>
+            <electricalConnectionInstanceW id="4013" preCell="../GoC_00263_pop/20/GoC_00263" preSegment="2" postCell="../GoC_00514_pop/12/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.281157136045458"/>
+            <electricalConnectionInstanceW id="4089" preCell="../GoC_00263_pop/21/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/18/GoC_00514" postSegment="1" synapse="Gap_junction" weight="2.099104107410468"/>
+            <electricalConnectionInstanceW id="4151" preCell="../GoC_00263_pop/22/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/11/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.884236139961175"/>
+            <electricalConnectionInstanceW id="4153" preCell="../GoC_00263_pop/22/GoC_00263" preSegment="5" postCell="../GoC_00514_pop/13/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.399602034591914"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_1_3" presynapticPopulation="GoC_00263_pop" postsynapticPopulation="GoC_00659_pop">
+            <electricalConnectionInstanceW id="2422" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/8/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.431002708980828"/>
+            <electricalConnectionInstanceW id="2431" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/17/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.081589193924343"/>
+            <electricalConnectionInstanceW id="2433" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/19/GoC_00659" postSegment="5" synapse="Gap_junction" weight="3.753971350622071"/>
+            <electricalConnectionInstanceW id="2435" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/21/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.892382440788265"/>
+            <electricalConnectionInstanceW id="2513" preCell="../GoC_00263_pop/1/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/9/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.713548533613654"/>
+            <electricalConnectionInstanceW id="2519" preCell="../GoC_00263_pop/1/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/15/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.136997775800078"/>
+            <electricalConnectionInstanceW id="2601" preCell="../GoC_00263_pop/2/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/8/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.597513746661545"/>
+            <electricalConnectionInstanceW id="2615" preCell="../GoC_00263_pop/2/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.495443744930466"/>
+            <electricalConnectionInstanceW id="2684" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/3/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.85409896951603"/>
+            <electricalConnectionInstanceW id="2685" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.946315904566938"/>
+            <electricalConnectionInstanceW id="2686" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.973892910636979"/>
+            <electricalConnectionInstanceW id="2690" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/9/GoC_00659" postSegment="2" synapse="Gap_junction" weight="0.821483012386584"/>
+            <electricalConnectionInstanceW id="2694" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/13/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.627723897223238"/>
+            <electricalConnectionInstanceW id="2771" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/3/GoC_00659" postSegment="5" synapse="Gap_junction" weight="6.97679545278384"/>
+            <electricalConnectionInstanceW id="2772" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.546359020289895"/>
+            <electricalConnectionInstanceW id="2773" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="1" synapse="Gap_junction" weight="0.802689360514525"/>
+            <electricalConnectionInstanceW id="2774" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.143217748341652"/>
+            <electricalConnectionInstanceW id="2783" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/15/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.774584486189125"/>
+            <electricalConnectionInstanceW id="2864" preCell="../GoC_00263_pop/5/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/10/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.824116946538485"/>
+            <electricalConnectionInstanceW id="2871" preCell="../GoC_00263_pop/5/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/17/GoC_00659" postSegment="1" synapse="Gap_junction" weight="5.402896555189768"/>
+            <electricalConnectionInstanceW id="2873" preCell="../GoC_00263_pop/5/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/19/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.425320192031289"/>
+            <electricalConnectionInstanceW id="2876" preCell="../GoC_00263_pop/5/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="2" synapse="Gap_junction" weight="6.958822130469541"/>
+            <electricalConnectionInstanceW id="2958" preCell="../GoC_00263_pop/6/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/19/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.626483537677029"/>
+            <electricalConnectionInstanceW id="3025" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/2/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.997335471449897"/>
+            <electricalConnectionInstanceW id="3027" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.570627521300854"/>
+            <electricalConnectionInstanceW id="3036" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/13/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.504719130386614"/>
+            <electricalConnectionInstanceW id="3039" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="2" synapse="Gap_junction" weight="5.959055908689538"/>
+            <electricalConnectionInstanceW id="3114" preCell="../GoC_00263_pop/8/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/8/GoC_00659" postSegment="1" synapse="Gap_junction" weight="0.977567126291894"/>
+            <electricalConnectionInstanceW id="3125" preCell="../GoC_00263_pop/8/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/19/GoC_00659" postSegment="1" synapse="Gap_junction" weight="4.653276584892692"/>
+            <electricalConnectionInstanceW id="3128" preCell="../GoC_00263_pop/8/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.488489024753536"/>
+            <electricalConnectionInstanceW id="3198" preCell="../GoC_00263_pop/9/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/10/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.529014968131549"/>
+            <electricalConnectionInstanceW id="3199" preCell="../GoC_00263_pop/9/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/11/GoC_00659" postSegment="2" synapse="Gap_junction" weight="0.951440225341371"/>
+            <electricalConnectionInstanceW id="3205" preCell="../GoC_00263_pop/9/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/17/GoC_00659" postSegment="2" synapse="Gap_junction" weight="4.572577766919518"/>
+            <electricalConnectionInstanceW id="3207" preCell="../GoC_00263_pop/9/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/19/GoC_00659" postSegment="1" synapse="Gap_junction" weight="3.073140465717247"/>
+            <electricalConnectionInstanceW id="3210" preCell="../GoC_00263_pop/9/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="2" synapse="Gap_junction" weight="8.093501356706119"/>
+            <electricalConnectionInstanceW id="3269" preCell="../GoC_00263_pop/10/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/0/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.40282695993244"/>
+            <electricalConnectionInstanceW id="3356" preCell="../GoC_00263_pop/11/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/7/GoC_00659" postSegment="2" synapse="Gap_junction" weight="0.782917791143996"/>
+            <electricalConnectionInstanceW id="3357" preCell="../GoC_00263_pop/11/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/8/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.442957002076172"/>
+            <electricalConnectionInstanceW id="3435" preCell="../GoC_00263_pop/12/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/7/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.921895181446516"/>
+            <electricalConnectionInstanceW id="3506" preCell="../GoC_00263_pop/13/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/0/GoC_00659" postSegment="5" synapse="Gap_junction" weight="0.63104041088361"/>
+            <electricalConnectionInstanceW id="3591" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/8/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.786990336491395"/>
+            <electricalConnectionInstanceW id="3602" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/19/GoC_00659" postSegment="1" synapse="Gap_junction" weight="4.985062145890614"/>
+            <electricalConnectionInstanceW id="3604" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/21/GoC_00659" postSegment="5" synapse="Gap_junction" weight="3.118553884315386"/>
+            <electricalConnectionInstanceW id="3662" preCell="../GoC_00263_pop/15/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/3/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.727449625302754"/>
+            <electricalConnectionInstanceW id="3663" preCell="../GoC_00263_pop/15/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.616469742936841"/>
+            <electricalConnectionInstanceW id="3668" preCell="../GoC_00263_pop/15/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/9/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.813728304321891"/>
+            <electricalConnectionInstanceW id="3674" preCell="../GoC_00263_pop/15/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/15/GoC_00659" postSegment="2" synapse="Gap_junction" weight="0.92616123296398"/>
+            <electricalConnectionInstanceW id="3675" preCell="../GoC_00263_pop/15/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.063220230230686"/>
+            <electricalConnectionInstanceW id="3735" preCell="../GoC_00263_pop/16/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/1/GoC_00659" postSegment="2" synapse="Gap_junction" weight="4.696017549631181"/>
+            <electricalConnectionInstanceW id="3738" preCell="../GoC_00263_pop/16/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="5" synapse="Gap_junction" weight="4.088693754294768"/>
+            <electricalConnectionInstanceW id="3740" preCell="../GoC_00263_pop/16/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.73674603853159"/>
+            <electricalConnectionInstanceW id="3741" preCell="../GoC_00263_pop/16/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/7/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.188306246113662"/>
+            <electricalConnectionInstanceW id="3752" preCell="../GoC_00263_pop/16/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/18/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.301882645563136"/>
+            <electricalConnectionInstanceW id="3813" preCell="../GoC_00263_pop/17/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="1" synapse="Gap_junction" weight="3.631487016771098"/>
+            <electricalConnectionInstanceW id="3817" preCell="../GoC_00263_pop/17/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/9/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.961744760438425"/>
+            <electricalConnectionInstanceW id="3824" preCell="../GoC_00263_pop/17/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.696007051429822"/>
+            <electricalConnectionInstanceW id="3886" preCell="../GoC_00263_pop/18/GoC_00263" preSegment="2" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.711125666659559"/>
+            <electricalConnectionInstanceW id="3896" preCell="../GoC_00263_pop/18/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/15/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.31426496648541"/>
+            <electricalConnectionInstanceW id="3969" preCell="../GoC_00263_pop/19/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.311433623428814"/>
+            <electricalConnectionInstanceW id="4030" preCell="../GoC_00263_pop/20/GoC_00263" preSegment="5" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.38317033780129"/>
+            <electricalConnectionInstanceW id="4031" preCell="../GoC_00263_pop/20/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/7/GoC_00659" postSegment="5" synapse="Gap_junction" weight="5.455579508947991"/>
+            <electricalConnectionInstanceW id="4101" preCell="../GoC_00263_pop/21/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/7/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.21322662932373"/>
+            <electricalConnectionInstanceW id="4114" preCell="../GoC_00263_pop/21/GoC_00263" preSegment="1" postCell="../GoC_00659_pop/20/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.67248585368012"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_1_4" presynapticPopulation="GoC_00263_pop" postsynapticPopulation="GoC_00856_pop">
+            <electricalConnectionInstanceW id="2452" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.363426957764172"/>
+            <electricalConnectionInstanceW id="2456" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="1" synapse="Gap_junction" weight="3.209433303279275"/>
+            <electricalConnectionInstanceW id="2458" preCell="../GoC_00263_pop/0/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.392016482231878"/>
+            <electricalConnectionInstanceW id="2527" preCell="../GoC_00263_pop/1/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.732259821787175"/>
+            <electricalConnectionInstanceW id="2535" preCell="../GoC_00263_pop/1/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="1" synapse="Gap_junction" weight="4.344248920301245"/>
+            <electricalConnectionInstanceW id="2538" preCell="../GoC_00263_pop/1/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/11/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.497174249873411"/>
+            <electricalConnectionInstanceW id="2540" preCell="../GoC_00263_pop/1/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/13/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.687351561757882"/>
+            <electricalConnectionInstanceW id="2628" preCell="../GoC_00263_pop/2/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/12/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.022020174675443"/>
+            <electricalConnectionInstanceW id="2635" preCell="../GoC_00263_pop/2/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="1" synapse="Gap_junction" weight="4.36104756450294"/>
+            <electricalConnectionInstanceW id="2704" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.493744833555012"/>
+            <electricalConnectionInstanceW id="2712" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.025049272710937"/>
+            <electricalConnectionInstanceW id="2724" preCell="../GoC_00263_pop/3/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.719456265267593"/>
+            <electricalConnectionInstanceW id="2792" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/1/GoC_00856" postSegment="1" synapse="Gap_junction" weight="4.557644701252054"/>
+            <electricalConnectionInstanceW id="2799" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.6518991178545"/>
+            <electricalConnectionInstanceW id="2811" preCell="../GoC_00263_pop/4/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="2" synapse="Gap_junction" weight="7.146079971937878"/>
+            <electricalConnectionInstanceW id="2966" preCell="../GoC_00263_pop/6/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/4/GoC_00856" postSegment="1" synapse="Gap_junction" weight="7.942827129091768"/>
+            <electricalConnectionInstanceW id="3046" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.001550315286029"/>
+            <electricalConnectionInstanceW id="3048" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="5" synapse="Gap_junction" weight="5.842267345563958"/>
+            <electricalConnectionInstanceW id="3051" preCell="../GoC_00263_pop/7/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/5/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.262264084398969"/>
+            <electricalConnectionInstanceW id="3133" preCell="../GoC_00263_pop/8/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/4/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.63113678984734"/>
+            <electricalConnectionInstanceW id="3144" preCell="../GoC_00263_pop/8/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.660066843643219"/>
+            <electricalConnectionInstanceW id="3230" preCell="../GoC_00263_pop/9/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="5" synapse="Gap_junction" weight="0.670996141928311"/>
+            <electricalConnectionInstanceW id="3375" preCell="../GoC_00263_pop/11/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/3/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.232008077183091"/>
+            <electricalConnectionInstanceW id="3387" preCell="../GoC_00263_pop/11/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.456166142012445"/>
+            <electricalConnectionInstanceW id="3388" preCell="../GoC_00263_pop/11/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/16/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.882917728843772"/>
+            <electricalConnectionInstanceW id="3390" preCell="../GoC_00263_pop/11/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/18/GoC_00856" postSegment="5" synapse="Gap_junction" weight="5.67101934629857"/>
+            <electricalConnectionInstanceW id="3391" preCell="../GoC_00263_pop/11/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.676328318147152"/>
+            <electricalConnectionInstanceW id="3467" preCell="../GoC_00263_pop/12/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/16/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.800453664723351"/>
+            <electricalConnectionInstanceW id="3469" preCell="../GoC_00263_pop/12/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/18/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.04874387205241"/>
+            <electricalConnectionInstanceW id="3473" preCell="../GoC_00263_pop/12/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="2" synapse="Gap_junction" weight="3.774560257318718"/>
+            <electricalConnectionInstanceW id="3534" preCell="../GoC_00263_pop/13/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/5/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.512932878135961"/>
+            <electricalConnectionInstanceW id="3535" preCell="../GoC_00263_pop/13/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/6/GoC_00856" postSegment="2" synapse="Gap_junction" weight="5.82804989312659"/>
+            <electricalConnectionInstanceW id="3610" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/4/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.732950258233581"/>
+            <electricalConnectionInstanceW id="3618" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/12/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.741546515447166"/>
+            <electricalConnectionInstanceW id="3621" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.783811017322597"/>
+            <electricalConnectionInstanceW id="3624" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/18/GoC_00856" postSegment="5" synapse="Gap_junction" weight="0.762427860615392"/>
+            <electricalConnectionInstanceW id="3625" preCell="../GoC_00263_pop/14/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.37811137170636"/>
+            <electricalConnectionInstanceW id="3695" preCell="../GoC_00263_pop/15/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/13/GoC_00856" postSegment="5" synapse="Gap_junction" weight="0.763731221862757"/>
+            <electricalConnectionInstanceW id="3764" preCell="../GoC_00263_pop/16/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/7/GoC_00856" postSegment="5" synapse="Gap_junction" weight="0.82159537729152"/>
+            <electricalConnectionInstanceW id="3777" preCell="../GoC_00263_pop/16/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.694196547073652"/>
+            <electricalConnectionInstanceW id="3831" preCell="../GoC_00263_pop/17/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="1" synapse="Gap_junction" weight="4.312222979328506"/>
+            <electricalConnectionInstanceW id="3833" preCell="../GoC_00263_pop/17/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.227912495855502"/>
+            <electricalConnectionInstanceW id="3842" preCell="../GoC_00263_pop/17/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/11/GoC_00856" postSegment="5" synapse="Gap_junction" weight="5.865512787634988"/>
+            <electricalConnectionInstanceW id="3844" preCell="../GoC_00263_pop/17/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/13/GoC_00856" postSegment="5" synapse="Gap_junction" weight="0.862629747130246"/>
+            <electricalConnectionInstanceW id="3904" preCell="../GoC_00263_pop/18/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.407187082425768"/>
+            <electricalConnectionInstanceW id="3912" preCell="../GoC_00263_pop/18/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="2" synapse="Gap_junction" weight="3.051940298016778"/>
+            <electricalConnectionInstanceW id="3917" preCell="../GoC_00263_pop/18/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/13/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.630259246088444"/>
+            <electricalConnectionInstanceW id="3978" preCell="../GoC_00263_pop/19/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.884596631434952"/>
+            <electricalConnectionInstanceW id="3981" preCell="../GoC_00263_pop/19/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/5/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.76032396000934"/>
+            <electricalConnectionInstanceW id="4064" preCell="../GoC_00263_pop/20/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/17/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.58922106621014"/>
+            <electricalConnectionInstanceW id="4067" preCell="../GoC_00263_pop/20/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="5" synapse="Gap_junction" weight="0.831866625099862"/>
+            <electricalConnectionInstanceW id="4068" preCell="../GoC_00263_pop/20/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.00692788826919"/>
+            <electricalConnectionInstanceW id="4069" preCell="../GoC_00263_pop/20/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.147290847260145"/>
+            <electricalConnectionInstanceW id="4120" preCell="../GoC_00263_pop/21/GoC_00263" preSegment="1" postCell="../GoC_00856_pop/3/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.479058714585227"/>
+            <electricalConnectionInstanceW id="4127" preCell="../GoC_00263_pop/21/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/10/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.159947522190834"/>
+            <electricalConnectionInstanceW id="4139" preCell="../GoC_00263_pop/21/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="2" synapse="Gap_junction" weight="3.575235656863906"/>
+            <electricalConnectionInstanceW id="4188" preCell="../GoC_00263_pop/22/GoC_00263" preSegment="5" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.213409449630198"/>
+            <electricalConnectionInstanceW id="4191" preCell="../GoC_00263_pop/22/GoC_00263" preSegment="2" postCell="../GoC_00856_pop/5/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.19785859176314"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_2_2" presynapticPopulation="GoC_00514_pop" postsynapticPopulation="GoC_00514_pop">
+            <electricalConnectionInstanceW id="4209" preCell="../GoC_00514_pop/0/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/1/GoC_00514" postSegment="1" synapse="Gap_junction" weight="2.742592920113549"/>
+            <electricalConnectionInstanceW id="4219" preCell="../GoC_00514_pop/0/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/11/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.996379045472549"/>
+            <electricalConnectionInstanceW id="4282" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/7/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.54071942182152"/>
+            <electricalConnectionInstanceW id="4283" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/8/GoC_00514" postSegment="2" synapse="Gap_junction" weight="4.677291531673177"/>
+            <electricalConnectionInstanceW id="4345" preCell="../GoC_00514_pop/2/GoC_00514" preSegment="5" postCell="../GoC_00514_pop/4/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.676847249605325"/>
+            <electricalConnectionInstanceW id="4346" preCell="../GoC_00514_pop/2/GoC_00514" preSegment="5" postCell="../GoC_00514_pop/5/GoC_00514" postSegment="1" synapse="Gap_junction" weight="4.94127854749618"/>
+            <electricalConnectionInstanceW id="4350" preCell="../GoC_00514_pop/2/GoC_00514" preSegment="2" postCell="../GoC_00514_pop/9/GoC_00514" postSegment="5" synapse="Gap_junction" weight="4.212265506602128"/>
+            <electricalConnectionInstanceW id="4357" preCell="../GoC_00514_pop/2/GoC_00514" preSegment="5" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.276181120717419"/>
+            <electricalConnectionInstanceW id="4418" preCell="../GoC_00514_pop/3/GoC_00514" preSegment="2" postCell="../GoC_00514_pop/12/GoC_00514" postSegment="1" synapse="Gap_junction" weight="3.083071079230483"/>
+            <electricalConnectionInstanceW id="4475" preCell="../GoC_00514_pop/4/GoC_00514" preSegment="2" postCell="../GoC_00514_pop/5/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.951136947885217"/>
+            <electricalConnectionInstanceW id="4486" preCell="../GoC_00514_pop/4/GoC_00514" preSegment="2" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="1" synapse="Gap_junction" weight="4.172736577127864"/>
+            <electricalConnectionInstanceW id="4492" preCell="../GoC_00514_pop/4/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/22/GoC_00514" postSegment="5" synapse="Gap_junction" weight="1.82527212403916"/>
+            <electricalConnectionInstanceW id="4542" preCell="../GoC_00514_pop/5/GoC_00514" preSegment="5" postCell="../GoC_00514_pop/9/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.861799097620802"/>
+            <electricalConnectionInstanceW id="4549" preCell="../GoC_00514_pop/5/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.542098126198481"/>
+            <electricalConnectionInstanceW id="4554" preCell="../GoC_00514_pop/5/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/21/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.095608862529384"/>
+            <electricalConnectionInstanceW id="4609" preCell="../GoC_00514_pop/6/GoC_00514" preSegment="2" postCell="../GoC_00514_pop/14/GoC_00514" postSegment="5" synapse="Gap_junction" weight="3.15254348966346"/>
+            <electricalConnectionInstanceW id="4612" preCell="../GoC_00514_pop/6/GoC_00514" preSegment="2" postCell="../GoC_00514_pop/17/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.917422791831261"/>
+            <electricalConnectionInstanceW id="4616" preCell="../GoC_00514_pop/6/GoC_00514" preSegment="2" postCell="../GoC_00514_pop/21/GoC_00514" postSegment="2" synapse="Gap_junction" weight="0.862445605457441"/>
+            <electricalConnectionInstanceW id="4664" preCell="../GoC_00514_pop/7/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/8/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.766334627958522"/>
+            <electricalConnectionInstanceW id="4849" preCell="../GoC_00514_pop/10/GoC_00514" preSegment="5" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="2" synapse="Gap_junction" weight="1.995298742069082"/>
+            <electricalConnectionInstanceW id="4855" preCell="../GoC_00514_pop/10/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/22/GoC_00514" postSegment="2" synapse="Gap_junction" weight="7.215404052786063"/>
+            <electricalConnectionInstanceW id="4905" preCell="../GoC_00514_pop/11/GoC_00514" preSegment="2" postCell="../GoC_00514_pop/15/GoC_00514" postSegment="2" synapse="Gap_junction" weight="2.643762819441157"/>
+            <electricalConnectionInstanceW id="4909" preCell="../GoC_00514_pop/11/GoC_00514" preSegment="2" postCell="../GoC_00514_pop/19/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.524037834742282"/>
+            <electricalConnectionInstanceW id="4961" preCell="../GoC_00514_pop/12/GoC_00514" preSegment="5" postCell="../GoC_00514_pop/15/GoC_00514" postSegment="5" synapse="Gap_junction" weight="2.278622942320299"/>
+            <electricalConnectionInstanceW id="4962" preCell="../GoC_00514_pop/12/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/16/GoC_00514" postSegment="1" synapse="Gap_junction" weight="0.780487396002641"/>
+            <electricalConnectionInstanceW id="4967" preCell="../GoC_00514_pop/12/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/21/GoC_00514" postSegment="2" synapse="Gap_junction" weight="0.688427859956249"/>
+            <electricalConnectionInstanceW id="5020" preCell="../GoC_00514_pop/13/GoC_00514" preSegment="2" postCell="../GoC_00514_pop/19/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.622587068401474"/>
+            <electricalConnectionInstanceW id="5129" preCell="../GoC_00514_pop/15/GoC_00514" preSegment="1" postCell="../GoC_00514_pop/21/GoC_00514" postSegment="1" synapse="Gap_junction" weight="1.601546064311321"/>
+            <electricalConnectionInstanceW id="5232" preCell="../GoC_00514_pop/17/GoC_00514" preSegment="2" postCell="../GoC_00514_pop/21/GoC_00514" postSegment="1" synapse="Gap_junction" weight="3.00007335769265"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_2_3" presynapticPopulation="GoC_00514_pop" postsynapticPopulation="GoC_00659_pop">
+            <electricalConnectionInstanceW id="4232" preCell="../GoC_00514_pop/0/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/1/GoC_00659" postSegment="2" synapse="Gap_junction" weight="4.038030385186512"/>
+            <electricalConnectionInstanceW id="4233" preCell="../GoC_00514_pop/0/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/2/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.06910092755406"/>
+            <electricalConnectionInstanceW id="4235" preCell="../GoC_00514_pop/0/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="5" synapse="Gap_junction" weight="4.581167929729496"/>
+            <electricalConnectionInstanceW id="4236" preCell="../GoC_00514_pop/0/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.041787487749203"/>
+            <electricalConnectionInstanceW id="4237" preCell="../GoC_00514_pop/0/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.700925930794183"/>
+            <electricalConnectionInstanceW id="4299" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/1/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.201312041276807"/>
+            <electricalConnectionInstanceW id="4300" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/2/GoC_00659" postSegment="5" synapse="Gap_junction" weight="0.650173853647372"/>
+            <electricalConnectionInstanceW id="4301" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/3/GoC_00659" postSegment="5" synapse="Gap_junction" weight="4.483274233805398"/>
+            <electricalConnectionInstanceW id="4303" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.791208489846512"/>
+            <electricalConnectionInstanceW id="4307" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/9/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.175257228038949"/>
+            <electricalConnectionInstanceW id="4311" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/13/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.423945808467683"/>
+            <electricalConnectionInstanceW id="4313" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/15/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.853120805872477"/>
+            <electricalConnectionInstanceW id="4314" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="2" synapse="Gap_junction" weight="0.940090483043733"/>
+            <electricalConnectionInstanceW id="4374" preCell="../GoC_00514_pop/2/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/10/GoC_00659" postSegment="5" synapse="Gap_junction" weight="3.10632633048025"/>
+            <electricalConnectionInstanceW id="4381" preCell="../GoC_00514_pop/2/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/17/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.896760086163005"/>
+            <electricalConnectionInstanceW id="4386" preCell="../GoC_00514_pop/2/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.955284509856611"/>
+            <electricalConnectionInstanceW id="4435" preCell="../GoC_00514_pop/3/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.016684672775368"/>
+            <electricalConnectionInstanceW id="4510" preCell="../GoC_00514_pop/4/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/17/GoC_00659" postSegment="5" synapse="Gap_junction" weight="3.965663409110793"/>
+            <electricalConnectionInstanceW id="4512" preCell="../GoC_00514_pop/4/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/19/GoC_00659" postSegment="2" synapse="Gap_junction" weight="5.537458568070271"/>
+            <electricalConnectionInstanceW id="4514" preCell="../GoC_00514_pop/4/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/21/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.855102208757637"/>
+            <electricalConnectionInstanceW id="4515" preCell="../GoC_00514_pop/4/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.995476058755318"/>
+            <electricalConnectionInstanceW id="4566" preCell="../GoC_00514_pop/5/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/10/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.8020441059676"/>
+            <electricalConnectionInstanceW id="4567" preCell="../GoC_00514_pop/5/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/11/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.586816814492658"/>
+            <electricalConnectionInstanceW id="4573" preCell="../GoC_00514_pop/5/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/17/GoC_00659" postSegment="2" synapse="Gap_junction" weight="4.374253539453353"/>
+            <electricalConnectionInstanceW id="4575" preCell="../GoC_00514_pop/5/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/19/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.627227426315758"/>
+            <electricalConnectionInstanceW id="4578" preCell="../GoC_00514_pop/5/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="2" synapse="Gap_junction" weight="5.188083182991131"/>
+            <electricalConnectionInstanceW id="4618" preCell="../GoC_00514_pop/6/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/0/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.89438044922665"/>
+            <electricalConnectionInstanceW id="4629" preCell="../GoC_00514_pop/6/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/11/GoC_00659" postSegment="5" synapse="Gap_junction" weight="0.576493384860575"/>
+            <electricalConnectionInstanceW id="4632" preCell="../GoC_00514_pop/6/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/14/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.274472430980397"/>
+            <electricalConnectionInstanceW id="4684" preCell="../GoC_00514_pop/7/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.080641865344268"/>
+            <electricalConnectionInstanceW id="4688" preCell="../GoC_00514_pop/7/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/9/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.25856167833164"/>
+            <electricalConnectionInstanceW id="4742" preCell="../GoC_00514_pop/8/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/3/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.455795902051299"/>
+            <electricalConnectionInstanceW id="4744" preCell="../GoC_00514_pop/8/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.073375301262341"/>
+            <electricalConnectionInstanceW id="4754" preCell="../GoC_00514_pop/8/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/15/GoC_00659" postSegment="5" synapse="Gap_junction" weight="3.938809560851298"/>
+            <electricalConnectionInstanceW id="4808" preCell="../GoC_00514_pop/9/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/10/GoC_00659" postSegment="2" synapse="Gap_junction" weight="6.495704893527832"/>
+            <electricalConnectionInstanceW id="4809" preCell="../GoC_00514_pop/9/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/11/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.283645778881177"/>
+            <electricalConnectionInstanceW id="4815" preCell="../GoC_00514_pop/9/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/17/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.531997139515554"/>
+            <electricalConnectionInstanceW id="4820" preCell="../GoC_00514_pop/9/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.880560438228371"/>
+            <electricalConnectionInstanceW id="4864" preCell="../GoC_00514_pop/10/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/8/GoC_00659" postSegment="2" synapse="Gap_junction" weight="5.457590243095036"/>
+            <electricalConnectionInstanceW id="4877" preCell="../GoC_00514_pop/10/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/21/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.948725982615744"/>
+            <electricalConnectionInstanceW id="4878" preCell="../GoC_00514_pop/10/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="5" synapse="Gap_junction" weight="0.843568067233016"/>
+            <electricalConnectionInstanceW id="4915" preCell="../GoC_00514_pop/11/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/2/GoC_00659" postSegment="5" synapse="Gap_junction" weight="4.689665251044163"/>
+            <electricalConnectionInstanceW id="4917" preCell="../GoC_00514_pop/11/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.307350850236054"/>
+            <electricalConnectionInstanceW id="4925" preCell="../GoC_00514_pop/11/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.763366848994197"/>
+            <electricalConnectionInstanceW id="4929" preCell="../GoC_00514_pop/11/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.199672294095726"/>
+            <electricalConnectionInstanceW id="4931" preCell="../GoC_00514_pop/11/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/18/GoC_00659" postSegment="2" synapse="Gap_junction" weight="4.212568284845621"/>
+            <electricalConnectionInstanceW id="4980" preCell="../GoC_00514_pop/12/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/11/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.321617100370548"/>
+            <electricalConnectionInstanceW id="4981" preCell="../GoC_00514_pop/12/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.46717541572209"/>
+            <electricalConnectionInstanceW id="4987" preCell="../GoC_00514_pop/12/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/18/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.381113508574832"/>
+            <electricalConnectionInstanceW id="5037" preCell="../GoC_00514_pop/13/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/13/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.041750248349398"/>
+            <electricalConnectionInstanceW id="5078" preCell="../GoC_00514_pop/14/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/0/GoC_00659" postSegment="1" synapse="Gap_junction" weight="3.73138963905043"/>
+            <electricalConnectionInstanceW id="5142" preCell="../GoC_00514_pop/15/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/11/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.10564819316425"/>
+            <electricalConnectionInstanceW id="5143" preCell="../GoC_00514_pop/15/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="5" synapse="Gap_junction" weight="0.892023336143874"/>
+            <electricalConnectionInstanceW id="5145" preCell="../GoC_00514_pop/15/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/14/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.884281859712858"/>
+            <electricalConnectionInstanceW id="5149" preCell="../GoC_00514_pop/15/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/18/GoC_00659" postSegment="1" synapse="Gap_junction" weight="4.782081732294936"/>
+            <electricalConnectionInstanceW id="5193" preCell="../GoC_00514_pop/16/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/10/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.188411286875474"/>
+            <electricalConnectionInstanceW id="5204" preCell="../GoC_00514_pop/16/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/21/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.746354607198831"/>
+            <electricalConnectionInstanceW id="5234" preCell="../GoC_00514_pop/17/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/0/GoC_00659" postSegment="2" synapse="Gap_junction" weight="1.420975128957927"/>
+            <electricalConnectionInstanceW id="5287" preCell="../GoC_00514_pop/18/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/3/GoC_00659" postSegment="2" synapse="Gap_junction" weight="0.746116498654015"/>
+            <electricalConnectionInstanceW id="5304" preCell="../GoC_00514_pop/18/GoC_00514" preSegment="5" postCell="../GoC_00659_pop/20/GoC_00659" postSegment="5" synapse="Gap_junction" weight="4.789474979812907"/>
+            <electricalConnectionInstanceW id="5389" preCell="../GoC_00514_pop/20/GoC_00514" preSegment="1" postCell="../GoC_00659_pop/8/GoC_00659" postSegment="1" synapse="Gap_junction" weight="4.310686119307808"/>
+            <electricalConnectionInstanceW id="5402" preCell="../GoC_00514_pop/20/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/21/GoC_00659" postSegment="5" synapse="Gap_junction" weight="0.933293281439963"/>
+            <electricalConnectionInstanceW id="5482" preCell="../GoC_00514_pop/22/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/8/GoC_00659" postSegment="5" synapse="Gap_junction" weight="4.850152532408798"/>
+            <electricalConnectionInstanceW id="5493" preCell="../GoC_00514_pop/22/GoC_00514" preSegment="2" postCell="../GoC_00659_pop/19/GoC_00659" postSegment="2" synapse="Gap_junction" weight="3.22324676537698"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_2_4" presynapticPopulation="GoC_00514_pop" postsynapticPopulation="GoC_00856_pop">
+            <electricalConnectionInstanceW id="4255" preCell="../GoC_00514_pop/0/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/1/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.936545273959914"/>
+            <electricalConnectionInstanceW id="4274" preCell="../GoC_00514_pop/0/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="5" synapse="Gap_junction" weight="7.028426936575933"/>
+            <electricalConnectionInstanceW id="4321" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.266283002362067"/>
+            <electricalConnectionInstanceW id="4322" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/1/GoC_00856" postSegment="1" synapse="Gap_junction" weight="3.962808401998245"/>
+            <electricalConnectionInstanceW id="4328" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/7/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.372384974587871"/>
+            <electricalConnectionInstanceW id="4329" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.314132979564225"/>
+            <electricalConnectionInstanceW id="4330" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/9/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.354502738004741"/>
+            <electricalConnectionInstanceW id="4341" preCell="../GoC_00514_pop/1/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.940526484865309"/>
+            <electricalConnectionInstanceW id="4471" preCell="../GoC_00514_pop/3/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.294568360726645"/>
+            <electricalConnectionInstanceW id="4473" preCell="../GoC_00514_pop/3/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="5" synapse="Gap_junction" weight="5.8638104094735"/>
+            <electricalConnectionInstanceW id="4520" preCell="../GoC_00514_pop/4/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/4/GoC_00856" postSegment="2" synapse="Gap_junction" weight="3.350565749229921"/>
+            <electricalConnectionInstanceW id="4655" preCell="../GoC_00514_pop/6/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/14/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.499923556572994"/>
+            <electricalConnectionInstanceW id="4702" preCell="../GoC_00514_pop/7/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.834205858105433"/>
+            <electricalConnectionInstanceW id="4715" preCell="../GoC_00514_pop/7/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/13/GoC_00856" postSegment="2" synapse="Gap_junction" weight="4.660600897601737"/>
+            <electricalConnectionInstanceW id="4762" preCell="../GoC_00514_pop/8/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.539337798477737"/>
+            <electricalConnectionInstanceW id="4763" preCell="../GoC_00514_pop/8/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/1/GoC_00856" postSegment="2" synapse="Gap_junction" weight="3.205823127778798"/>
+            <electricalConnectionInstanceW id="4769" preCell="../GoC_00514_pop/8/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/7/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.647571277871068"/>
+            <electricalConnectionInstanceW id="4770" preCell="../GoC_00514_pop/8/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="1" synapse="Gap_junction" weight="3.05475637542448"/>
+            <electricalConnectionInstanceW id="4782" preCell="../GoC_00514_pop/8/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.305025345310092"/>
+            <electricalConnectionInstanceW id="4835" preCell="../GoC_00514_pop/9/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/14/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.32713126558523"/>
+            <electricalConnectionInstanceW id="4891" preCell="../GoC_00514_pop/10/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/12/GoC_00856" postSegment="1" synapse="Gap_junction" weight="3.813356559488733"/>
+            <electricalConnectionInstanceW id="4894" preCell="../GoC_00514_pop/10/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="5" synapse="Gap_junction" weight="6.907858993148163"/>
+            <electricalConnectionInstanceW id="4898" preCell="../GoC_00514_pop/10/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.12729971196672"/>
+            <electricalConnectionInstanceW id="4900" preCell="../GoC_00514_pop/10/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.235580509167712"/>
+            <electricalConnectionInstanceW id="4938" preCell="../GoC_00514_pop/11/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="2" synapse="Gap_junction" weight="0.990428328050425"/>
+            <electricalConnectionInstanceW id="4956" preCell="../GoC_00514_pop/11/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.11328491991658"/>
+            <electricalConnectionInstanceW id="5049" preCell="../GoC_00514_pop/13/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="2" synapse="Gap_junction" weight="3.890343543111493"/>
+            <electricalConnectionInstanceW id="5052" preCell="../GoC_00514_pop/13/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/5/GoC_00856" postSegment="1" synapse="Gap_junction" weight="5.192007479884543"/>
+            <electricalConnectionInstanceW id="5053" preCell="../GoC_00514_pop/13/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/6/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.065238420167791"/>
+            <electricalConnectionInstanceW id="5058" preCell="../GoC_00514_pop/13/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/11/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.133165972724376"/>
+            <electricalConnectionInstanceW id="5210" preCell="../GoC_00514_pop/16/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/4/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.381865787503483"/>
+            <electricalConnectionInstanceW id="5221" preCell="../GoC_00514_pop/16/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.009746034731508"/>
+            <electricalConnectionInstanceW id="5225" preCell="../GoC_00514_pop/16/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.121058178690429"/>
+            <electricalConnectionInstanceW id="5271" preCell="../GoC_00514_pop/17/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/14/GoC_00856" postSegment="1" synapse="Gap_junction" weight="3.665207253471023"/>
+            <electricalConnectionInstanceW id="5308" preCell="../GoC_00514_pop/18/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/1/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.115193203168583"/>
+            <electricalConnectionInstanceW id="5316" preCell="../GoC_00514_pop/18/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/9/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.246502148233479"/>
+            <electricalConnectionInstanceW id="5317" preCell="../GoC_00514_pop/18/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/10/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.743906781812703"/>
+            <electricalConnectionInstanceW id="5324" preCell="../GoC_00514_pop/18/GoC_00514" preSegment="5" postCell="../GoC_00856_pop/17/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.124047335063266"/>
+            <electricalConnectionInstanceW id="5329" preCell="../GoC_00514_pop/18/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.708349508694409"/>
+            <electricalConnectionInstanceW id="5416" preCell="../GoC_00514_pop/20/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/12/GoC_00856" postSegment="1" synapse="Gap_junction" weight="4.29665427040505"/>
+            <electricalConnectionInstanceW id="5465" preCell="../GoC_00514_pop/21/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/14/GoC_00856" postSegment="5" synapse="Gap_junction" weight="5.868464350287681"/>
+            <electricalConnectionInstanceW id="5501" preCell="../GoC_00514_pop/22/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/4/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.253047254286458"/>
+            <electricalConnectionInstanceW id="5509" preCell="../GoC_00514_pop/22/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/12/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.114439749594853"/>
+            <electricalConnectionInstanceW id="5512" preCell="../GoC_00514_pop/22/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="5" synapse="Gap_junction" weight="5.567788453983309"/>
+            <electricalConnectionInstanceW id="5515" preCell="../GoC_00514_pop/22/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/18/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.624974240108989"/>
+            <electricalConnectionInstanceW id="5516" preCell="../GoC_00514_pop/22/GoC_00514" preSegment="1" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.274516158439891"/>
+            <electricalConnectionInstanceW id="5518" preCell="../GoC_00514_pop/22/GoC_00514" preSegment="2" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="1" synapse="Gap_junction" weight="0.681795938063348"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_3_4" presynapticPopulation="GoC_00659_pop" postsynapticPopulation="GoC_00856_pop">
+            <electricalConnectionInstanceW id="5556" preCell="../GoC_00659_pop/0/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/14/GoC_00856" postSegment="2" synapse="Gap_junction" weight="0.662400320987256"/>
+            <electricalConnectionInstanceW id="5594" preCell="../GoC_00659_pop/1/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.086881187214255"/>
+            <electricalConnectionInstanceW id="5606" preCell="../GoC_00659_pop/1/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="1" synapse="Gap_junction" weight="5.134984294468597"/>
+            <electricalConnectionInstanceW id="5631" preCell="../GoC_00659_pop/2/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.341428088984178"/>
+            <electricalConnectionInstanceW id="5672" preCell="../GoC_00659_pop/3/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/1/GoC_00856" postSegment="2" synapse="Gap_junction" weight="6.653684589635264"/>
+            <electricalConnectionInstanceW id="5678" preCell="../GoC_00659_pop/3/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/7/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.976399343239663"/>
+            <electricalConnectionInstanceW id="5679" preCell="../GoC_00659_pop/3/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.645230603092116"/>
+            <electricalConnectionInstanceW id="5680" preCell="../GoC_00659_pop/3/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/9/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.913312022338626"/>
+            <electricalConnectionInstanceW id="5712" preCell="../GoC_00659_pop/4/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.031823675195817"/>
+            <electricalConnectionInstanceW id="5714" preCell="../GoC_00659_pop/4/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.462894238388048"/>
+            <electricalConnectionInstanceW id="5732" preCell="../GoC_00659_pop/4/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.878278953476883"/>
+            <electricalConnectionInstanceW id="5752" preCell="../GoC_00659_pop/5/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="1" synapse="Gap_junction" weight="8.454463796626923"/>
+            <electricalConnectionInstanceW id="5765" preCell="../GoC_00659_pop/5/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/13/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.701667173288982"/>
+            <electricalConnectionInstanceW id="5798" preCell="../GoC_00659_pop/6/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/7/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.660554155357245"/>
+            <electricalConnectionInstanceW id="5808" preCell="../GoC_00659_pop/6/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/17/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.400101248709281"/>
+            <electricalConnectionInstanceW id="5811" preCell="../GoC_00659_pop/6/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="1" synapse="Gap_junction" weight="3.316989203452096"/>
+            <electricalConnectionInstanceW id="5813" preCell="../GoC_00659_pop/6/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.548927203792819"/>
+            <electricalConnectionInstanceW id="5839" preCell="../GoC_00659_pop/7/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/10/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.108444926745619"/>
+            <electricalConnectionInstanceW id="5845" preCell="../GoC_00659_pop/7/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/16/GoC_00856" postSegment="1" synapse="Gap_junction" weight="0.99666916447509"/>
+            <electricalConnectionInstanceW id="5849" preCell="../GoC_00659_pop/7/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="1" synapse="Gap_junction" weight="0.88255581258035"/>
+            <electricalConnectionInstanceW id="5850" preCell="../GoC_00659_pop/7/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.155292996051998"/>
+            <electricalConnectionInstanceW id="5851" preCell="../GoC_00659_pop/7/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="2" synapse="Gap_junction" weight="4.567125756968143"/>
+            <electricalConnectionInstanceW id="5878" preCell="../GoC_00659_pop/8/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/12/GoC_00856" postSegment="1" synapse="Gap_junction" weight="7.336366604889913"/>
+            <electricalConnectionInstanceW id="5881" preCell="../GoC_00659_pop/8/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="1" synapse="Gap_junction" weight="6.486649539681389"/>
+            <electricalConnectionInstanceW id="5884" preCell="../GoC_00659_pop/8/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/18/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.260202806868878"/>
+            <electricalConnectionInstanceW id="5902" preCell="../GoC_00659_pop/9/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="2" synapse="Gap_junction" weight="4.706018693105102"/>
+            <electricalConnectionInstanceW id="5910" preCell="../GoC_00659_pop/9/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.592477204616543"/>
+            <electricalConnectionInstanceW id="5913" preCell="../GoC_00659_pop/9/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/11/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.7865376864681"/>
+            <electricalConnectionInstanceW id="5915" preCell="../GoC_00659_pop/9/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/13/GoC_00856" postSegment="2" synapse="Gap_junction" weight="3.94232729729587"/>
+            <electricalConnectionInstanceW id="5951" preCell="../GoC_00659_pop/10/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/14/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.089374650035315"/>
+            <electricalConnectionInstanceW id="5985" preCell="../GoC_00659_pop/11/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/14/GoC_00856" postSegment="2" synapse="Gap_junction" weight="6.019992686369863"/>
+            <electricalConnectionInstanceW id="6036" preCell="../GoC_00659_pop/13/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="2" synapse="Gap_junction" weight="5.248534156137984"/>
+            <electricalConnectionInstanceW id="6044" preCell="../GoC_00659_pop/13/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.708589071950902"/>
+            <electricalConnectionInstanceW id="6047" preCell="../GoC_00659_pop/13/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/11/GoC_00856" postSegment="5" synapse="Gap_junction" weight="5.473159486972662"/>
+            <electricalConnectionInstanceW id="6081" preCell="../GoC_00659_pop/14/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/14/GoC_00856" postSegment="1" synapse="Gap_junction" weight="3.364396513658561"/>
+            <electricalConnectionInstanceW id="6098" preCell="../GoC_00659_pop/15/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/1/GoC_00856" postSegment="2" synapse="Gap_junction" weight="3.004149466150973"/>
+            <electricalConnectionInstanceW id="6104" preCell="../GoC_00659_pop/15/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/7/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.498584660890458"/>
+            <electricalConnectionInstanceW id="6105" preCell="../GoC_00659_pop/15/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.390443200775146"/>
+            <electricalConnectionInstanceW id="6106" preCell="../GoC_00659_pop/15/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/9/GoC_00856" postSegment="2" synapse="Gap_junction" weight="3.952145650932108"/>
+            <electricalConnectionInstanceW id="6126" preCell="../GoC_00659_pop/16/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/0/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.47297286453865"/>
+            <electricalConnectionInstanceW id="6128" preCell="../GoC_00659_pop/16/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/2/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.165687983688426"/>
+            <electricalConnectionInstanceW id="6131" preCell="../GoC_00659_pop/16/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/5/GoC_00856" postSegment="2" synapse="Gap_junction" weight="0.615885560972562"/>
+            <electricalConnectionInstanceW id="6137" preCell="../GoC_00659_pop/16/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/11/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.088700438693976"/>
+            <electricalConnectionInstanceW id="6211" preCell="../GoC_00659_pop/19/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/4/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.403328349569763"/>
+            <electricalConnectionInstanceW id="6222" preCell="../GoC_00659_pop/19/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.529718526454188"/>
+            <electricalConnectionInstanceW id="6233" preCell="../GoC_00659_pop/20/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/1/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.149242283936502"/>
+            <electricalConnectionInstanceW id="6239" preCell="../GoC_00659_pop/20/GoC_00659" preSegment="5" postCell="../GoC_00856_pop/7/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.740578327292514"/>
+            <electricalConnectionInstanceW id="6241" preCell="../GoC_00659_pop/20/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/9/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.794386626389541"/>
+            <electricalConnectionInstanceW id="6249" preCell="../GoC_00659_pop/20/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/17/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.527704080924986"/>
+            <electricalConnectionInstanceW id="6260" preCell="../GoC_00659_pop/21/GoC_00659" preSegment="1" postCell="../GoC_00856_pop/4/GoC_00856" postSegment="1" synapse="Gap_junction" weight="3.525439146023662"/>
+            <electricalConnectionInstanceW id="6283" preCell="../GoC_00659_pop/22/GoC_00659" preSegment="2" postCell="../GoC_00856_pop/4/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.044475652589934"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_3_3" presynapticPopulation="GoC_00659_pop" postsynapticPopulation="GoC_00659_pop">
+            <electricalConnectionInstanceW id="5565" preCell="../GoC_00659_pop/1/GoC_00659" preSegment="2" postCell="../GoC_00659_pop/2/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.61367558965466"/>
+            <electricalConnectionInstanceW id="5566" preCell="../GoC_00659_pop/1/GoC_00659" preSegment="2" postCell="../GoC_00659_pop/3/GoC_00659" postSegment="1" synapse="Gap_junction" weight="4.114302291750739"/>
+            <electricalConnectionInstanceW id="5567" preCell="../GoC_00659_pop/1/GoC_00659" preSegment="2" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.320564710098108"/>
+            <electricalConnectionInstanceW id="5569" preCell="../GoC_00659_pop/1/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.976315762635848"/>
+            <electricalConnectionInstanceW id="5578" preCell="../GoC_00659_pop/1/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/15/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.16525987226043"/>
+            <electricalConnectionInstanceW id="5609" preCell="../GoC_00659_pop/2/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/3/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.121669153671367"/>
+            <electricalConnectionInstanceW id="5610" preCell="../GoC_00659_pop/2/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="2" synapse="Gap_junction" weight="6.280951716070158"/>
+            <electricalConnectionInstanceW id="5618" preCell="../GoC_00659_pop/2/GoC_00659" preSegment="2" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.960971671992646"/>
+            <electricalConnectionInstanceW id="5619" preCell="../GoC_00659_pop/2/GoC_00659" preSegment="2" postCell="../GoC_00659_pop/13/GoC_00659" postSegment="1" synapse="Gap_junction" weight="0.592531513777631"/>
+            <electricalConnectionInstanceW id="5624" preCell="../GoC_00659_pop/2/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/18/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.567893142988644"/>
+            <electricalConnectionInstanceW id="5652" preCell="../GoC_00659_pop/3/GoC_00659" preSegment="1" postCell="../GoC_00659_pop/4/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.076025789991786"/>
+            <electricalConnectionInstanceW id="5654" preCell="../GoC_00659_pop/3/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/6/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.269989966578816"/>
+            <electricalConnectionInstanceW id="5660" preCell="../GoC_00659_pop/3/GoC_00659" preSegment="1" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="5" synapse="Gap_junction" weight="0.973227294331817"/>
+            <electricalConnectionInstanceW id="5694" preCell="../GoC_00659_pop/4/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/5/GoC_00659" postSegment="5" synapse="Gap_junction" weight="1.061085934094709"/>
+            <electricalConnectionInstanceW id="5701" preCell="../GoC_00659_pop/4/GoC_00659" preSegment="1" postCell="../GoC_00659_pop/12/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.53057362453924"/>
+            <electricalConnectionInstanceW id="5705" preCell="../GoC_00659_pop/4/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.942992274087006"/>
+            <electricalConnectionInstanceW id="5738" preCell="../GoC_00659_pop/5/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/9/GoC_00659" postSegment="1" synapse="Gap_junction" weight="4.367409776314835"/>
+            <electricalConnectionInstanceW id="5742" preCell="../GoC_00659_pop/5/GoC_00659" preSegment="2" postCell="../GoC_00659_pop/13/GoC_00659" postSegment="2" synapse="Gap_junction" weight="4.07334718141049"/>
+            <electricalConnectionInstanceW id="5745" preCell="../GoC_00659_pop/5/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.260469346545449"/>
+            <electricalConnectionInstanceW id="5775" preCell="../GoC_00659_pop/6/GoC_00659" preSegment="1" postCell="../GoC_00659_pop/7/GoC_00659" postSegment="2" synapse="Gap_junction" weight="2.973971142543278"/>
+            <electricalConnectionInstanceW id="5864" preCell="../GoC_00659_pop/8/GoC_00659" preSegment="1" postCell="../GoC_00659_pop/21/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.277106970056244"/>
+            <electricalConnectionInstanceW id="5931" preCell="../GoC_00659_pop/10/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/17/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.400210653586828"/>
+            <electricalConnectionInstanceW id="5966" preCell="../GoC_00659_pop/11/GoC_00659" preSegment="1" postCell="../GoC_00659_pop/18/GoC_00659" postSegment="5" synapse="Gap_junction" weight="0.859268752887074"/>
+            <electricalConnectionInstanceW id="5999" preCell="../GoC_00659_pop/12/GoC_00659" preSegment="1" postCell="../GoC_00659_pop/18/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.82099211375259"/>
+            <electricalConnectionInstanceW id="6029" preCell="../GoC_00659_pop/13/GoC_00659" preSegment="1" postCell="../GoC_00659_pop/16/GoC_00659" postSegment="1" synapse="Gap_junction" weight="2.991934000130901"/>
+            <electricalConnectionInstanceW id="6150" preCell="../GoC_00659_pop/17/GoC_00659" preSegment="2" postCell="../GoC_00659_pop/19/GoC_00659" postSegment="5" synapse="Gap_junction" weight="2.535196946825585"/>
+            <electricalConnectionInstanceW id="6153" preCell="../GoC_00659_pop/17/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="2" synapse="Gap_junction" weight="4.917226822225314"/>
+            <electricalConnectionInstanceW id="6205" preCell="../GoC_00659_pop/19/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/21/GoC_00659" postSegment="5" synapse="Gap_junction" weight="4.173854112565971"/>
+            <electricalConnectionInstanceW id="6206" preCell="../GoC_00659_pop/19/GoC_00659" preSegment="5" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="5" synapse="Gap_junction" weight="4.020531205120219"/>
+            <electricalConnectionInstanceW id="6255" preCell="../GoC_00659_pop/21/GoC_00659" preSegment="1" postCell="../GoC_00659_pop/22/GoC_00659" postSegment="1" synapse="Gap_junction" weight="1.458003655862237"/>
+        </electricalProjection>
+        <electricalProjection id="GJ_4_4" presynapticPopulation="GoC_00856_pop" postsynapticPopulation="GoC_00856_pop">
+            <electricalConnectionInstanceW id="6309" preCell="../GoC_00856_pop/0/GoC_00856" preSegment="2" postCell="../GoC_00856_pop/8/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.084930441043"/>
+            <electricalConnectionInstanceW id="6312" preCell="../GoC_00856_pop/0/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/11/GoC_00856" postSegment="5" synapse="Gap_junction" weight="4.635750904037539"/>
+            <electricalConnectionInstanceW id="6329" preCell="../GoC_00856_pop/1/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/7/GoC_00856" postSegment="2" synapse="Gap_junction" weight="6.470570279306822"/>
+            <electricalConnectionInstanceW id="6342" preCell="../GoC_00856_pop/1/GoC_00856" preSegment="2" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="1" synapse="Gap_junction" weight="4.304877952263496"/>
+            <electricalConnectionInstanceW id="6347" preCell="../GoC_00856_pop/2/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/5/GoC_00856" postSegment="5" synapse="Gap_junction" weight="2.566855238044639"/>
+            <electricalConnectionInstanceW id="6348" preCell="../GoC_00856_pop/2/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/6/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.145577392346973"/>
+            <electricalConnectionInstanceW id="6353" preCell="../GoC_00856_pop/2/GoC_00856" preSegment="2" postCell="../GoC_00856_pop/11/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.437278040550761"/>
+            <electricalConnectionInstanceW id="6371" preCell="../GoC_00856_pop/3/GoC_00856" preSegment="2" postCell="../GoC_00856_pop/10/GoC_00856" postSegment="2" synapse="Gap_junction" weight="4.066362384982432"/>
+            <electricalConnectionInstanceW id="6383" preCell="../GoC_00856_pop/3/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.9271191446872"/>
+            <electricalConnectionInstanceW id="6402" preCell="../GoC_00856_pop/5/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/6/GoC_00856" postSegment="1" synapse="Gap_junction" weight="5.036177054143073"/>
+            <electricalConnectionInstanceW id="6436" preCell="../GoC_00856_pop/7/GoC_00856" preSegment="1" postCell="../GoC_00856_pop/9/GoC_00856" postSegment="1" synapse="Gap_junction" weight="2.484491800303187"/>
+            <electricalConnectionInstanceW id="6444" preCell="../GoC_00856_pop/7/GoC_00856" preSegment="1" postCell="../GoC_00856_pop/17/GoC_00856" postSegment="1" synapse="Gap_junction" weight="0.79362100422314"/>
+            <electricalConnectionInstanceW id="6447" preCell="../GoC_00856_pop/7/GoC_00856" preSegment="1" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="2" synapse="Gap_junction" weight="2.701297864148934"/>
+            <electricalConnectionInstanceW id="6452" preCell="../GoC_00856_pop/8/GoC_00856" preSegment="2" postCell="../GoC_00856_pop/11/GoC_00856" postSegment="2" synapse="Gap_junction" weight="0.809292685326447"/>
+            <electricalConnectionInstanceW id="6461" preCell="../GoC_00856_pop/8/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.0106105248032"/>
+            <electricalConnectionInstanceW id="6474" preCell="../GoC_00856_pop/9/GoC_00856" preSegment="1" postCell="../GoC_00856_pop/20/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.32008196687137"/>
+            <electricalConnectionInstanceW id="6488" preCell="../GoC_00856_pop/10/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="5" synapse="Gap_junction" weight="3.143305784650283"/>
+            <electricalConnectionInstanceW id="6490" preCell="../GoC_00856_pop/11/GoC_00856" preSegment="1" postCell="../GoC_00856_pop/13/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.059785269865422"/>
+            <electricalConnectionInstanceW id="6502" preCell="../GoC_00856_pop/12/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/15/GoC_00856" postSegment="1" synapse="Gap_junction" weight="4.995221574736407"/>
+            <electricalConnectionInstanceW id="6506" preCell="../GoC_00856_pop/12/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.547179783809276"/>
+            <electricalConnectionInstanceW id="6508" preCell="../GoC_00856_pop/12/GoC_00856" preSegment="2" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.116707432424557"/>
+            <electricalConnectionInstanceW id="6530" preCell="../GoC_00856_pop/15/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/19/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.591226857738115"/>
+            <electricalConnectionInstanceW id="6535" preCell="../GoC_00856_pop/16/GoC_00856" preSegment="2" postCell="../GoC_00856_pop/18/GoC_00856" postSegment="1" synapse="Gap_junction" weight="1.953701517539729"/>
+            <electricalConnectionInstanceW id="6538" preCell="../GoC_00856_pop/16/GoC_00856" preSegment="5" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="2" synapse="Gap_junction" weight="0.901334373249197"/>
+            <electricalConnectionInstanceW id="6539" preCell="../GoC_00856_pop/16/GoC_00856" preSegment="1" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="2" synapse="Gap_junction" weight="1.697315838607112"/>
+            <electricalConnectionInstanceW id="6544" preCell="../GoC_00856_pop/17/GoC_00856" preSegment="1" postCell="../GoC_00856_pop/22/GoC_00856" postSegment="1" synapse="Gap_junction" weight="5.773876690912678"/>
+            <electricalConnectionInstanceW id="6547" preCell="../GoC_00856_pop/18/GoC_00856" preSegment="1" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="5" synapse="Gap_junction" weight="1.110226277042714"/>
+            <electricalConnectionInstanceW id="6550" preCell="../GoC_00856_pop/19/GoC_00856" preSegment="2" postCell="../GoC_00856_pop/21/GoC_00856" postSegment="1" synapse="Gap_junction" weight="6.460016932772494"/>
+        </electricalProjection>
+    </network>
+</neuroml>
