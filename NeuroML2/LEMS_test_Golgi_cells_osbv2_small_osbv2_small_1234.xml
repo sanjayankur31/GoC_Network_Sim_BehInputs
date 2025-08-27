@@ -1,0 +1,44 @@
+<Lems>
+
+    <!--
+
+        This LEMS file has been automatically generated using PyNeuroML v1.3.22 (libNeuroML v0.6.7)
+
+     -->
+
+    <!-- Specify which component to run -->
+    <Target component="test_golgi_cells"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+
+    <Include file="Golgi_cell_network_osbv2_small_osbv2_small_1234.net.nml"/>
+    <Include file="./cells/Golgi/GoC_00659.cell.nml"/>
+    <Include file="./cells/Golgi/GoC_00856.cell.nml"/>
+
+    <Simulation id="test_golgi_cells" length="1500.0ms" step="0.01ms" target="Golgi_cell_network" seed="1234">  <!-- Note seed: ensures same random numbers used every run -->
+        <Display id="DispPop__GoC_00659_pop" title="Membrane potentials of cells in GoC_00659_pop" timeScale="1ms" xmin="-150.0" xmax="1650.0000000000002" ymin="-90" ymax="50">
+            <Line id="GoC_00659_pop[0]: v" quantity="GoC_00659_pop/0/GoC_00659/v" scale="1mV" color="#d54f33" timeScale="1ms"/>
+            <Line id="GoC_00659_pop[1]: v" quantity="GoC_00659_pop/1/GoC_00659/v" scale="1mV" color="#0534e4" timeScale="1ms"/>
+        </Display>
+
+        <Display id="DispPop__GoC_00856_pop" title="Membrane potentials of cells in GoC_00856_pop" timeScale="1ms" xmin="-150.0" xmax="1650.0000000000002" ymin="-90" ymax="50">
+            <Line id="GoC_00856_pop[0]: v" quantity="GoC_00856_pop/0/GoC_00856/v" scale="1mV" color="#98e752" timeScale="1ms"/>
+            <Line id="GoC_00856_pop[1]: v" quantity="GoC_00856_pop/1/GoC_00856/v" scale="1mV" color="#bca074" timeScale="1ms"/>
+        </Display>
+
+        <OutputFile id="Volts_file__GoC_00659_pop" fileName="test_golgi_cells.GoC_00659_pop.v.dat">
+            <OutputColumn id="v_GoC_00659_pop_0_GoC_00659_v" quantity="GoC_00659_pop/0/GoC_00659/v"/>
+            <OutputColumn id="v_GoC_00659_pop_1_GoC_00659_v" quantity="GoC_00659_pop/1/GoC_00659/v"/>
+        </OutputFile>
+
+        <OutputFile id="Volts_file__GoC_00856_pop" fileName="test_golgi_cells.GoC_00856_pop.v.dat">
+            <OutputColumn id="v_GoC_00856_pop_0_GoC_00856_v" quantity="GoC_00856_pop/0/GoC_00856/v"/>
+            <OutputColumn id="v_GoC_00856_pop_1_GoC_00856_v" quantity="GoC_00856_pop/1/GoC_00856/v"/>
+        </OutputFile>
+
+    </Simulation>
+
+</Lems>

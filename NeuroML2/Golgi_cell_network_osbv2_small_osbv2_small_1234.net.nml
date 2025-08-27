@@ -1,0 +1,22 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.3.1.xsd" id="Golgi_cell_network">
+    <include href="./cells/Golgi/GoC_00659.cell.nml"/>
+    <include href="./cells/Golgi/GoC_00856.cell.nml"/>
+    <network id="Golgi_cell_network">
+        <population id="GoC_00659_pop" component="GoC_00659" type="populationList">
+            <instance id="0">
+                <location x="18.428708381381366" y="4.735527880151514" z="67.488094358233013"/>
+            </instance>
+            <instance id="1">
+                <location x="59.462477993444885" y="53.331016299875053" z="4.332406269480349"/>
+            </instance>
+        </population>
+        <population id="GoC_00856_pop" component="GoC_00856" type="populationList">
+            <instance id="0">
+                <location x="56.143308006339787" y="32.966844562091502" z="50.296683311261837"/>
+            </instance>
+            <instance id="1">
+                <location x="11.189431757440381" y="60.719370621848455" z="56.594464305053137"/>
+            </instance>
+        </population>
+    </network>
+</neuroml>
